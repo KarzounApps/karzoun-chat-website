@@ -1,36 +1,50 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  GitBranch, Plus, MessageSquare, Bot, Zap, 
-  Settings, Play, ArrowRight, ChevronRight, 
-  ChevronLeft, Check, X, AlertCircle, Code,
-  Braces, Database, Workflow, Layers
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  GitBranch,
+  Plus,
+  MessageSquare,
+  Bot,
+  Zap,
+  Settings,
+  Play,
+  // ArrowRight,
+  ChevronRight,
+  ChevronLeft,
+  // Check,
+  // X,
+  // AlertCircle,
+  Code,
+  // Braces,
+  Database,
+  Workflow,
+  Layers,
+} from "lucide-react";
 
 export function VisualBuilder() {
   const [activeStep, setActiveStep] = useState(0);
-  
+
   const steps = [
     {
       title: "إنشاء التدفق",
       description: "بناء تدفق المحادثة باستخدام السحب والإفلات",
-      icon: GitBranch
+      icon: GitBranch,
     },
     {
       title: "إضافة الردود",
       description: "تخصيص الردود والرسائل لكل خطوة",
-      icon: MessageSquare
+      icon: MessageSquare,
     },
     {
       title: "إضافة الشروط",
       description: "إنشاء مسارات متعددة بناءً على ردود المستخدم",
-      icon: Workflow
+      icon: Workflow,
     },
     {
       title: "ربط الأنظمة",
       description: "تكامل مع قواعد البيانات والأنظمة الخارجية",
-      icon: Database
-    }
+      icon: Database,
+    },
   ];
 
   const nextStep = () => {
@@ -51,9 +65,7 @@ export function VisualBuilder() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              منشئ تدفقات مرئي سهل الاستخدام
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">منشئ تدفقات مرئي سهل الاستخدام</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               صمم روبوتات محادثة متطورة بسهولة باستخدام واجهة السحب والإفلات البديهية، دون الحاجة لأي خبرة برمجية
             </p>
@@ -85,7 +97,7 @@ export function VisualBuilder() {
                 </div>
               </div>
             </div>
-            
+
             <div className="p-6 h-[400px] bg-gray-50 relative">
               {/* Builder Canvas */}
               <div className="absolute inset-0 p-4">
@@ -101,7 +113,7 @@ export function VisualBuilder() {
                     </div>
                   </div>
                 )}
-                
+
                 {activeStep === 1 && (
                   <div className="h-full flex flex-col items-center justify-center">
                     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200 w-64 mb-8">
@@ -115,13 +127,13 @@ export function VisualBuilder() {
                         مرحباً! كيف يمكنني مساعدتك اليوم؟
                       </div>
                     </div>
-                    
+
                     <svg width="40" height="40" viewBox="0 0 40 40">
                       <path d="M20 0 L20 40" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4" />
                       <path d="M20 40 L15 35" stroke="#e5e7eb" strokeWidth="2" />
                       <path d="M20 40 L25 35" stroke="#e5e7eb" strokeWidth="2" />
                     </svg>
-                    
+
                     <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200 w-64 mt-4">
                       <div className="flex items-center gap-2 mb-3">
                         <div className="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center">
@@ -130,20 +142,14 @@ export function VisualBuilder() {
                         <span className="font-medium">خيارات الرد</span>
                       </div>
                       <div className="space-y-2">
-                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">
-                          استفسار عن المنتجات
-                        </div>
-                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">
-                          طلب المساعدة
-                        </div>
-                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">
-                          التحدث مع موظف
-                        </div>
+                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">استفسار عن المنتجات</div>
+                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">طلب المساعدة</div>
+                        <div className="bg-blue-50 p-2 rounded border border-blue-100 text-sm">التحدث مع موظف</div>
                       </div>
                     </div>
                   </div>
                 )}
-                
+
                 {activeStep === 2 && (
                   <div className="h-full flex items-center justify-center">
                     <div className="flex gap-8">
@@ -155,21 +161,21 @@ export function VisualBuilder() {
                           <span className="font-medium">شرط</span>
                         </div>
                         <div className="bg-yellow-50 p-3 rounded border border-yellow-200 text-sm">
-                          إذا كان الاختيار = "استفسار عن المنتجات"
+                          إذا كان الاختيار = &quot;استفسار عن المنتجات&quot;
                         </div>
                         <div className="flex justify-between mt-3">
                           <div className="text-xs text-gray-500">نعم</div>
                           <div className="text-xs text-gray-500">لا</div>
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-col items-center">
                         <svg width="40" height="100" viewBox="0 0 40 100">
                           <path d="M0 50 L40 50" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4" />
                           <path d="M40 50 L35 45" stroke="#e5e7eb" strokeWidth="2" />
                           <path d="M40 50 L35 55" stroke="#e5e7eb" strokeWidth="2" />
                         </svg>
-                        
+
                         <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200 w-64">
                           <div className="flex items-center gap-2 mb-3">
                             <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
@@ -185,7 +191,7 @@ export function VisualBuilder() {
                     </div>
                   </div>
                 )}
-                
+
                 {activeStep === 3 && (
                   <div className="h-full flex items-center justify-center">
                     <div className="flex gap-8">
@@ -197,19 +203,21 @@ export function VisualBuilder() {
                           <span className="font-medium">استعلام قاعدة البيانات</span>
                         </div>
                         <div className="bg-purple-50 p-3 rounded border border-purple-200 text-sm font-mono text-xs">
-                          SELECT * FROM products<br />
-                          WHERE category = '{{category}}'<br />
+                          SELECT * FROM products
+                          <br />
+                          WHERE category = &quot;{"category"}&quot;
+                          <br />
                           LIMIT 5
                         </div>
                       </div>
-                      
+
                       <div className="flex flex-col items-center">
                         <svg width="40" height="100" viewBox="0 0 40 100">
                           <path d="M0 50 L40 50" stroke="#e5e7eb" strokeWidth="2" strokeDasharray="4" />
                           <path d="M40 50 L35 45" stroke="#e5e7eb" strokeWidth="2" />
                           <path d="M40 50 L35 55" stroke="#e5e7eb" strokeWidth="2" />
                         </svg>
-                        
+
                         <div className="bg-white rounded-lg p-4 shadow-md border border-gray-200 w-64">
                           <div className="flex items-center gap-2 mb-3">
                             <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
@@ -218,12 +226,12 @@ export function VisualBuilder() {
                             <span className="font-medium">عرض ديناميكي</span>
                           </div>
                           <div className="bg-gray-50 p-3 rounded border border-gray-200 text-sm">
-                            <div className="text-xs font-mono mb-2">{'{{#each products}}'}</div>
+                            <div className="text-xs font-mono mb-2">{"{{#each products}}"}</div>
                             <div className="bg-white p-2 rounded border border-gray-200 mb-2">
-                              <div className="text-xs font-bold">{'{{name}}'}</div>
-                              <div className="text-xs">{'{{price}} ريال'}</div>
+                              <div className="text-xs font-bold">{"{{name}}"}</div>
+                              <div className="text-xs">{"{{price}} ريال"}</div>
                             </div>
-                            <div className="text-xs font-mono">{'{{/each}}'}</div>
+                            <div className="text-xs font-mono">{"{{/each}}"}</div>
                           </div>
                         </div>
                       </div>
@@ -232,7 +240,7 @@ export function VisualBuilder() {
                 )}
               </div>
             </div>
-            
+
             {/* Elements Sidebar */}
             <div className="absolute top-24 left-6 bottom-24 w-16 bg-white rounded-xl shadow-lg border border-gray-200 flex flex-col items-center py-4 gap-4">
               <button className="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center">
@@ -271,26 +279,29 @@ export function VisualBuilder() {
               <span className="block text-google-blue">بسهولة ودون برمجة</span>
             </h3>
             <p className="text-lg text-gray-600 mb-8">
-              منشئ التدفقات المرئي يتيح لك تصميم روبوتات محادثة متطورة باستخدام واجهة السحب والإفلات البديهية، دون الحاجة لأي خبرة برمجية.
+              منشئ التدفقات المرئي يتيح لك تصميم روبوتات محادثة متطورة باستخدام واجهة السحب والإفلات البديهية، دون
+              الحاجة لأي خبرة برمجية.
             </p>
 
             {/* Steps */}
             <div className="space-y-6 mb-8">
               {steps.map((step, index) => (
-                <div 
+                <div
                   key={index}
                   className={`flex items-start gap-4 p-4 rounded-lg transition-colors ${
-                    activeStep === index ? 'bg-blue-50 border border-blue-100' : 'hover:bg-gray-50'
+                    activeStep === index ? "bg-blue-50 border border-blue-100" : "hover:bg-gray-50"
                   }`}
                   onClick={() => setActiveStep(index)}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeStep === index ? 'bg-google-blue text-white' : 'bg-gray-100 text-gray-500'
-                  }`}>
+                  <div
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      activeStep === index ? "bg-google-blue text-white" : "bg-gray-100 text-gray-500"
+                    }`}
+                  >
                     <step.icon className="h-5 w-5" />
                   </div>
                   <div>
-                    <h4 className={`font-medium ${activeStep === index ? 'text-google-blue' : 'text-gray-900'}`}>
+                    <h4 className={`font-medium ${activeStep === index ? "text-google-blue" : "text-gray-900"}`}>
                       {step.title}
                     </h4>
                     <p className="text-gray-600 mt-1">{step.description}</p>
@@ -301,17 +312,11 @@ export function VisualBuilder() {
 
             {/* Navigation */}
             <div className="flex justify-between">
-              <button 
-                onClick={prevStep}
-                className="flex items-center gap-2 text-gray-600 hover:text-gray-900"
-              >
+              <button onClick={prevStep} className="flex items-center gap-2 text-gray-600 hover:text-gray-900">
                 <ChevronRight className="h-5 w-5" />
                 <span>السابق</span>
               </button>
-              <button 
-                onClick={nextStep}
-                className="flex items-center gap-2 text-google-blue hover:text-blue-700"
-              >
+              <button onClick={nextStep} className="flex items-center gap-2 text-google-blue hover:text-blue-700">
                 <span>التالي</span>
                 <ChevronLeft className="h-5 w-5" />
               </button>

@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Palette, Upload, Monitor, Moon, Sun, 
-  Check, MessageSquare, Bell, Search,
-  User, Settings, Menu
-} from 'lucide-react';
+import React, { useState } from "react";
+// import { motion } from 'framer-motion';
+import {
+  // Palette,
+  Upload,
+  // Monitor,
+  Moon,
+  Sun,
+  // Check,
+  MessageSquare,
+  Bell,
+  Search,
+  User,
+  Settings,
+  Menu,
+} from "lucide-react";
 
 interface Theme {
   primary: string;
@@ -15,21 +24,21 @@ interface Theme {
 }
 
 const defaultTheme: Theme = {
-  primary: '#4285f4',
-  secondary: '#34a853',
-  accent: '#fbbc05',
-  background: '#ffffff',
-  text: '#1f2937'
+  primary: "#4285f4",
+  secondary: "#34a853",
+  accent: "#fbbc05",
+  background: "#ffffff",
+  text: "#1f2937",
 };
 
 export function WhitelabelDemo() {
   const [theme, setTheme] = useState<Theme>(defaultTheme);
-  const [logo, setLogo] = useState<string>('/logo.svg');
+  const [logo, setLogo] = useState<string>("/logo.svg");
   const [darkMode, setDarkMode] = useState(false);
-  const [companyName, setCompanyName] = useState('شركتك');
+  const [companyName, setCompanyName] = useState("شركتك");
 
   const updateTheme = (key: keyof Theme, value: string) => {
-    setTheme(prev => ({ ...prev, [key]: value }));
+    setTheme((prev) => ({ ...prev, [key]: value }));
   };
 
   return (
@@ -40,9 +49,7 @@ export function WhitelabelDemo() {
           <div className="space-y-8">
             <div>
               <h3 className="text-xl font-bold mb-4">تخصيص الواجهة</h3>
-              <p className="text-gray-600 mb-6">
-                جرب تخصيص واجهة المنصة بألوانك وهويتك التجارية
-              </p>
+              <p className="text-gray-600 mb-6">جرب تخصيص واجهة المنصة بألوانك وهويتك التجارية</p>
             </div>
 
             {/* Brand Settings */}
@@ -50,9 +57,7 @@ export function WhitelabelDemo() {
               <h4 className="font-semibold">الهوية التجارية</h4>
               <div className="space-y-3">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    اسم الشركة
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">اسم الشركة</label>
                   <input
                     type="text"
                     value={companyName}
@@ -61,18 +66,13 @@ export function WhitelabelDemo() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    الشعار
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">الشعار</label>
                   <div className="flex items-center gap-4">
                     <button className="flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-lg hover:bg-gray-50">
                       <Upload className="h-4 w-4" />
                       تحميل شعار
                     </button>
-                    <button 
-                      onClick={() => setLogo('/logo.svg')}
-                      className="text-sm text-google-blue hover:underline"
-                    >
+                    <button onClick={() => setLogo("/logo.svg")} className="text-sm text-google-blue hover:underline">
                       إعادة تعيين
                     </button>
                   </div>
@@ -87,10 +87,15 @@ export function WhitelabelDemo() {
                 {Object.entries(theme).map(([key, value]) => (
                   <div key={key}>
                     <label className="block text-sm font-medium text-gray-700 mb-1">
-                      {key === 'primary' ? 'اللون الرئيسي' :
-                       key === 'secondary' ? 'اللون الثانوي' :
-                       key === 'accent' ? 'لون التمييز' :
-                       key === 'background' ? 'الخلفية' : 'النص'}
+                      {key === "primary"
+                        ? "اللون الرئيسي"
+                        : key === "secondary"
+                        ? "اللون الثانوي"
+                        : key === "accent"
+                        ? "لون التمييز"
+                        : key === "background"
+                        ? "الخلفية"
+                        : "النص"}
                     </label>
                     <div className="flex items-center gap-2">
                       <input
@@ -118,9 +123,7 @@ export function WhitelabelDemo() {
                 <button
                   onClick={() => setDarkMode(false)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-                    !darkMode 
-                      ? 'bg-google-blue text-white' 
-                      : 'bg-gray-100 text-gray-700'
+                    !darkMode ? "bg-google-blue text-white" : "bg-gray-100 text-gray-700"
                   }`}
                 >
                   <Sun className="h-4 w-4" />
@@ -129,9 +132,7 @@ export function WhitelabelDemo() {
                 <button
                   onClick={() => setDarkMode(true)}
                   className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-                    darkMode 
-                      ? 'bg-google-blue text-white' 
-                      : 'bg-gray-100 text-gray-700'
+                    darkMode ? "bg-google-blue text-white" : "bg-gray-100 text-gray-700"
                   }`}
                 >
                   <Moon className="h-4 w-4" />
@@ -144,22 +145,20 @@ export function WhitelabelDemo() {
           {/* Preview Panel */}
           <div>
             <h3 className="text-xl font-bold mb-4">معاينة مباشرة</h3>
-            <p className="text-gray-600 mb-6">
-              شاهد كيف ستبدو منصتك بعد التخصيص
-            </p>
+            <p className="text-gray-600 mb-6">شاهد كيف ستبدو منصتك بعد التخصيص</p>
 
             {/* Dashboard Preview */}
-            <div 
+            <div
               className={`rounded-xl shadow-lg overflow-hidden transition-colors ${
-                darkMode ? 'bg-gray-900' : 'bg-white'
+                darkMode ? "bg-gray-900" : "bg-white"
               }`}
-              style={{ 
-                backgroundColor: darkMode ? '#1f2937' : theme.background,
-                color: darkMode ? '#f3f4f6' : theme.text
+              style={{
+                backgroundColor: darkMode ? "#1f2937" : theme.background,
+                color: darkMode ? "#f3f4f6" : theme.text,
               }}
             >
               {/* Header */}
-              <div className="border-b" style={{ borderColor: darkMode ? '#374151' : '#e5e7eb' }}>
+              <div className="border-b" style={{ borderColor: darkMode ? "#374151" : "#e5e7eb" }}>
                 <div className="px-6 py-4">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -192,16 +191,13 @@ export function WhitelabelDemo() {
                       type="text"
                       placeholder="بحث..."
                       className="w-full pl-4 pr-10 py-2 rounded-lg border"
-                      style={{ 
-                        backgroundColor: darkMode ? '#374151' : '#f9fafb',
-                        borderColor: darkMode ? '#4b5563' : '#e5e7eb'
+                      style={{
+                        backgroundColor: darkMode ? "#374151" : "#f9fafb",
+                        borderColor: darkMode ? "#4b5563" : "#e5e7eb",
                       }}
                     />
                   </div>
-                  <button 
-                    className="px-4 py-2 rounded-lg text-white"
-                    style={{ backgroundColor: theme.primary }}
-                  >
+                  <button className="px-4 py-2 rounded-lg text-white" style={{ backgroundColor: theme.primary }}>
                     محادثة جديدة
                   </button>
                 </div>
@@ -209,16 +205,16 @@ export function WhitelabelDemo() {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-3 gap-4 mb-6">
                   {[
-                    { label: 'المحادثات النشطة', value: '24' },
-                    { label: 'العملاء الجدد', value: '156' },
-                    { label: 'معدل الرضا', value: '98%' }
+                    { label: "المحادثات النشطة", value: "24" },
+                    { label: "العملاء الجدد", value: "156" },
+                    { label: "معدل الرضا", value: "98%" },
                   ].map((stat, index) => (
                     <div
                       key={index}
                       className="p-4 rounded-lg"
-                      style={{ 
-                        backgroundColor: darkMode ? '#374151' : '#f9fafb',
-                        borderColor: darkMode ? '#4b5563' : '#e5e7eb'
+                      style={{
+                        backgroundColor: darkMode ? "#374151" : "#f9fafb",
+                        borderColor: darkMode ? "#4b5563" : "#e5e7eb",
                       }}
                     >
                       <div className="text-2xl font-bold" style={{ color: theme.primary }}>
@@ -230,11 +226,11 @@ export function WhitelabelDemo() {
                 </div>
 
                 {/* Chat Preview */}
-                <div 
+                <div
                   className="rounded-lg p-4"
-                  style={{ 
-                    backgroundColor: darkMode ? '#374151' : '#f9fafb',
-                    borderColor: darkMode ? '#4b5563' : '#e5e7eb'
+                  style={{
+                    backgroundColor: darkMode ? "#374151" : "#f9fafb",
+                    borderColor: darkMode ? "#4b5563" : "#e5e7eb",
                   }}
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -243,17 +239,16 @@ export function WhitelabelDemo() {
                   </div>
                   <div className="space-y-2">
                     {[
-                      'مرحباً، كيف يمكنني المساعدة؟',
-                      'أريد معرفة المزيد عن خدماتكم',
-                      'بالتأكيد! يسعدني مساعدتك...'
+                      "مرحباً، كيف يمكنني المساعدة؟",
+                      "أريد معرفة المزيد عن خدماتكم",
+                      "بالتأكيد! يسعدني مساعدتك...",
                     ].map((message, index) => (
                       <div
                         key={index}
                         className="p-3 rounded-lg"
-                        style={{ 
-                          backgroundColor: index % 2 === 0 
-                            ? (darkMode ? '#4b5563' : '#ffffff')
-                            : (darkMode ? '#1f2937' : '#f3f4f6')
+                        style={{
+                          backgroundColor:
+                            index % 2 === 0 ? (darkMode ? "#4b5563" : "#ffffff") : darkMode ? "#1f2937" : "#f3f4f6",
                         }}
                       >
                         {message}

@@ -102,7 +102,7 @@ export function PipelineManagement() {
           {/* Pipeline Stages */}
           <div className="p-6">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-              {pipelines[activePipeline].stages.map((stage, index) => (
+              {pipelines[activePipeline as keyof typeof pipelines].stages.map((stage, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

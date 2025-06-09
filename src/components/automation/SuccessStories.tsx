@@ -1,11 +1,25 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Star, ShoppingCart, MessageSquare, Users, 
-  ArrowRight, CheckCircle2, ChevronLeft, ChevronRight,
-  Building2, Globe, Rocket, Zap, Clock, BarChart,
-  DollarSign, TrendingUp, UserCheck, Target
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Star,
+  ShoppingCart,
+  MessageSquare,
+  Users,
+  ArrowRight,
+  CheckCircle2,
+  ChevronLeft,
+  ChevronRight,
+  Building2,
+  Globe,
+  Rocket,
+  Zap,
+  Clock,
+  BarChart,
+  DollarSign,
+  TrendingUp,
+  UserCheck,
+  Target,
+} from "lucide-react";
 
 // Sample success stories data
 const successStories = [
@@ -14,26 +28,18 @@ const successStories = [
     logo: "https://upload.wikimedia.org/wikipedia/commons/5/5e/STC_Logo.svg",
     industry: "الاتصالات",
     description: "أتمتة عمليات خدمة العملاء وتحسين تجربة المستخدم",
-    results: [
-      "تقليل وقت الاستجابة بنسبة 70%",
-      "زيادة رضا العملاء بنسبة 85%",
-      "توفير 45% من تكاليف خدمة العملاء"
-    ],
-    automations: [
-      "أتمتة الردود على الاستفسارات الشائعة",
-      "متابعة حالة الطلبات والشكاوى",
-      "إدارة طلبات الدعم الفني"
-    ],
+    results: ["تقليل وقت الاستجابة بنسبة 70%", "زيادة رضا العملاء بنسبة 85%", "توفير 45% من تكاليف خدمة العملاء"],
+    automations: ["أتمتة الردود على الاستفسارات الشائعة", "متابعة حالة الطلبات والشكاوى", "إدارة طلبات الدعم الفني"],
     metrics: {
       responseTime: "2.5 دقيقة",
       satisfaction: "92%",
-      automation: "80%"
+      automation: "80%",
     },
     testimonial: {
       quote: "ساعدتنا أتمتة كرزون في تحسين كفاءة خدمة العملاء بشكل كبير وتقليل التكاليف مع الحفاظ على جودة الخدمة",
       author: "أحمد العتيبي",
-      position: "مدير خدمة العملاء"
-    }
+      position: "مدير خدمة العملاء",
+    },
   },
   {
     company: "بنك الراجحي",
@@ -43,23 +49,19 @@ const successStories = [
     results: [
       "زيادة استخدام الخدمات الرقمية بنسبة 60%",
       "تقليل الأخطاء البشرية بنسبة 95%",
-      "تحسين معدل التحويل بنسبة 40%"
+      "تحسين معدل التحويل بنسبة 40%",
     ],
-    automations: [
-      "أتمتة فتح الحسابات الجديدة",
-      "معالجة طلبات القروض",
-      "إدارة الاستفسارات المالية"
-    ],
+    automations: ["أتمتة فتح الحسابات الجديدة", "معالجة طلبات القروض", "إدارة الاستفسارات المالية"],
     metrics: {
       digitalAdoption: "85%",
       errorReduction: "95%",
-      processSpeed: "75%"
+      processSpeed: "75%",
     },
     testimonial: {
       quote: "مكنتنا منصة كرزون من تقديم خدمات مصرفية رقمية متطورة مع الحفاظ على أعلى معايير الأمان والدقة",
       author: "سارة الشمري",
-      position: "رئيس القنوات الرقمية"
-    }
+      position: "رئيس القنوات الرقمية",
+    },
   },
   {
     company: "مجموعة صافولا",
@@ -69,24 +71,20 @@ const successStories = [
     results: [
       "تحسين كفاءة سلسلة التوريد بنسبة 55%",
       "تقليل تكاليف التشغيل بنسبة 35%",
-      "زيادة دقة التنبؤ بالطلب بنسبة 80%"
+      "زيادة دقة التنبؤ بالطلب بنسبة 80%",
     ],
-    automations: [
-      "أتمتة إدارة المخزون",
-      "تتبع الشحنات والتوصيل",
-      "إدارة طلبات الموردين"
-    ],
+    automations: ["أتمتة إدارة المخزون", "تتبع الشحنات والتوصيل", "إدارة طلبات الموردين"],
     metrics: {
       efficiency: "95%",
       accuracy: "98%",
-      cost: "-35%"
+      cost: "-35%",
     },
     testimonial: {
       quote: "ساعدتنا أتمتة العمليات في تحسين الكفاءة التشغيلية وتقليل التكاليف مع ضمان توفر المنتجات في الوقت المناسب",
       author: "خالد السعيد",
-      position: "مدير العمليات"
-    }
-  }
+      position: "مدير العمليات",
+    },
+  },
 ];
 
 export function SuccessStories() {
@@ -110,9 +108,7 @@ export function SuccessStories() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              قصص نجاح عملائنا
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">قصص نجاح عملائنا</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               اكتشف كيف ساعدت حلول الأتمتة من كرزون الشركات في تحسين كفاءة عملياتها وتحقيق نتائج أعمال ملموسة
             </p>
@@ -133,8 +129,8 @@ export function SuccessStories() {
               {/* Story Content */}
               <div className="p-8">
                 <div className="flex items-center gap-4 mb-6">
-                  <img 
-                    src={successStories[activeStory].logo} 
+                  <img
+                    src={successStories[activeStory].logo}
                     alt={successStories[activeStory].company}
                     className="h-12 object-contain"
                   />
@@ -144,9 +140,7 @@ export function SuccessStories() {
                   </div>
                 </div>
 
-                <p className="text-lg text-gray-700 mb-6">
-                  {successStories[activeStory].description}
-                </p>
+                <p className="text-lg text-gray-700 mb-6">{successStories[activeStory].description}</p>
 
                 <div className="space-y-6 mb-8">
                   {/* Results */}
@@ -188,15 +182,23 @@ export function SuccessStories() {
                     <div key={index} className="bg-gray-50 rounded-lg p-4 text-center">
                       <div className="text-2xl font-bold text-gray-900">{value}</div>
                       <div className="text-sm text-gray-600">
-                        {key === 'responseTime' ? 'وقت الاستجابة' :
-                         key === 'satisfaction' ? 'رضا العملاء' :
-                         key === 'automation' ? 'نسبة الأتمتة' :
-                         key === 'digitalAdoption' ? 'التحول الرقمي' :
-                         key === 'errorReduction' ? 'تقليل الأخطاء' :
-                         key === 'processSpeed' ? 'سرعة العمليات' :
-                         key === 'efficiency' ? 'الكفاءة' :
-                         key === 'accuracy' ? 'الدقة' :
-                         'التكلفة'}
+                        {key === "responseTime"
+                          ? "وقت الاستجابة"
+                          : key === "satisfaction"
+                          ? "رضا العملاء"
+                          : key === "automation"
+                          ? "نسبة الأتمتة"
+                          : key === "digitalAdoption"
+                          ? "التحول الرقمي"
+                          : key === "errorReduction"
+                          ? "تقليل الأخطاء"
+                          : key === "processSpeed"
+                          ? "سرعة العمليات"
+                          : key === "efficiency"
+                          ? "الكفاءة"
+                          : key === "accuracy"
+                          ? "الدقة"
+                          : "التكلفة"}
                       </div>
                     </div>
                   ))}
@@ -248,7 +250,7 @@ export function SuccessStories() {
               <ChevronLeft className="h-6 w-6 text-gray-700" />
             </button>
           </div>
-          
+
           <div className="absolute top-1/2 -translate-y-1/2 right-4">
             <button
               onClick={nextStory}
@@ -266,9 +268,7 @@ export function SuccessStories() {
               key={index}
               onClick={() => setActiveStory(index)}
               className={`w-2.5 h-2.5 rounded-full transition-all ${
-                index === activeStory 
-                  ? 'bg-purple-600 w-8' 
-                  : 'bg-gray-300 hover:bg-gray-400'
+                index === activeStory ? "bg-purple-600 w-8" : "bg-gray-300 hover:bg-gray-400"
               }`}
               aria-label={`Story ${index + 1}`}
             />
@@ -277,12 +277,8 @@ export function SuccessStories() {
 
         {/* CTA Section */}
         <div className="mt-16 text-center">
-          <h3 className="text-2xl font-bold mb-4">
-            جاهز لبدء رحلة الأتمتة الخاصة بك؟
-          </h3>
-          <p className="text-gray-600 mb-8">
-            انضم إلى مئات الشركات الناجحة التي تستخدم كرزون لأتمتة عملياتها
-          </p>
+          <h3 className="text-2xl font-bold mb-4">جاهز لبدء رحلة الأتمتة الخاصة بك؟</h3>
+          <p className="text-gray-600 mb-8">انضم إلى مئات الشركات الناجحة التي تستخدم كرزون لأتمتة عملياتها</p>
           <div className="flex flex-wrap justify-center gap-4">
             <button className="bg-purple-600 text-white px-8 py-4 rounded-xl font-semibold hover:bg-purple-700 transition-colors">
               ابدأ الآن مجاناً
@@ -298,7 +294,7 @@ export function SuccessStories() {
 }
 
 // Add Workflow icon component since it's not imported
-function Workflow(props) {
+function Workflow(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

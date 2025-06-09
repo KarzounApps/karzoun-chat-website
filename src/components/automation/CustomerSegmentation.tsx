@@ -1,21 +1,54 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, Filter, ArrowRight, CheckCircle2, 
-  User, Calendar, Clock, Tag, MessageSquare,
-  ShoppingCart, DollarSign, MapPin, Globe,
-  BarChart, Database, Layers, Workflow,
-  Percent, Target, UserCheck, FileText, Mail,
-  Send, Smartphone, Heart, Star, Package, Truck,
-  CreditCard, Gift, Repeat, AlertCircle, Plus,
-  Search, ChevronDown, Settings, MoreHorizontal,
-  Edit, Trash2, Download, Share2
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Users,
+  Filter,
+  ArrowRight,
+  CheckCircle2,
+  User,
+  Calendar,
+  Clock,
+  Tag,
+  MessageSquare,
+  ShoppingCart,
+  DollarSign,
+  MapPin,
+  Globe,
+  BarChart,
+  Database,
+  Layers,
+  Workflow,
+  Percent,
+  Target,
+  UserCheck,
+  FileText,
+  Mail,
+  Send,
+  Smartphone,
+  Heart,
+  Star,
+  Package,
+  Truck,
+  CreditCard,
+  Gift,
+  Repeat,
+  AlertCircle,
+  Plus,
+  Search,
+  ChevronDown,
+  Settings,
+  MoreHorizontal,
+  Edit,
+  Trash2,
+  Download,
+  Share2,
+  Zap,
+} from "lucide-react";
 
 export function CustomerSegmentation() {
-  const [activeSegment, setActiveSegment] = useState(null);
+  const [activeSegment, setActiveSegment] = useState<(typeof segments)[number] | null>(null);
   const [showFilters, setShowFilters] = useState(false);
-  
+
   // Sample segments data
   const segments = [
     {
@@ -27,13 +60,9 @@ export function CustomerSegmentation() {
       color: "bg-green-500",
       conditions: [
         { field: "آخر عملية شراء", operator: "أقل من", value: "30 يوم" },
-        { field: "عدد المشتريات", operator: "أكبر من", value: "1" }
+        { field: "عدد المشتريات", operator: "أكبر من", value: "1" },
       ],
-      actions: [
-        "إرسال عروض خاصة",
-        "دعوة لبرنامج الولاء",
-        "استطلاع رضا العملاء"
-      ]
+      actions: ["إرسال عروض خاصة", "دعوة لبرنامج الولاء", "استطلاع رضا العملاء"],
     },
     {
       id: 2,
@@ -44,13 +73,9 @@ export function CustomerSegmentation() {
       color: "bg-blue-500",
       conditions: [
         { field: "عدد الزيارات", operator: "أكبر من", value: "3" },
-        { field: "عدد المشتريات", operator: "يساوي", value: "0" }
+        { field: "عدد المشتريات", operator: "يساوي", value: "0" },
       ],
-      actions: [
-        "إرسال رمز خصم ترحيبي",
-        "دعوة لمتابعة وسائل التواصل",
-        "عرض المنتجات المشابهة"
-      ]
+      actions: ["إرسال رمز خصم ترحيبي", "دعوة لمتابعة وسائل التواصل", "عرض المنتجات المشابهة"],
     },
     {
       id: 3,
@@ -61,13 +86,9 @@ export function CustomerSegmentation() {
       color: "bg-yellow-500",
       conditions: [
         { field: "آخر تفاعل", operator: "أكبر من", value: "90 يوم" },
-        { field: "حالة العضوية", operator: "يساوي", value: "نشط" }
+        { field: "حالة العضوية", operator: "يساوي", value: "نشط" },
       ],
-      actions: [
-        "حملة إعادة تنشيط",
-        "استطلاع رأي",
-        "عرض خاص للعودة"
-      ]
+      actions: ["حملة إعادة تنشيط", "استطلاع رأي", "عرض خاص للعودة"],
     },
     {
       id: 4,
@@ -78,43 +99,18 @@ export function CustomerSegmentation() {
       color: "bg-purple-500",
       conditions: [
         { field: "متوسط قيمة الطلب", operator: "أكبر من", value: "1000 ريال" },
-        { field: "عدد المشتريات", operator: "أكبر من", value: "3" }
+        { field: "عدد المشتريات", operator: "أكبر من", value: "3" },
       ],
-      actions: [
-        "دعوة لبرنامج VIP",
-        "عروض حصرية",
-        "خدمة عملاء مميزة"
-      ]
-    }
+      actions: ["دعوة لبرنامج VIP", "عروض حصرية", "خدمة عملاء مميزة"],
+    },
   ];
 
   // Sample filter options
   const filterOptions = {
-    behavior: [
-      "نشط",
-      "غير نشط",
-      "محتمل",
-      "متكرر",
-      "جديد"
-    ],
-    source: [
-      "موقع إلكتروني",
-      "تطبيق جوال",
-      "متجر فعلي",
-      "وسائل تواصل"
-    ],
-    location: [
-      "الرياض",
-      "جدة",
-      "الدمام",
-      "مكة",
-      "المدينة"
-    ],
-    value: [
-      "عالي القيمة",
-      "متوسط القيمة",
-      "منخفض القيمة"
-    ]
+    behavior: ["نشط", "غير نشط", "محتمل", "متكرر", "جديد"],
+    source: ["موقع إلكتروني", "تطبيق جوال", "متجر فعلي", "وسائل تواصل"],
+    location: ["الرياض", "جدة", "الدمام", "مكة", "المدينة"],
+    value: ["عالي القيمة", "متوسط القيمة", "منخفض القيمة"],
   };
 
   return (
@@ -127,9 +123,7 @@ export function CustomerSegmentation() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              تقسيم العملاء الذكي
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">تقسيم العملاء الذكي</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               قم بتقسيم عملائك إلى شرائح ذكية بناءً على سلوكهم وتفضيلاتهم، وأرسل رسائل مخصصة لكل شريحة
             </p>
@@ -146,28 +140,28 @@ export function CustomerSegmentation() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={`bg-white rounded-xl p-6 shadow-lg border border-gray-200 cursor-pointer transition-all ${
-                activeSegment?.id === segment.id ? 'ring-2 ring-purple-500' : ''
+                activeSegment?.id === segment.id ? "ring-2 ring-purple-500" : ""
               }`}
               onClick={() => setActiveSegment(segment)}
             >
               <div className="flex items-center justify-between mb-4">
                 <div className={`w-12 h-12 ${segment.color} bg-opacity-10 rounded-lg flex items-center justify-center`}>
-                  <Users className={`h-6 w-6 ${segment.color.replace('bg-', 'text-')}`} />
+                  <Users className={`h-6 w-6 ${segment.color.replace("bg-", "text-")}`} />
                 </div>
-                <div className={`text-sm px-2 py-1 rounded-full ${
-                  segment.growth.startsWith('+') 
-                    ? 'bg-green-100 text-green-700'
-                    : 'bg-red-100 text-red-700'
-                }`}>
+                <div
+                  className={`text-sm px-2 py-1 rounded-full ${
+                    segment.growth.startsWith("+") ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"
+                  }`}
+                >
                   {segment.growth}
                 </div>
               </div>
-              
+
               <h3 className="text-lg font-semibold mb-1">{segment.name}</h3>
               <p className="text-sm text-gray-600 mb-3">{segment.description}</p>
-              
+
               <div className="flex items-center justify-between">
-                <div className="text-2xl font-bold">{segment.count.toLocaleString('ar-SA')}</div>
+                <div className="text-2xl font-bold">{segment.count.toLocaleString("ar-SA")}</div>
                 <button className="text-purple-600 hover:text-purple-700">
                   <ArrowRight className="h-5 w-5" />
                 </button>
@@ -182,7 +176,7 @@ export function CustomerSegmentation() {
             <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-bold">منشئ الشرائح</h3>
               <div className="flex items-center gap-3">
-                <button 
+                <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center gap-2 bg-gray-100 hover:bg-gray-200 px-4 py-2 rounded-lg text-sm transition-colors"
                 >
@@ -195,11 +189,11 @@ export function CustomerSegmentation() {
                 </button>
               </div>
             </div>
-            
+
             {showFilters && (
               <motion.div
                 initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
+                animate={{ opacity: 1, height: "auto" }}
                 exit={{ opacity: 0, height: 0 }}
                 className="bg-gray-50 rounded-lg p-4 mb-6"
               >
@@ -207,15 +201,20 @@ export function CustomerSegmentation() {
                   {Object.entries(filterOptions).map(([category, options]) => (
                     <div key={category}>
                       <label className="block text-sm font-medium text-gray-700 mb-2">
-                        {category === 'behavior' ? 'السلوك' :
-                         category === 'source' ? 'المصدر' :
-                         category === 'location' ? 'الموقع' :
-                         'القيمة'}
+                        {category === "behavior"
+                          ? "السلوك"
+                          : category === "source"
+                          ? "المصدر"
+                          : category === "location"
+                          ? "الموقع"
+                          : "القيمة"}
                       </label>
                       <select className="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm">
                         <option value="">اختر {category}</option>
                         {options.map((option) => (
-                          <option key={option} value={option}>{option}</option>
+                          <option key={option} value={option}>
+                            {option}
+                          </option>
                         ))}
                       </select>
                     </div>
@@ -223,7 +222,7 @@ export function CustomerSegmentation() {
                 </div>
               </motion.div>
             )}
-            
+
             <div className="flex items-center gap-4">
               <div className="relative flex-1">
                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-gray-400" />
@@ -246,7 +245,7 @@ export function CustomerSegmentation() {
               </div>
             </div>
           </div>
-          
+
           {/* Segment Details */}
           {activeSegment && (
             <div className="p-6">
@@ -257,7 +256,7 @@ export function CustomerSegmentation() {
                     <Filter className="h-5 w-5 text-purple-600" />
                     <span>شروط الشريحة</span>
                   </h4>
-                  
+
                   <div className="space-y-4">
                     {activeSegment.conditions.map((condition, index) => (
                       <div key={index} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
@@ -282,21 +281,21 @@ export function CustomerSegmentation() {
                         </div>
                       </div>
                     ))}
-                    
+
                     <button className="w-full flex items-center justify-center gap-2 p-3 border border-dashed border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                       <Plus className="h-4 w-4" />
                       <span>إضافة شرط جديد</span>
                     </button>
                   </div>
                 </div>
-                
+
                 {/* Actions */}
                 <div>
                   <h4 className="font-semibold mb-4 flex items-center gap-2">
                     <Zap className="h-5 w-5 text-purple-600" />
                     <span>الإجراءات التلقائية</span>
                   </h4>
-                  
+
                   <div className="space-y-4">
                     {activeSegment.actions.map((action, index) => (
                       <div key={index} className="bg-gray-50 rounded-lg p-4 flex items-center justify-between">
@@ -316,7 +315,7 @@ export function CustomerSegmentation() {
                         </div>
                       </div>
                     ))}
-                    
+
                     <button className="w-full flex items-center justify-center gap-2 p-3 border border-dashed border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 transition-colors">
                       <Plus className="h-4 w-4" />
                       <span>إضافة إجراء جديد</span>
@@ -324,27 +323,27 @@ export function CustomerSegmentation() {
                   </div>
                 </div>
               </div>
-              
+
               {/* Analytics */}
               <div className="mt-8 pt-8 border-t border-gray-200">
                 <h4 className="font-semibold mb-4 flex items-center gap-2">
                   <BarChart className="h-5 w-5 text-purple-600" />
                   <span>تحليلات الشريحة</span>
                 </h4>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="text-sm text-gray-600 mb-1">معدل التفاعل</div>
                     <div className="text-2xl font-bold text-purple-600">85%</div>
                     <div className="text-sm text-green-600">↑ 12% من الشهر الماضي</div>
                   </div>
-                  
+
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="text-sm text-gray-600 mb-1">متوسط قيمة الطلب</div>
                     <div className="text-2xl font-bold text-purple-600">750 ريال</div>
                     <div className="text-sm text-green-600">↑ 8% من الشهر الماضي</div>
                   </div>
-                  
+
                   <div className="bg-gray-50 rounded-lg p-4">
                     <div className="text-sm text-gray-600 mb-1">معدل الاحتفاظ</div>
                     <div className="text-2xl font-bold text-purple-600">92%</div>
@@ -362,18 +361,18 @@ export function CustomerSegmentation() {
             {
               icon: Target,
               title: "استهداف دقيق",
-              description: "تقسيم العملاء بناءً على عشرات المعايير المختلفة"
+              description: "تقسيم العملاء بناءً على عشرات المعايير المختلفة",
             },
             {
               icon: Workflow,
               title: "أتمتة ذكية",
-              description: "تنفيذ إجراءات تلقائية لكل شريحة من العملاء"
+              description: "تنفيذ إجراءات تلقائية لكل شريحة من العملاء",
             },
             {
               icon: BarChart,
               title: "تحليلات متقدمة",
-              description: "تحليل أداء كل شريحة وتحسين الاستهداف"
-            }
+              description: "تحليل أداء كل شريحة وتحسين الاستهداف",
+            },
           ].map((feature, index) => (
             <motion.div
               key={index}

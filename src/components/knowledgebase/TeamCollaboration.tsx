@@ -1,12 +1,25 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Users, MessageSquare, FileText, Clock,
-  User, Edit, CheckCircle2, Lock, Globe,
-  Share2, UserPlus, Settings2, History,
-  Bell, Calendar, ArrowRight, Shield,
-  Plus
-} from 'lucide-react';
+import React from "react";
+import { motion } from "framer-motion";
+import {
+  Users,
+  MessageSquare,
+  FileText,
+  Clock,
+  User,
+  Edit,
+  CheckCircle2,
+  Lock,
+  Globe,
+  Share2,
+  UserPlus,
+  Settings2,
+  History,
+  Bell,
+  Calendar,
+  ArrowRight,
+  Shield,
+  Plus,
+} from "lucide-react";
 
 export function TeamCollaboration() {
   return (
@@ -19,9 +32,7 @@ export function TeamCollaboration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              تعاون فريق فعال
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">تعاون فريق فعال</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               أدوات متكاملة لتمكين فريقك من العمل معاً بكفاءة على إنشاء وتحديث محتوى قاعدة المعرفة
             </p>
@@ -67,16 +78,14 @@ export function TeamCollaboration() {
                       <span className="text-sm text-gray-500">قام بتحديث مقال</span>
                     </div>
                     <p className="text-sm text-gray-600 mt-1">
-                      "إعداد روبوت المحادثة" - تحديث إرشادات التكوين
+                      &quot;إعداد روبوت المحادثة&quot; - تحديث إرشادات التكوين
                     </p>
                     <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
                       <span className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         قبل 5 دقائق
                       </span>
-                      <button className="text-blue-600 hover:text-blue-700">
-                        عرض التغييرات
-                      </button>
+                      <button className="text-blue-600 hover:text-blue-700">عرض التغييرات</button>
                     </div>
                   </div>
                 </div>
@@ -90,9 +99,7 @@ export function TeamCollaboration() {
                       <span className="font-medium">سارة أحمد</span>
                       <span className="text-sm text-gray-500">راجعت واعتمدت التغييرات</span>
                     </div>
-                    <p className="text-sm text-gray-600 mt-1">
-                      "دليل المستخدم الأساسي" - جاهز للنشر
-                    </p>
+                    <p className="text-sm text-gray-600 mt-1">&quot;دليل المستخدم الأساسي&quot; - جاهز للنشر</p>
                     <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
                       <span className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
@@ -112,16 +119,14 @@ export function TeamCollaboration() {
                       <span className="text-sm text-gray-500">أضاف تعليقاً</span>
                     </div>
                     <p className="text-sm text-gray-600 mt-1">
-                      "يجب إضافة المزيد من الأمثلة التوضيحية في قسم التكامل مع API"
+                      &quot;يجب إضافة المزيد من الأمثلة التوضيحية في قسم التكامل مع API&quot;
                     </p>
                     <div className="flex items-center gap-4 mt-2 text-xs text-gray-500">
                       <span className="flex items-center gap-1">
                         <Clock className="h-3 w-3" />
                         قبل ساعة
                       </span>
-                      <button className="text-blue-600 hover:text-blue-700">
-                        رد
-                      </button>
+                      <button className="text-blue-600 hover:text-blue-700">رد</button>
                     </div>
                   </div>
                 </div>
@@ -167,23 +172,23 @@ export function TeamCollaboration() {
                 {
                   icon: Users,
                   title: "إدارة الأدوار والصلاحيات",
-                  description: "تحكم دقيق في صلاحيات كل عضو في الفريق"
+                  description: "تحكم دقيق في صلاحيات كل عضو في الفريق",
                 },
                 {
                   icon: History,
                   title: "سجل التغييرات",
-                  description: "تتبع كامل لجميع التعديلات مع إمكانية التراجع"
+                  description: "تتبع كامل لجميع التعديلات مع إمكانية التراجع",
                 },
                 {
                   icon: MessageSquare,
                   title: "تعليقات وملاحظات",
-                  description: "نظام تعليقات متكامل للمناقشة والمراجعة"
+                  description: "نظام تعليقات متكامل للمناقشة والمراجعة",
                 },
                 {
                   icon: Bell,
                   title: "إشعارات مخصصة",
-                  description: "تنبيهات فورية للتغييرات والمهام الجديدة"
-                }
+                  description: "تنبيهات فورية للتغييرات والمهام الجديدة",
+                },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
@@ -215,7 +220,7 @@ export function TeamCollaboration() {
                   "تشفير المحتوى والبيانات",
                   "سجل تدقيق شامل",
                   "نسخ احتياطي تلقائي",
-                  "حماية ضد التعديلات غير المصرح بها"
+                  "حماية ضد التعديلات غير المصرح بها",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-[#2ca24c] flex-shrink-0" />
@@ -234,32 +239,20 @@ export function TeamCollaboration() {
               icon: Calendar,
               title: "جدولة المراجعات",
               description: "جدولة مراجعات دورية للمحتوى لضمان دقته وحداثته",
-              features: [
-                "تذكيرات تلقائية",
-                "تعيين مراجعين",
-                "متابعة حالة المراجعة"
-              ]
+              features: ["تذكيرات تلقائية", "تعيين مراجعين", "متابعة حالة المراجعة"],
             },
             {
               icon: Share2,
               title: "مشاركة المعرفة",
               description: "أدوات متقدمة لمشاركة المحتوى داخلياً وخارجياً",
-              features: [
-                "روابط مشاركة مخصصة",
-                "تحكم في صلاحيات المشاركة",
-                "تتبع المشاهدات"
-              ]
+              features: ["روابط مشاركة مخصصة", "تحكم في صلاحيات المشاركة", "تتبع المشاهدات"],
             },
             {
               icon: ArrowRight,
               title: "تدفق العمل المخصص",
               description: "إنشاء وتخصيص تدفقات عمل لإدارة المحتوى",
-              features: [
-                "خطوات موافقة مخصصة",
-                "قواعد نشر تلقائية",
-                "إشعارات مخصصة"
-              ]
-            }
+              features: ["خطوات موافقة مخصصة", "قواعد نشر تلقائية", "إشعارات مخصصة"],
+            },
           ].map((feature, index) => (
             <motion.div
               key={index}

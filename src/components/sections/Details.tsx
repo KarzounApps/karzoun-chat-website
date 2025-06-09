@@ -1,22 +1,37 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Brain, Clock, Gauge, MessagesSquare, 
-  MessageSquare, Bot, BarChart, Users, 
-  Facebook, Instagram, Mail, Send, 
-  Smartphone, LineChart, PieChart, AreaChart,
-  CheckCircle2, ArrowRight, Zap, Globe
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import {
+  Brain,
+  Clock,
+  Gauge,
+  MessagesSquare,
+  MessageSquare,
+  Bot,
+  BarChart,
+  Users,
+  Facebook,
+  Instagram,
+  Mail,
+  Send,
+  Smartphone,
+  LineChart,
+  PieChart,
+  AreaChart,
+  CheckCircle2,
+  ArrowRight,
+  Zap,
+  Globe,
+} from "lucide-react";
 
 export function Details() {
-  const [activeFeature, setActiveFeature] = useState('omnichannel');
+  const [activeFeature, setActiveFeature] = useState("omnichannel");
 
   // Feature data
   const features = {
     omnichannel: {
       icon: MessageSquare,
-      title: 'صندوق وارد متعدد المنصات',
-      description: 'استقبل رسائل عملائك من خلال أشهر المنصات في لوحة واحدة',
+      title: "صندوق وارد متعدد المنصات",
+      description: "استقبل رسائل عملائك من خلال أشهر المنصات في لوحة واحدة",
       content: (
         <div className="bg-white rounded-xl h-full p-6 shadow-sm border border-gray-100">
           <div className="flex flex-col h-full">
@@ -24,7 +39,7 @@ export function Details() {
               <MessageSquare className="h-8 w-8 text-google-blue" />
               <h3 className="text-xl font-semibold">صندوق وارد موحد</h3>
             </div>
-            
+
             <div className="space-y-4 flex-grow">
               {/* Platform Icons */}
               <div className="flex flex-wrap gap-3 mb-4">
@@ -53,7 +68,7 @@ export function Details() {
                   <span>منصات أخرى</span>
                 </div>
               </div>
-              
+
               {/* Conversation Preview */}
               <div className="border border-gray-100 rounded-lg overflow-hidden">
                 <div className="bg-gray-50 px-4 py-2 border-b border-gray-100 flex items-center justify-between">
@@ -63,7 +78,7 @@ export function Details() {
                   </div>
                   <div className="text-xs text-gray-500">قبل 5 دقائق</div>
                 </div>
-                
+
                 <div className="p-4 space-y-3">
                   <div className="flex gap-3">
                     <div className="w-8 h-8 rounded-full bg-gray-200 flex-shrink-0"></div>
@@ -71,7 +86,7 @@ export function Details() {
                       مرحباً، أريد الاستفسار عن المنتج الجديد الذي أعلنتم عنه
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-3 justify-end">
                     <div className="bg-blue-50 rounded-lg p-3 text-sm max-w-[80%] rounded-tl-none">
                       أهلاً بك! يسعدني تقديم كافة المعلومات عن المنتج الجديد. هل هناك جانب معين تود معرفة المزيد عنه؟
@@ -82,14 +97,17 @@ export function Details() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-4 text-sm text-gray-600">
-                <p>تواصل مع عملائك عبر جميع القنوات من مكان واحد، مع إمكانية تتبع المحادثات وتحويلها بين أعضاء الفريق بسهولة.</p>
+                <p>
+                  تواصل مع عملائك عبر جميع القنوات من مكان واحد، مع إمكانية تتبع المحادثات وتحويلها بين أعضاء الفريق
+                  بسهولة.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      )
+      ),
     },
     monitoring: {
       icon: Clock,
@@ -102,7 +120,7 @@ export function Details() {
               <Clock className="h-8 w-8 text-google-blue" />
               <h3 className="text-xl font-semibold">مراقبة المحادثات</h3>
             </div>
-            
+
             <div className="space-y-4 flex-grow">
               {/* Monitoring Dashboard */}
               <div className="bg-gray-50 rounded-lg p-4">
@@ -110,7 +128,7 @@ export function Details() {
                   <h4 className="font-medium text-gray-800">لوحة المراقبة</h4>
                   <div className="text-xs text-gray-500">تحديث مباشر</div>
                 </div>
-                
+
                 <div className="grid grid-cols-3 gap-3 mb-4">
                   <div className="bg-white p-3 rounded-lg shadow-sm">
                     <div className="text-xs text-gray-500 mb-1">محادثات نشطة</div>
@@ -125,7 +143,7 @@ export function Details() {
                     <div className="text-xl font-bold text-green-500">1.2 د</div>
                   </div>
                 </div>
-                
+
                 {/* Agent Status */}
                 <div className="border border-gray-200 rounded-lg overflow-hidden">
                   <div className="bg-gray-100 px-3 py-2 text-xs font-medium">حالة الوكلاء</div>
@@ -163,14 +181,17 @@ export function Details() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-4 text-sm text-gray-600">
-                <p>راقب أداء فريقك وجودة خدمة العملاء في الوقت الفعلي، مع تنبيهات فورية للمحادثات التي تحتاج إلى اهتمام عاجل.</p>
+                <p>
+                  راقب أداء فريقك وجودة خدمة العملاء في الوقت الفعلي، مع تنبيهات فورية للمحادثات التي تحتاج إلى اهتمام
+                  عاجل.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      )
+      ),
     },
     ai: {
       icon: Brain,
@@ -183,7 +204,7 @@ export function Details() {
               <Brain className="h-8 w-8 text-google-blue" />
               <h3 className="text-xl font-semibold">مساعد ذكي</h3>
             </div>
-            
+
             <div className="space-y-4 flex-grow">
               {/* AI Chat Interface */}
               <div className="border border-gray-100 rounded-lg overflow-hidden">
@@ -191,7 +212,7 @@ export function Details() {
                   <Bot className="h-4 w-4 text-purple-600" />
                   <span className="text-sm font-medium">مساعد كرزون الذكي</span>
                 </div>
-                
+
                 <div className="p-4 space-y-3">
                   <div className="flex gap-3">
                     <div className="w-8 h-8 rounded-full bg-gray-200 flex-shrink-0"></div>
@@ -199,7 +220,7 @@ export function Details() {
                       أريد معرفة كيفية إعداد حملة تسويقية فعالة لمنتجنا الجديد
                     </div>
                   </div>
-                  
+
                   <div className="flex gap-3">
                     <div className="w-8 h-8 rounded-full bg-purple-100 flex-shrink-0 flex items-center justify-center">
                       <Bot className="h-4 w-4 text-purple-600" />
@@ -218,7 +239,7 @@ export function Details() {
                   </div>
                 </div>
               </div>
-              
+
               {/* AI Features */}
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-gray-50 p-3 rounded-lg">
@@ -236,14 +257,17 @@ export function Details() {
                   <p className="text-xs text-gray-600">يتعلم من التفاعلات السابقة لتحسين الردود</p>
                 </div>
               </div>
-              
+
               <div className="mt-4 text-sm text-gray-600">
-                <p>استفد من قوة الذكاء الاصطناعي لتقديم تجربة مخصصة لكل عميل، مع تحسين مستمر للردود بناءً على التفاعلات السابقة.</p>
+                <p>
+                  استفد من قوة الذكاء الاصطناعي لتقديم تجربة مخصصة لكل عميل، مع تحسين مستمر للردود بناءً على التفاعلات
+                  السابقة.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      )
+      ),
     },
     analytics: {
       icon: Gauge,
@@ -256,17 +280,15 @@ export function Details() {
               <BarChart className="h-8 w-8 text-google-blue" />
               <h3 className="text-xl font-semibold">تحليلات متقدمة</h3>
             </div>
-            
+
             <div className="space-y-4 flex-grow">
               {/* Analytics Dashboard */}
               <div className="bg-gray-50 rounded-lg p-4">
                 <div className="flex justify-between items-center mb-4">
                   <h4 className="font-medium text-gray-800">لوحة التحليلات</h4>
-                  <div className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">
-                    آخر 30 يوم
-                  </div>
+                  <div className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">آخر 30 يوم</div>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-3 mb-4">
                   <div className="bg-white p-3 rounded-lg shadow-sm">
                     <div className="text-xs text-gray-500 mb-1">رضا العملاء</div>
@@ -279,7 +301,7 @@ export function Details() {
                     <div className="text-xs text-green-600">↓ 12%</div>
                   </div>
                 </div>
-                
+
                 {/* Charts */}
                 <div className="space-y-3">
                   <div className="bg-white p-3 rounded-lg shadow-sm">
@@ -302,7 +324,7 @@ export function Details() {
                       <span>بريد</span>
                     </div>
                   </div>
-                  
+
                   <div className="bg-white p-3 rounded-lg shadow-sm">
                     <div className="flex items-center justify-between mb-2">
                       <div className="text-xs font-medium">اتجاهات المحادثات</div>
@@ -320,10 +342,10 @@ export function Details() {
                       </div>
                       <div className="absolute inset-0 flex items-end">
                         <svg className="w-full h-full" preserveAspectRatio="none">
-                          <path 
-                            d="M0,70 L14.28,50 L28.57,60 L42.85,30 L57.14,40 L71.42,20 L100,10" 
-                            fill="none" 
-                            stroke="#3b82f6" 
+                          <path
+                            d="M0,70 L14.28,50 L28.57,60 L42.85,30 L57.14,40 L71.42,20 L100,10"
+                            fill="none"
+                            stroke="#3b82f6"
                             strokeWidth="2"
                           />
                         </svg>
@@ -332,28 +354,31 @@ export function Details() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="mt-4 text-sm text-gray-600">
-                <p>احصل على رؤى تفصيلية عن أداء خدمة العملاء، مع تقارير قابلة للتخصيص ولوحات تحكم تفاعلية لاتخاذ قرارات مدروسة.</p>
+                <p>
+                  احصل على رؤى تفصيلية عن أداء خدمة العملاء، مع تقارير قابلة للتخصيص ولوحات تحكم تفاعلية لاتخاذ قرارات
+                  مدروسة.
+                </p>
               </div>
             </div>
           </div>
         </div>
-      )
-    }
+      ),
+    },
   };
 
   // Map feature keys to their respective IDs
   const featureMap = {
-    'صندوق وارد متعدد المنصات': 'omnichannel',
-    'متابعة على مدار الساعة': 'monitoring',
-    'ذكاء اصطناعي متقدم': 'ai',
-    'تحليلات متقدمة': 'analytics'
+    "صندوق وارد متعدد المنصات": "omnichannel",
+    "متابعة على مدار الساعة": "monitoring",
+    "ذكاء اصطناعي متقدم": "ai",
+    "تحليلات متقدمة": "analytics",
   };
 
   // Handle feature click
-  const handleFeatureClick = (title) => {
-    const featureId = featureMap[title];
+  const handleFeatureClick = (title: string) => {
+    const featureId = featureMap[title as keyof typeof featureMap];
     if (featureId) {
       setActiveFeature(featureId);
     }
@@ -396,7 +421,7 @@ export function Details() {
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5 }}
                     >
-                      {features[activeFeature].content}
+                      {features[activeFeature as keyof typeof features].content}
                     </motion.div>
                   </AnimatePresence>
                 </div>
@@ -417,24 +442,26 @@ export function Details() {
                   onClick={() => handleFeatureClick(feature.title)}
                   className={`relative rounded-2xl p-6 shadow-sm border transition-all cursor-pointer ${
                     activeFeature === Object.keys(features)[index]
-                      ? 'bg-blue-50 border-blue-200'
-                      : 'bg-white border-gray-100 hover:border-blue-100 hover:bg-blue-50/30'
+                      ? "bg-blue-50 border-blue-200"
+                      : "bg-white border-gray-100 hover:border-blue-100 hover:bg-blue-50/30"
                   }`}
                 >
                   <div className="flex items-center gap-4">
-                    <feature.icon className={`h-8 w-8 ${
-                      activeFeature === Object.keys(features)[index]
-                        ? 'text-google-blue'
-                        : 'text-gray-400'
-                    }`} />
-                    <h3 className={`text-lg font-semibold ${
-                      activeFeature === Object.keys(features)[index]
-                        ? 'text-google-blue'
-                        : 'text-gray-900'
-                    }`}>{feature.title}</h3>
+                    <feature.icon
+                      className={`h-8 w-8 ${
+                        activeFeature === Object.keys(features)[index] ? "text-google-blue" : "text-gray-400"
+                      }`}
+                    />
+                    <h3
+                      className={`text-lg font-semibold ${
+                        activeFeature === Object.keys(features)[index] ? "text-google-blue" : "text-gray-900"
+                      }`}
+                    >
+                      {feature.title}
+                    </h3>
                   </div>
                   <p className="mt-4 text-gray-600">{feature.description}</p>
-                  
+
                   {activeFeature === Object.keys(features)[index] && (
                     <div className="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 bg-blue-50 border-l border-t border-blue-200 transform rotate-45"></div>
                   )}

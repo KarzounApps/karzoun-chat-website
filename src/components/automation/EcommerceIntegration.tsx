@@ -1,25 +1,51 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, ArrowRight, CheckCircle2, 
-  Package, Truck, Calendar, Bell, Tag,
-  MessageSquare, Users, BarChart, Clock,
-  Send, Mail, Smartphone, Database, Settings,
-  Globe, Repeat, Filter, Zap, Link, Store,
-  CreditCard, Box, DollarSign, Percent, Gift,
-  UserPlus, Heart, Star, Share2, Trash2
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  ShoppingCart,
+  ArrowRight,
+  CheckCircle2,
+  Package,
+  Truck,
+  Calendar,
+  Bell,
+  Tag,
+  MessageSquare,
+  Users,
+  BarChart,
+  Clock,
+  Send,
+  Mail,
+  Smartphone,
+  Database,
+  Settings,
+  Globe,
+  Repeat,
+  Filter,
+  Zap,
+  Link,
+  Store,
+  CreditCard,
+  Box,
+  DollarSign,
+  Percent,
+  Gift,
+  UserPlus,
+  Heart,
+  Star,
+  Share2,
+  Trash2,
+} from "lucide-react";
 
 export function EcommerceIntegration() {
-  const [activePlatform, setActivePlatform] = useState('shopify');
-  
+  const [activePlatform, setActivePlatform] = useState("shopify");
+
   const platforms = [
-    { id: 'shopify', name: 'Shopify', icon: Store },
-    { id: 'woocommerce', name: 'WooCommerce', icon: ShoppingCart },
-    { id: 'magento', name: 'Magento', icon: Package },
-    { id: 'opencart', name: 'OpenCart', icon: Box }
+    { id: "shopify", name: "Shopify", icon: Store },
+    { id: "woocommerce", name: "WooCommerce", icon: ShoppingCart },
+    { id: "magento", name: "Magento", icon: Package },
+    { id: "opencart", name: "OpenCart", icon: Box },
   ];
-  
+
   const automationTypes = [
     {
       title: "أتمتة السلة المهجورة",
@@ -31,8 +57,8 @@ export function EcommerceIntegration() {
         "زيادة معدل استرداد السلة بنسبة 40%",
         "رسائل مخصصة حسب محتوى السلة",
         "متابعة تلقائية متعددة المراحل",
-        "عروض خاصة لتشجيع إتمام الشراء"
-      ]
+        "عروض خاصة لتشجيع إتمام الشراء",
+      ],
     },
     {
       title: "متابعة الطلبات",
@@ -44,8 +70,8 @@ export function EcommerceIntegration() {
         "تحديثات فورية عن حالة الطلب",
         "إشعارات الشحن والتوصيل",
         "معالجة المشكلات والتأخيرات",
-        "تقييم تجربة العملاء"
-      ]
+        "تقييم تجربة العملاء",
+      ],
     },
     {
       title: "برنامج الولاء",
@@ -57,8 +83,8 @@ export function EcommerceIntegration() {
         "تتبع نقاط الولاء تلقائياً",
         "إشعارات المكافآت والهدايا",
         "عروض خاصة للأعضاء",
-        "تذكير بالنقاط المتراكمة"
-      ]
+        "تذكير بالنقاط المتراكمة",
+      ],
     },
     {
       title: "استرداد العملاء",
@@ -66,12 +92,7 @@ export function EcommerceIntegration() {
       icon: Repeat,
       color: "bg-yellow-100",
       textColor: "text-yellow-600",
-      benefits: [
-        "تحديد العملاء غير النشطين",
-        "حملات استرداد مخصصة",
-        "عروض إعادة التفعيل",
-        "تحليل سلوك العملاء"
-      ]
+      benefits: ["تحديد العملاء غير النشطين", "حملات استرداد مخصصة", "عروض إعادة التفعيل", "تحليل سلوك العملاء"],
     },
     {
       title: "تقييمات المنتجات",
@@ -79,12 +100,7 @@ export function EcommerceIntegration() {
       icon: Star,
       color: "bg-red-100",
       textColor: "text-red-600",
-      benefits: [
-        "طلب التقييمات تلقائياً",
-        "متابعة التقييمات السلبية",
-        "مكافآت على التقييمات",
-        "تحليل رضا العملاء"
-      ]
+      benefits: ["طلب التقييمات تلقائياً", "متابعة التقييمات السلبية", "مكافآت على التقييمات", "تحليل رضا العملاء"],
     },
     {
       title: "إدارة المخزون",
@@ -92,13 +108,8 @@ export function EcommerceIntegration() {
       icon: Box,
       color: "bg-indigo-100",
       textColor: "text-indigo-600",
-      benefits: [
-        "تنبيهات انخفاض المخزون",
-        "إشعارات إعادة التوفر",
-        "تحديثات حالة المنتج",
-        "تقارير المخزون الدورية"
-      ]
-    }
+      benefits: ["تنبيهات انخفاض المخزون", "إشعارات إعادة التوفر", "تحديثات حالة المنتج", "تقارير المخزون الدورية"],
+    },
   ];
 
   return (
@@ -111,9 +122,7 @@ export function EcommerceIntegration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              تكامل مع منصات التجارة الإلكترونية
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">تكامل مع منصات التجارة الإلكترونية</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               أتمتة عمليات متجرك الإلكتروني وتحسين تجربة العملاء من خلال تكامل سلس مع أشهر منصات التجارة الإلكترونية
             </p>
@@ -128,8 +137,8 @@ export function EcommerceIntegration() {
               onClick={() => setActivePlatform(platform.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-colors ${
                 activePlatform === platform.id
-                  ? 'bg-green-600 text-white'
-                  : 'bg-white text-gray-700 shadow-sm hover:bg-gray-50'
+                  ? "bg-green-600 text-white"
+                  : "bg-white text-gray-700 shadow-sm hover:bg-gray-50"
               }`}
             >
               <platform.icon className="h-5 w-5" />
@@ -154,7 +163,7 @@ export function EcommerceIntegration() {
               </div>
               <h3 className="text-xl font-bold mb-2">{type.title}</h3>
               <p className="text-gray-600 mb-4">{type.description}</p>
-              
+
               <ul className="space-y-2 mb-4">
                 {type.benefits.map((benefit, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm">
@@ -163,8 +172,11 @@ export function EcommerceIntegration() {
                   </li>
                 ))}
               </ul>
-              
-              <a href="#" className={`inline-flex items-center gap-1 ${type.textColor} hover:underline text-sm font-medium`}>
+
+              <a
+                href="#"
+                className={`inline-flex items-center gap-1 ${type.textColor} hover:underline text-sm font-medium`}
+              >
                 <span>إعداد الأتمتة</span>
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -178,18 +190,18 @@ export function EcommerceIntegration() {
             {
               icon: Zap,
               title: "إعداد سريع",
-              description: "تكامل سريع مع متجرك خلال دقائق معدودة"
+              description: "تكامل سريع مع متجرك خلال دقائق معدودة",
             },
             {
               icon: Link,
               title: "تكامل ثنائي الاتجاه",
-              description: "مزامنة البيانات في الوقت الفعلي بين المنصات"
+              description: "مزامنة البيانات في الوقت الفعلي بين المنصات",
             },
             {
               icon: Shield,
               title: "آمن وموثوق",
-              description: "حماية كاملة لبيانات متجرك وعملائك"
-            }
+              description: "حماية كاملة لبيانات متجرك وعملائك",
+            },
           ].map((benefit, index) => (
             <motion.div
               key={index}
@@ -212,9 +224,7 @@ export function EcommerceIntegration() {
         <div className="mt-16 bg-white rounded-xl p-8 shadow-lg border border-gray-200">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-2/3">
-              <h3 className="text-2xl font-bold mb-4">
-                جاهز لأتمتة متجرك الإلكتروني؟
-              </h3>
+              <h3 className="text-2xl font-bold mb-4">جاهز لأتمتة متجرك الإلكتروني؟</h3>
               <p className="text-gray-600 mb-6">
                 ابدأ اليوم مع فترة تجريبية مجانية لمدة 14 يوماً واكتشف كيف يمكن لأتمتة المتجر أن تساعد في نمو مبيعاتك.
               </p>
@@ -228,7 +238,7 @@ export function EcommerceIntegration() {
               </div>
             </div>
             <div className="md:w-1/3">
-              <img 
+              <img
                 src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&h=300&q=80"
                 alt="E-commerce Integration"
                 className="rounded-xl shadow-lg"
@@ -242,7 +252,7 @@ export function EcommerceIntegration() {
 }
 
 // Add Shield icon component since it's not imported
-function Shield(props) {
+function Shield(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,24 +1,48 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Code, Globe, Database, ArrowRight, CheckCircle2,
-  Webhook, Link, Settings, Braces, Server, Cloud,
-  Lock, Key, RefreshCw, FileJson, Terminal, Play,
-  Blocks, Network, Cpu, GitBranch, Layers, Shield,
-  Zap, MessageSquare, Send, Mail, Bot, Users
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Code,
+  Globe,
+  Database,
+  ArrowRight,
+  CheckCircle2,
+  Webhook,
+  Link,
+  Settings,
+  Braces,
+  Server,
+  Cloud,
+  Lock,
+  Key,
+  RefreshCw,
+  FileJson,
+  Terminal,
+  Play,
+  Blocks,
+  Network,
+  Cpu,
+  GitBranch,
+  Layers,
+  Shield,
+  Zap,
+  MessageSquare,
+  Send,
+  Mail,
+  Bot,
+  Users,
+} from "lucide-react";
 
 export function ApiIntegration() {
-  const [activeTab, setActiveTab] = useState('http');
-  const [selectedEndpoint, setSelectedEndpoint] = useState(null);
-  
+  const [activeTab, setActiveTab] = useState("http");
+  const [selectedEndpoint, setSelectedEndpoint] = useState<any>(null);
+
   const integrationTypes = [
-    { id: 'http', name: 'طلبات HTTP', icon: Globe },
-    { id: 'webhook', name: 'Webhooks', icon: Webhook },
-    { id: 'database', name: 'قواعد البيانات', icon: Database },
-    { id: 'custom', name: 'تكامل مخصص', icon: Code }
+    { id: "http", name: "طلبات HTTP", icon: Globe },
+    { id: "webhook", name: "Webhooks", icon: Webhook },
+    { id: "database", name: "قواعد البيانات", icon: Database },
+    { id: "custom", name: "تكامل مخصص", icon: Code },
   ];
-  
+
   const endpoints = {
     http: [
       {
@@ -27,8 +51,8 @@ export function ApiIntegration() {
         method: "GET",
         url: "https://api.example.com/data",
         headers: {
-          "Authorization": "Bearer {token}",
-          "Content-Type": "application/json"
+          Authorization: "Bearer {token}",
+          "Content-Type": "application/json",
         },
         code: `// نموذج طلب GET
 fetch('https://api.example.com/data', {
@@ -42,7 +66,7 @@ fetch('https://api.example.com/data', {
 .then(data => {
   // معالجة البيانات
   console.log(data);
-});`
+});`,
       },
       {
         title: "إرسال طلب POST",
@@ -50,12 +74,12 @@ fetch('https://api.example.com/data', {
         method: "POST",
         url: "https://api.example.com/data",
         headers: {
-          "Authorization": "Bearer {token}",
-          "Content-Type": "application/json"
+          Authorization: "Bearer {token}",
+          "Content-Type": "application/json",
         },
         body: {
-          "key": "value",
-          "data": "{dynamic_data}"
+          key: "value",
+          data: "{dynamic_data}",
         },
         code: `// نموذج طلب POST
 fetch('https://api.example.com/data', {
@@ -73,7 +97,7 @@ fetch('https://api.example.com/data', {
 .then(data => {
   // معالجة الاستجابة
   console.log(data);
-});`
+});`,
       },
       {
         title: "تحديث البيانات",
@@ -81,11 +105,11 @@ fetch('https://api.example.com/data', {
         method: "PUT",
         url: "https://api.example.com/data/{id}",
         headers: {
-          "Authorization": "Bearer {token}",
-          "Content-Type": "application/json"
+          Authorization: "Bearer {token}",
+          "Content-Type": "application/json",
         },
         body: {
-          "key": "updated_value"
+          key: "updated_value",
         },
         code: `// نموذج طلب PUT
 fetch('https://api.example.com/data/{id}', {
@@ -102,8 +126,8 @@ fetch('https://api.example.com/data/{id}', {
 .then(data => {
   // معالجة الاستجابة
   console.log(data);
-});`
-      }
+});`,
+      },
     ],
     webhook: [
       {
@@ -123,7 +147,7 @@ app.post('/webhook/endpoint', (req, res) => {
     status: 'success',
     message: 'Webhook received'
   });
-});`
+});`,
       },
       {
         title: "إرسال Webhook",
@@ -147,8 +171,8 @@ fetch('{webhook_url}', {
 .then(response => response.json())
 .then(data => {
   console.log('Webhook sent:', data);
-});`
-      }
+});`,
+      },
     ],
     database: [
       {
@@ -165,7 +189,7 @@ executeQuery(query)
   .then(results => {
     // معالجة نتائج الاستعلام
     console.log(results);
-  });`
+  });`,
       },
       {
         title: "تحديث البيانات",
@@ -181,8 +205,8 @@ const updateQuery = \`
 executeUpdate(updateQuery, [customerId])
   .then(result => {
     console.log('تم تحديث السجل:', result);
-  });`
-      }
+  });`,
+      },
     ],
     custom: [
       {
@@ -211,7 +235,7 @@ async function customIntegration(data) {
       message: error.message
     };
   }
-}`
+}`,
       },
       {
         title: "معالجة الأحداث",
@@ -229,9 +253,9 @@ eventEmitter.on('custom_event', async (event) => {
   
   // تسجيل الحدث
   await logEvent(event);
-});`
-      }
-    ]
+});`,
+      },
+    ],
   };
 
   return (
@@ -244,9 +268,7 @@ eventEmitter.on('custom_event', async (event) => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              تكامل API متقدم
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">تكامل API متقدم</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               ربط تدفقات الأتمتة مع الأنظمة الخارجية باستخدام واجهة برمجة التطبيقات المرنة والقوية
             </p>
@@ -260,9 +282,7 @@ eventEmitter.on('custom_event', async (event) => {
               key={type.id}
               onClick={() => setActiveTab(type.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl transition-colors ${
-                activeTab === type.id
-                  ? 'bg-indigo-600 text-white'
-                  : 'bg-white text-gray-700 shadow-sm hover:bg-gray-50'
+                activeTab === type.id ? "bg-indigo-600 text-white" : "bg-white text-gray-700 shadow-sm hover:bg-gray-50"
               }`}
             >
               <type.icon className="h-5 w-5" />
@@ -281,12 +301,12 @@ eventEmitter.on('custom_event', async (event) => {
             transition={{ duration: 0.5 }}
             className="space-y-4"
           >
-            {endpoints[activeTab].map((endpoint, index) => (
+            {endpoints[activeTab as keyof typeof endpoints].map((endpoint: any, index: number) => (
               <div
                 key={index}
                 onClick={() => setSelectedEndpoint(endpoint)}
                 className={`bg-white rounded-xl p-6 shadow-lg border border-gray-200 cursor-pointer transition-all ${
-                  selectedEndpoint === endpoint ? 'ring-2 ring-indigo-500' : 'hover:shadow-xl'
+                  selectedEndpoint === endpoint ? "ring-2 ring-indigo-500" : "hover:shadow-xl"
                 }`}
               >
                 <div className="flex items-center gap-3 mb-4">
@@ -301,11 +321,15 @@ eventEmitter.on('custom_event', async (event) => {
 
                 {endpoint.method && (
                   <div className="flex items-center gap-2 mb-2">
-                    <span className={`text-xs px-2 py-1 rounded-full ${
-                      endpoint.method === 'GET' ? 'bg-green-100 text-green-700' :
-                      endpoint.method === 'POST' ? 'bg-blue-100 text-blue-700' :
-                      'bg-yellow-100 text-yellow-700'
-                    }`}>
+                    <span
+                      className={`text-xs px-2 py-1 rounded-full ${
+                        endpoint.method === "GET"
+                          ? "bg-green-100 text-green-700"
+                          : endpoint.method === "POST"
+                          ? "bg-blue-100 text-blue-700"
+                          : "bg-yellow-100 text-yellow-700"
+                      }`}
+                    >
                       {endpoint.method}
                     </span>
                     <span className="text-sm text-gray-600">{endpoint.url}</span>
@@ -315,18 +339,14 @@ eventEmitter.on('custom_event', async (event) => {
                 {endpoint.headers && (
                   <div className="text-sm text-gray-600 mb-2">
                     <div className="font-medium mb-1">Headers:</div>
-                    <pre className="bg-gray-50 p-2 rounded text-xs">
-                      {JSON.stringify(endpoint.headers, null, 2)}
-                    </pre>
+                    <pre className="bg-gray-50 p-2 rounded text-xs">{JSON.stringify(endpoint.headers, null, 2)}</pre>
                   </div>
                 )}
 
                 {endpoint.body && (
                   <div className="text-sm text-gray-600">
                     <div className="font-medium mb-1">Body:</div>
-                    <pre className="bg-gray-50 p-2 rounded text-xs">
-                      {JSON.stringify(endpoint.body, null, 2)}
-                    </pre>
+                    <pre className="bg-gray-50 p-2 rounded text-xs">{JSON.stringify(endpoint.body, null, 2)}</pre>
                   </div>
                 )}
               </div>
@@ -355,11 +375,11 @@ eventEmitter.on('custom_event', async (event) => {
                 </button>
               </div>
             </div>
-            
+
             <div className="bg-gray-800 rounded-lg p-4 overflow-x-auto">
               <pre className="text-sm">
                 <code className="text-gray-300">
-                  {selectedEndpoint ? selectedEndpoint.code : '// اختر نوع التكامل لعرض نموذج الكود'}
+                  {selectedEndpoint ? selectedEndpoint.code : "// اختر نوع التكامل لعرض نموذج الكود"}
                 </code>
               </pre>
             </div>
@@ -372,18 +392,18 @@ eventEmitter.on('custom_event', async (event) => {
             {
               icon: Lock,
               title: "آمن وموثوق",
-              description: "تشفير كامل للبيانات وتأمين نقاط النهاية"
+              description: "تشفير كامل للبيانات وتأمين نقاط النهاية",
             },
             {
               icon: Zap,
               title: "أداء عالي",
-              description: "معالجة سريعة للطلبات مع دعم للتخزين المؤقت"
+              description: "معالجة سريعة للطلبات مع دعم للتخزين المؤقت",
             },
             {
               icon: RefreshCw,
               title: "مزامنة ثنائية الاتجاه",
-              description: "تزامن البيانات في كلا الاتجاهين بين الأنظمة"
-            }
+              description: "تزامن البيانات في كلا الاتجاهين بين الأنظمة",
+            },
           ].map((feature, index) => (
             <motion.div
               key={index}
@@ -404,10 +424,7 @@ eventEmitter.on('custom_event', async (event) => {
 
         {/* Documentation Link */}
         <div className="mt-12 text-center">
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium"
-          >
+          <a href="#" className="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 font-medium">
             <span>استكشف وثائق API الكاملة</span>
             <ArrowRight className="h-4 w-4" />
           </a>
@@ -418,7 +435,7 @@ eventEmitter.on('custom_event', async (event) => {
 }
 
 // Add Copy icon component since it's not imported
-function Copy(props) {
+function Copy(props: any) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -1,12 +1,30 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  MessageSquare, ArrowRight, Ticket, Users,
-  Clock, Tag, Flag, User, MoreHorizontal,
-  Plus, Search, Filter, CheckCircle2, Send,
-  ArrowLeftRight, Settings, Bell, Calendar,
-  FileText, Layers, Bot, Workflow, Zap
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  MessageSquare,
+  ArrowRight,
+  Ticket,
+  Users,
+  Clock,
+  Tag,
+  Flag,
+  User,
+  MoreHorizontal,
+  Plus,
+  Search,
+  Filter,
+  CheckCircle2,
+  Send,
+  ArrowLeftRight,
+  Settings,
+  Bell,
+  Calendar,
+  FileText,
+  Layers,
+  Bot,
+  Workflow,
+  Zap,
+} from "lucide-react";
 
 export function ConversationIntegration() {
   const [selectedMessage, setSelectedMessage] = useState(null);
@@ -16,28 +34,29 @@ export function ConversationIntegration() {
   const conversation = {
     customer: {
       name: "أحمد محمد",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+      avatar:
+        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     },
     messages: [
       {
         id: 1,
-        type: 'customer',
-        text: 'مرحباً، لدي مشكلة في الدفع الإلكتروني',
-        time: '10:30'
+        type: "customer",
+        text: "مرحباً، لدي مشكلة في الدفع الإلكتروني",
+        time: "10:30",
       },
       {
         id: 2,
-        type: 'agent',
-        text: 'مرحباً بك! آسف لسماع ذلك. هل يمكنك إخباري بالمزيد عن المشكلة؟',
-        time: '10:31'
+        type: "agent",
+        text: "مرحباً بك! آسف لسماع ذلك. هل يمكنك إخباري بالمزيد عن المشكلة؟",
+        time: "10:31",
       },
       {
         id: 3,
-        type: 'customer',
-        text: 'عندما أحاول الدفع تظهر رسالة خطأ ولا يمكنني إكمال عملية الشراء',
-        time: '10:32'
-      }
-    ]
+        type: "customer",
+        text: "عندما أحاول الدفع تظهر رسالة خطأ ولا يمكنني إكمال عملية الشراء",
+        time: "10:32",
+      },
+    ],
   };
 
   return (
@@ -50,9 +69,7 @@ export function ConversationIntegration() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              تحويل المحادثات إلى مهام
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">تحويل المحادثات إلى مهام</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               حول المحادثات الجارية إلى تذاكر ومهام بنقرة واحدة. تتبع وأدر طلبات العملاء بكفاءة من نفس واجهة المحادثة.
             </p>
@@ -103,14 +120,14 @@ export function ConversationIntegration() {
                     key={message.id}
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className={`flex ${message.type === 'customer' ? 'justify-start' : 'justify-end'}`}
-                    onClick={() => setSelectedMessage(message)}
+                    className={`flex ${message.type === "customer" ? "justify-start" : "justify-end"}`}
+                    onClick={() => setSelectedMessage(message as any)}
                   >
-                    <div className={`max-w-[80%] rounded-lg p-3 ${
-                      message.type === 'customer' 
-                        ? 'bg-gray-100' 
-                        : 'bg-[#2ca24c] text-white'
-                    }`}>
+                    <div
+                      className={`max-w-[80%] rounded-lg p-3 ${
+                        message.type === "customer" ? "bg-gray-100" : "bg-[#2ca24c] text-white"
+                      }`}
+                    >
                       <p className="mb-1">{message.text}</p>
                       <span className="text-xs opacity-70">{message.time}</span>
                     </div>
@@ -121,7 +138,7 @@ export function ConversationIntegration() {
               {/* Quick Actions */}
               <div className="p-4 border-t border-gray-100">
                 <div className="flex items-center gap-2 mb-4">
-                  <button 
+                  <button
                     onClick={() => setShowTicketForm(true)}
                     className="flex items-center gap-2 bg-[#2ca24c] text-white px-4 py-2 rounded-lg text-sm"
                   >
@@ -173,9 +190,7 @@ export function ConversationIntegration() {
               <div className="space-y-6">
                 {/* Title */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    عنوان التذكرة
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">عنوان التذكرة</label>
                   <input
                     type="text"
                     defaultValue="مشكلة في الدفع الإلكتروني"
@@ -185,17 +200,15 @@ export function ConversationIntegration() {
 
                 {/* Priority */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    الأولوية
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">الأولوية</label>
                   <div className="flex gap-2">
-                    {['منخفضة', 'متوسطة', 'عالية', 'عاجلة'].map((priority) => (
+                    {["منخفضة", "متوسطة", "عالية", "عاجلة"].map((priority) => (
                       <button
                         key={priority}
                         className={`px-4 py-2 rounded-lg text-sm ${
-                          priority === 'عالية'
-                            ? 'bg-[#2ca24c] text-white'
-                            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          priority === "عالية"
+                            ? "bg-[#2ca24c] text-white"
+                            : "bg-gray-100 text-gray-700 hover:bg-gray-200"
                         }`}
                       >
                         {priority}
@@ -206,13 +219,14 @@ export function ConversationIntegration() {
 
                 {/* Assignee */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    تعيين إلى
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">تعيين إلى</label>
                   <div className="flex items-center gap-2">
                     <div className="flex -space-x-2 space-x-reverse">
                       {[1, 2, 3].map((i) => (
-                        <div key={i} className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-sm">
+                        <div
+                          key={i}
+                          className="w-8 h-8 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-sm"
+                        >
                           {i}
                         </div>
                       ))}
@@ -225,9 +239,7 @@ export function ConversationIntegration() {
 
                 {/* Due Date */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    تاريخ الاستحقاق
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">تاريخ الاستحقاق</label>
                   <input
                     type="date"
                     className="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#2ca24c] focus:border-transparent"
@@ -236,11 +248,9 @@ export function ConversationIntegration() {
 
                 {/* Tags */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    الوسوم
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">الوسوم</label>
                   <div className="flex flex-wrap gap-2">
-                    {['دعم فني', 'دفع إلكتروني', 'عالي الأولوية'].map((tag) => (
+                    {["دعم فني", "دفع إلكتروني", "عالي الأولوية"].map((tag) => (
                       <span key={tag} className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">
                         {tag}
                       </span>
@@ -253,9 +263,7 @@ export function ConversationIntegration() {
 
                 {/* Description */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    الوصف
-                  </label>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">الوصف</label>
                   <textarea
                     rows={4}
                     className="w-full border border-gray-200 rounded-lg px-4 py-2 focus:ring-2 focus:ring-[#2ca24c] focus:border-transparent"
@@ -276,12 +284,8 @@ export function ConversationIntegration() {
                     </button>
                   </div>
                   <div className="flex gap-2">
-                    <button className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900">
-                      إلغاء
-                    </button>
-                    <button className="bg-[#2ca24c] text-white px-4 py-2 rounded-lg text-sm">
-                      إنشاء التذكرة
-                    </button>
+                    <button className="px-4 py-2 text-sm text-gray-600 hover:text-gray-900">إلغاء</button>
+                    <button className="bg-[#2ca24c] text-white px-4 py-2 rounded-lg text-sm">إنشاء التذكرة</button>
                   </div>
                 </div>
               </div>
@@ -296,32 +300,20 @@ export function ConversationIntegration() {
               icon: ArrowLeftRight,
               title: "تحويل سلس",
               description: "حول المحادثات إلى تذاكر بنقرة واحدة مع نقل كامل السياق",
-              features: [
-                "تحويل فوري للمحادثات",
-                "نقل تلقائي للمعلومات",
-                "ربط بالمحادثة الأصلية"
-              ]
+              features: ["تحويل فوري للمحادثات", "نقل تلقائي للمعلومات", "ربط بالمحادثة الأصلية"],
             },
             {
               icon: Workflow,
               title: "تدفق عمل ذكي",
               description: "تدفقات عمل مؤتمتة لمعالجة التذاكر بكفاءة",
-              features: [
-                "توجيه تلقائي للفريق",
-                "إشعارات مخصصة",
-                "متابعة حالة التذكرة"
-              ]
+              features: ["توجيه تلقائي للفريق", "إشعارات مخصصة", "متابعة حالة التذكرة"],
             },
             {
               icon: Layers,
               title: "تكامل شامل",
               description: "تكامل سلس مع جميع أدوات وأنظمة العمل",
-              features: [
-                "ربط مع CRM",
-                "تكامل مع نظام المهام",
-                "تزامن البيانات"
-              ]
-            }
+              features: ["ربط مع CRM", "تكامل مع نظام المهام", "تزامن البيانات"],
+            },
           ].map((feature, index) => (
             <motion.div
               key={index}

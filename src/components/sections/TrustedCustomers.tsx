@@ -110,9 +110,9 @@ const statistics = [
 ];
 
 // Counter animation component
-const Counter = ({ value, duration = 2 }) => {
+const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) => {
   const [count, setCount] = useState(0);
-  const countRef = useRef(null);
+  const countRef = useRef<HTMLSpanElement>(null);
   const isInView = useInView(countRef, { once: true, amount: 0.5 });
   
   // Parse the numeric part of the value
@@ -121,7 +121,7 @@ const Counter = ({ value, duration = 2 }) => {
   
   useEffect(() => {
     let start = 0;
-    let timeoutId;
+    let timeoutId: NodeJS.Timeout;
     
     if (isInView) {
       // Calculate the increment based on the final value and duration

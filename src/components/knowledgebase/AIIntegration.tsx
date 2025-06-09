@@ -1,15 +1,28 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Bot, MessageSquare, Search, Zap, 
-  Brain, Sparkles, ArrowRight, CheckCircle2,
-  FileText, Users, Database, Settings,
-  BrainCircuit, Lightbulb, Target, Rocket,
-  Send, User
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Bot,
+  MessageSquare,
+  Search,
+  Zap,
+  Brain,
+  Sparkles,
+  ArrowRight,
+  CheckCircle2,
+  FileText,
+  Users,
+  Database,
+  Settings,
+  BrainCircuit,
+  Lightbulb,
+  Target,
+  Rocket,
+  Send,
+  User,
+} from "lucide-react";
 
 export function AIIntegration() {
-  const [activeDemo, setActiveDemo] = useState('copilot');
+  const [activeDemo, setActiveDemo] = useState("copilot");
   const [demoStep, setDemoStep] = useState(0);
 
   // Auto advance demo steps
@@ -39,7 +52,8 @@ export function AIIntegration() {
               <span className="block text-[#2ca24c]">مدعومة بالذكاء الاصطناعي</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
-              استفد من قوة الذكاء الاصطناعي لتحسين تجربة العملاء والموظفين. مساعد ذكي يتعلم من محتوى قاعدة المعرفة ويقدم إجابات دقيقة.
+              استفد من قوة الذكاء الاصطناعي لتحسين تجربة العملاء والموظفين. مساعد ذكي يتعلم من محتوى قاعدة المعرفة ويقدم
+              إجابات دقيقة.
             </p>
           </motion.div>
         </div>
@@ -48,22 +62,18 @@ export function AIIntegration() {
         <div className="flex justify-center mb-12">
           <div className="inline-flex bg-gray-100 rounded-xl p-1">
             <button
-              onClick={() => setActiveDemo('copilot')}
+              onClick={() => setActiveDemo("copilot")}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-colors ${
-                activeDemo === 'copilot'
-                  ? 'bg-white text-[#2ca24c] shadow'
-                  : 'text-gray-600 hover:text-gray-900'
+                activeDemo === "copilot" ? "bg-white text-[#2ca24c] shadow" : "text-gray-600 hover:text-gray-900"
               }`}
             >
               <Brain className="h-5 w-5" />
               <span>مساعد الموظفين</span>
             </button>
             <button
-              onClick={() => setActiveDemo('customer')}
+              onClick={() => setActiveDemo("customer")}
               className={`flex items-center gap-2 px-6 py-3 rounded-lg transition-colors ${
-                activeDemo === 'customer'
-                  ? 'bg-white text-[#2ca24c] shadow'
-                  : 'text-gray-600 hover:text-gray-900'
+                activeDemo === "customer" ? "bg-white text-[#2ca24c] shadow" : "text-gray-600 hover:text-gray-900"
               }`}
             >
               <MessageSquare className="h-5 w-5" />
@@ -85,34 +95,26 @@ export function AIIntegration() {
             <div className="bg-gray-50 border-b border-gray-200 p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  {activeDemo === 'copilot' ? (
+                  {activeDemo === "copilot" ? (
                     <Brain className="h-5 w-5 text-[#2ca24c]" />
                   ) : (
                     <Bot className="h-5 w-5 text-[#2ca24c]" />
                   )}
-                  <h3 className="font-medium">
-                    {activeDemo === 'copilot' ? 'مساعد الموظفين' : 'مساعد العملاء'}
-                  </h3>
+                  <h3 className="font-medium">{activeDemo === "copilot" ? "مساعد الموظفين" : "مساعد العملاء"}</h3>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">
-                    متصل
-                  </span>
+                  <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full">متصل</span>
                 </div>
               </div>
             </div>
-            
+
             <div className="p-6 h-[400px] flex flex-col">
               <div className="flex-1 space-y-4">
-                {activeDemo === 'copilot' ? (
+                {activeDemo === "copilot" ? (
                   // Copilot Demo
                   <>
                     {demoStep >= 0 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="flex gap-3"
-                      >
+                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-3">
                         <div className="flex-shrink-0">
                           <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                             <User className="h-4 w-4 text-gray-600" />
@@ -125,11 +127,7 @@ export function AIIntegration() {
                     )}
 
                     {demoStep >= 1 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="flex gap-3"
-                      >
+                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-3">
                         <div className="flex-shrink-0">
                           <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                             <Brain className="h-4 w-4 text-[#2ca24c]" />
@@ -138,8 +136,8 @@ export function AIIntegration() {
                         <div className="bg-green-50 rounded-lg p-3 text-sm max-w-[80%]">
                           <p className="mb-2">بناءً على الوثائق المتوفرة، إليك خطوات إعداد روبوت محادثة جديد:</p>
                           <ol className="list-decimal list-inside space-y-1">
-                            <li>انتقل إلى قسم "الروبوتات" في لوحة التحكم</li>
-                            <li>انقر على "إنشاء روبوت جديد"</li>
+                            <li>انتقل إلى قسم &quot;الروبوتات&quot; في لوحة التحكم</li>
+                            <li>انقر على &quot;إنشاء روبوت جديد&quot;</li>
                             <li>اختر قالب الروبوت المناسب</li>
                             <li>قم بتخصيص الردود والتدفقات</li>
                             <li>اختبر الروبوت قبل نشره</li>
@@ -153,11 +151,7 @@ export function AIIntegration() {
                   // Customer Assistant Demo
                   <>
                     {demoStep >= 0 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="flex gap-3"
-                      >
+                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-3">
                         <div className="flex-shrink-0">
                           <div className="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center">
                             <User className="h-4 w-4 text-gray-600" />
@@ -170,11 +164,7 @@ export function AIIntegration() {
                     )}
 
                     {demoStep >= 1 && (
-                      <motion.div
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="flex gap-3"
-                      >
+                      <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-3">
                         <div className="flex-shrink-0">
                           <div className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center">
                             <Bot className="h-4 w-4 text-[#2ca24c]" />
@@ -185,7 +175,7 @@ export function AIIntegration() {
                           <ol className="list-decimal list-inside mt-2 space-y-1">
                             <li>ادخل إلى حسابك</li>
                             <li>اختر الطلب المراد استرجاعه</li>
-                            <li>اضغط على "طلب استرجاع"</li>
+                            <li>اضغط على &quot;طلب استرجاع&quot;</li>
                             <li>اتبع التعليمات لإكمال الطلب</li>
                           </ol>
                           <p className="mt-2">هل تريد المساعدة في تقديم طلب الاسترجاع؟</p>
@@ -230,23 +220,23 @@ export function AIIntegration() {
                 {
                   icon: BrainCircuit,
                   title: "تعلم مستمر",
-                  description: "يتعلم المساعد تلقائياً من المحتوى الجديد والتفاعلات"
+                  description: "يتعلم المساعد تلقائياً من المحتوى الجديد والتفاعلات",
                 },
                 {
                   icon: Target,
                   title: "إجابات دقيقة",
-                  description: "يقدم إجابات مخصصة بناءً على سياق السؤال"
+                  description: "يقدم إجابات مخصصة بناءً على سياق السؤال",
                 },
                 {
                   icon: Lightbulb,
                   title: "اقتراحات ذكية",
-                  description: "يقترح مقالات وحلول ذات صلة بشكل تلقائي"
+                  description: "يقترح مقالات وحلول ذات صلة بشكل تلقائي",
                 },
                 {
                   icon: Rocket,
                   title: "تحسين مستمر",
-                  description: "يتحسن أداء المساعد مع كل تفاعل جديد"
-                }
+                  description: "يتحسن أداء المساعد مع كل تفاعل جديد",
+                },
               ].map((feature, index) => (
                 <motion.div
                   key={index}
@@ -278,7 +268,7 @@ export function AIIntegration() {
                   "التعلم المستمر من التفاعلات السابقة",
                   "تخصيص الإجابات حسب سياق المحادثة",
                   "دعم كامل للغة العربية",
-                  "تكامل مع أنظمة إدارة المعرفة"
+                  "تكامل مع أنظمة إدارة المعرفة",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-[#2ca24c] flex-shrink-0" />
@@ -297,20 +287,20 @@ export function AIIntegration() {
               icon: Zap,
               title: "تحسين الإنتاجية",
               description: "وفر وقت الموظفين مع إجابات فورية ودقيقة",
-              stats: ["50% وقت أقل في البحث", "30% تحسن في الإنتاجية"]
+              stats: ["50% وقت أقل في البحث", "30% تحسن في الإنتاجية"],
             },
             {
               icon: Users,
               title: "تحسين تجربة العملاء",
               description: "إجابات فورية على مدار الساعة لجميع الاستفسارات",
-              stats: ["85% رضا العملاء", "24/7 دعم متواصل"]
+              stats: ["85% رضا العملاء", "24/7 دعم متواصل"],
             },
             {
               icon: Database,
               title: "إدارة المعرفة الذكية",
               description: "تحسين مستمر لقاعدة المعرفة بناءً على التفاعلات",
-              stats: ["90% دقة في الإجابات", "تحديث تلقائي للمحتوى"]
-            }
+              stats: ["90% دقة في الإجابات", "تحديث تلقائي للمحتوى"],
+            },
           ].map((benefit, index) => (
             <motion.div
               key={index}

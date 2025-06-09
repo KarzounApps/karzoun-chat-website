@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronRight, ChevronLeft, Star } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronRight, ChevronLeft, Star } from "lucide-react";
 
 // Dummy testimonials data
 const dummyTestimonials = [
@@ -10,13 +10,14 @@ const dummyTestimonials = [
     role: "مدير التسويق",
     company: "شركة التقنية المتقدمة",
     content: "زيادة رضا العملاء بنسبة 85% منذ استخدام كرزون. النظام سهل الاستخدام وفعال للغاية.",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     stats: {
       satisfaction: "85%",
       response: "2.5 دقيقة",
-      retention: "95%"
+      retention: "95%",
     },
-    rating: 5
+    rating: 5,
   },
   {
     id: 2,
@@ -24,13 +25,14 @@ const dummyTestimonials = [
     role: "مديرة المبيعات",
     company: "متجر الأناقة",
     content: "تحسين معدل التحويل بنسبة 40% مع دعم عملاء أفضل. كرزون غير طريقة عملنا للأفضل.",
-    avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     stats: {
       conversion: "40%",
       sales: "2.5x",
-      support: "24/7"
+      support: "24/7",
     },
-    rating: 5
+    rating: 5,
   },
   {
     id: 3,
@@ -38,14 +40,15 @@ const dummyTestimonials = [
     role: "الرئيس التنفيذي",
     company: "تك سوليوشنز",
     content: "أتمتة 90% من عمليات خدمة العملاء مع الحفاظ على جودة عالية في الخدمة.",
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
     stats: {
       automation: "90%",
       satisfaction: "94%",
-      efficiency: "3x"
+      efficiency: "3x",
     },
-    rating: 5
-  }
+    rating: 5,
+  },
 ];
 
 interface TestimonialsCarouselProps {
@@ -71,13 +74,11 @@ export function TestimonialsCarousel({ autoPlay = true, interval = 5000 }: Testi
   };
 
   const prevSlide = () => {
-    setCurrentIndex((current) => 
-      current === 0 ? dummyTestimonials.length - 1 : current - 1
-    );
+    setCurrentIndex((current) => (current === 0 ? dummyTestimonials.length - 1 : current - 1));
   };
 
   return (
-    <div 
+    <div
       className="relative overflow-hidden"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -99,15 +100,9 @@ export function TestimonialsCarousel({ autoPlay = true, interval = 5000 }: Testi
                 className="w-16 h-16 rounded-full object-cover"
               />
               <div>
-                <h4 className="font-semibold text-lg">
-                  {dummyTestimonials[currentIndex].name}
-                </h4>
-                <p className="text-gray-600">
-                  {dummyTestimonials[currentIndex].role}
-                </p>
-                <p className="text-gray-500 text-sm">
-                  {dummyTestimonials[currentIndex].company}
-                </p>
+                <h4 className="font-semibold text-lg">{dummyTestimonials[currentIndex].name}</h4>
+                <p className="text-gray-600">{dummyTestimonials[currentIndex].role}</p>
+                <p className="text-gray-500 text-sm">{dummyTestimonials[currentIndex].company}</p>
               </div>
               <div className="flex gap-1 mr-auto">
                 {[...Array(dummyTestimonials[currentIndex].rating)].map((_, i) => (
@@ -117,7 +112,7 @@ export function TestimonialsCarousel({ autoPlay = true, interval = 5000 }: Testi
             </div>
 
             <blockquote className="text-xl font-medium text-gray-900 mb-8">
-              "{dummyTestimonials[currentIndex].content}"
+              &quot;{dummyTestimonials[currentIndex].content}&quot;
             </blockquote>
 
             <div className="grid grid-cols-3 gap-4 p-4 bg-gray-50 rounded-xl">
@@ -137,9 +132,7 @@ export function TestimonialsCarousel({ autoPlay = true, interval = 5000 }: Testi
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-3 h-3 rounded-full transition-all ${
-                index === currentIndex 
-                  ? 'bg-google-blue scale-110' 
-                  : 'bg-gray-300 hover:bg-gray-400'
+                index === currentIndex ? "bg-google-blue scale-110" : "bg-gray-300 hover:bg-gray-400"
               }`}
             />
           ))}

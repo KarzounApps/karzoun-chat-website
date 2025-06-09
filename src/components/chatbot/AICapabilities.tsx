@@ -1,18 +1,79 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { Brain, Bot, MessageSquare, Zap, FileText, ArrowRight, CheckCircle2, Sparkles, Settings, Play, Braces, Users, Database, Lock, Shield, Code, Search, BookOpen, PenTool, Lightbulb, Star, BarChart, Layers, RefreshCw, Gauge, AlertCircle, FileCheck, UserCheck, MessagesSquare, BrainCircuit, Workflow, Cpu, GitBranch, Keyboard, Rocket, ChevronRight, ChevronLeft, Send, Clock, User, Wand2, Repeat, Fingerprint, Eye, Network, Target, Blocks, Loader2, Maximize2, Minimize2, Expand, Shrink, Info, Waves, Orbit, Atom, Infinity, Radar, Printer as Prism, Tag } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import {
+  Brain,
+  Bot,
+  MessageSquare,
+  Zap,
+  FileText,
+  ArrowRight,
+  CheckCircle2,
+  Sparkles,
+  Settings,
+  Play,
+  Braces,
+  Users,
+  Database,
+  Lock,
+  Shield,
+  Code,
+  Search,
+  BookOpen,
+  PenTool,
+  Lightbulb,
+  Star,
+  BarChart,
+  Layers,
+  RefreshCw,
+  Gauge,
+  AlertCircle,
+  FileCheck,
+  UserCheck,
+  MessagesSquare,
+  BrainCircuit,
+  Workflow,
+  Cpu,
+  GitBranch,
+  Keyboard,
+  Rocket,
+  ChevronRight,
+  ChevronLeft,
+  Send,
+  Clock,
+  User,
+  Wand2,
+  Repeat,
+  Fingerprint,
+  Eye,
+  Network,
+  Target,
+  Blocks,
+  Loader2,
+  Maximize2,
+  Minimize2,
+  Expand,
+  Shrink,
+  Info,
+  Waves,
+  Orbit,
+  Atom,
+  Infinity,
+  Radar,
+  Printer as Prism,
+  Tag,
+} from "lucide-react";
 
 export function AICapabilities() {
-  const [activeFeature, setActiveFeature] = useState('intent');
+  const [activeFeature, setActiveFeature] = useState("intent");
   const [isAnimating, setIsAnimating] = useState(false);
   const [animationStep, setAnimationStep] = useState(0);
-  
+
   // Auto-advance animation steps
   useEffect(() => {
     if (isAnimating) {
       const timer = setTimeout(() => {
         if (animationStep < 3) {
-          setAnimationStep(prev => prev + 1);
+          setAnimationStep((prev) => prev + 1);
         } else {
           setIsAnimating(false);
           setAnimationStep(0);
@@ -34,9 +95,9 @@ export function AICapabilities() {
         "فهم دقيق لاحتياجات العملاء",
         "توجيه المحادثة للمسار الصحيح",
         "تقليل وقت الانتظار",
-        "تحسين تجربة العملاء"
+        "تحسين تجربة العملاء",
       ],
-      animation: (step) => (
+      animation: (step: number) => (
         <div className="h-full flex flex-col justify-center items-center">
           {step >= 0 && (
             <motion.div
@@ -47,7 +108,7 @@ export function AICapabilities() {
               <p className="text-sm">أريد معرفة حالة طلبي رقم #45678</p>
             </motion.div>
           )}
-          
+
           {step >= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -62,7 +123,7 @@ export function AICapabilities() {
               <p className="text-xs text-blue-700">الثقة: 95%</p>
             </motion.div>
           )}
-          
+
           {step >= 2 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -76,7 +137,7 @@ export function AICapabilities() {
               <p className="text-xs text-green-700">تم توجيه المحادثة إلى: مسار متابعة الطلبات</p>
             </motion.div>
           )}
-          
+
           {step >= 3 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -87,11 +148,13 @@ export function AICapabilities() {
                 <Bot className="h-4 w-4 text-purple-600" />
                 <span className="text-sm font-medium text-purple-800">الرد الآلي</span>
               </div>
-              <p className="text-xs text-purple-700">طلبك رقم #45678 في مرحلة الشحن وسيصل خلال 24-48 ساعة. هل تحتاج إلى مساعدة أخرى؟</p>
+              <p className="text-xs text-purple-700">
+                طلبك رقم #45678 في مرحلة الشحن وسيصل خلال 24-48 ساعة. هل تحتاج إلى مساعدة أخرى؟
+              </p>
             </motion.div>
           )}
         </div>
-      )
+      ),
     },
     sentiment: {
       title: "تحليل المشاعر",
@@ -99,13 +162,8 @@ export function AICapabilities() {
       color: "bg-red-100",
       textColor: "text-red-600",
       description: "يحلل مشاعر العملاء ويكيف الردود وفقاً لحالتهم العاطفية",
-      benefits: [
-        "فهم مشاعر العملاء",
-        "تكييف نبرة الرد حسب الحالة",
-        "تحديد العملاء المحبطين",
-        "تحسين رضا العملاء"
-      ],
-      animation: (step) => (
+      benefits: ["فهم مشاعر العملاء", "تكييف نبرة الرد حسب الحالة", "تحديد العملاء المحبطين", "تحسين رضا العملاء"],
+      animation: (step: number) => (
         <div className="h-full flex flex-col justify-center items-center">
           {step >= 0 && (
             <motion.div
@@ -113,10 +171,12 @@ export function AICapabilities() {
               animate={{ opacity: 1 }}
               className="bg-gray-100 rounded-lg p-3 max-w-[80%] mb-4"
             >
-              <p className="text-sm">للأسف لم يصل طلبي حتى الآن رغم مرور أسبوع على الموعد المحدد! هذه تجربة سيئة جداً.</p>
+              <p className="text-sm">
+                للأسف لم يصل طلبي حتى الآن رغم مرور أسبوع على الموعد المحدد! هذه تجربة سيئة جداً.
+              </p>
             </motion.div>
           )}
-          
+
           {step >= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -131,7 +191,7 @@ export function AICapabilities() {
               <p className="text-xs text-red-700">مستوى السلبية: مرتفع (85%)</p>
             </motion.div>
           )}
-          
+
           {step >= 2 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -146,7 +206,7 @@ export function AICapabilities() {
               <p className="text-xs text-yellow-700">إجراء: تعويض العميل + اعتذار</p>
             </motion.div>
           )}
-          
+
           {step >= 3 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -157,11 +217,14 @@ export function AICapabilities() {
                 <Bot className="h-4 w-4 text-purple-600" />
                 <span className="text-sm font-medium text-purple-800">الرد المخصص</span>
               </div>
-              <p className="text-xs text-purple-700">نعتذر بشدة عن هذا التأخير غير المقبول. سنقوم بتعويضك بقسيمة خصم بقيمة 20% على طلبك القادم. سيتم إرسال الطلب بشكل عاجل خلال 24 ساعة. هل يمكنني مساعدتك بأي شيء آخر؟</p>
+              <p className="text-xs text-purple-700">
+                نعتذر بشدة عن هذا التأخير غير المقبول. سنقوم بتعويضك بقسيمة خصم بقيمة 20% على طلبك القادم. سيتم إرسال
+                الطلب بشكل عاجل خلال 24 ساعة. هل يمكنني مساعدتك بأي شيء آخر؟
+              </p>
             </motion.div>
           )}
         </div>
-      )
+      ),
     },
     completion: {
       title: "إكمال تلقائي",
@@ -169,13 +232,8 @@ export function AICapabilities() {
       color: "bg-purple-100",
       textColor: "text-purple-600",
       description: "يقترح ويكمل الردود أثناء الكتابة لتوفير الوقت",
-      benefits: [
-        "توفير وقت الموظفين",
-        "ضمان اتساق الردود",
-        "تقليل الأخطاء الكتابية",
-        "زيادة سرعة الاستجابة"
-      ],
-      animation: (step) => (
+      benefits: ["توفير وقت الموظفين", "ضمان اتساق الردود", "تقليل الأخطاء الكتابية", "زيادة سرعة الاستجابة"],
+      animation: (step: number) => (
         <div className="h-full flex flex-col justify-center items-center">
           {step >= 0 && (
             <motion.div
@@ -186,7 +244,7 @@ export function AICapabilities() {
               <p className="text-sm">كيف يمكنني إرجاع منتج تالف؟</p>
             </motion.div>
           )}
-          
+
           {step >= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -200,7 +258,7 @@ export function AICapabilities() {
               <p className="text-xs text-gray-700">يمكنك إرجاع المنتج</p>
             </motion.div>
           )}
-          
+
           {step >= 2 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -213,14 +271,15 @@ export function AICapabilities() {
               </div>
               <p className="text-xs text-purple-700">
                 <span className="text-gray-700">يمكنك إرجاع المنتج</span>
-                <span className="text-purple-700"> التالف خلال 14 يوماً من تاريخ الاستلام. يرجى اتباع الخطوات التالية:
-                1. تصوير المنتج التالف
-                2. تعبئة نموذج الإرجاع من حسابك
-                3. التواصل مع خدمة التوصيل لاستلام المنتج</span>
+                <span className="text-purple-700">
+                  {" "}
+                  التالف خلال 14 يوماً من تاريخ الاستلام. يرجى اتباع الخطوات التالية: 1. تصوير المنتج التالف 2. تعبئة
+                  نموذج الإرجاع من حسابك 3. التواصل مع خدمة التوصيل لاستلام المنتج
+                </span>
               </p>
             </motion.div>
           )}
-          
+
           {step >= 3 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -235,7 +294,7 @@ export function AICapabilities() {
             </motion.div>
           )}
         </div>
-      )
+      ),
     },
     summary: {
       title: "تلخيص المحادثات",
@@ -247,9 +306,9 @@ export function AICapabilities() {
         "توفير وقت مراجعة المحادثات",
         "استخلاص النقاط المهمة",
         "تحديث ملف العميل تلقائياً",
-        "تسهيل متابعة المحادثات السابقة"
+        "تسهيل متابعة المحادثات السابقة",
       ],
-      animation: (step) => (
+      animation: (step: number) => (
         <div className="h-full flex flex-col justify-center items-center">
           {step >= 0 && (
             <motion.div
@@ -269,7 +328,7 @@ export function AICapabilities() {
               <p className="text-xs text-gray-700">...</p>
             </motion.div>
           )}
-          
+
           {step >= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -290,7 +349,7 @@ export function AICapabilities() {
               </ul>
             </motion.div>
           )}
-          
+
           {step >= 2 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -304,12 +363,14 @@ export function AICapabilities() {
               <p className="text-xs text-blue-700">تصنيفات مقترحة:</p>
               <div className="flex flex-wrap gap-1 mt-1">
                 <span className="text-xs bg-blue-200 text-blue-800 px-2 py-0.5 rounded-full">عميل محتمل</span>
-                <span className="text-xs bg-blue-200 text-blue-800 px-2 py-0.5 rounded-full">مهتم بالملابس الرياضية</span>
+                <span className="text-xs bg-blue-200 text-blue-800 px-2 py-0.5 rounded-full">
+                  مهتم بالملابس الرياضية
+                </span>
                 <span className="text-xs bg-blue-200 text-blue-800 px-2 py-0.5 rounded-full">يفضل اللون الأزرق</span>
               </div>
             </motion.div>
           )}
-          
+
           {step >= 3 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -329,7 +390,7 @@ export function AICapabilities() {
             </motion.div>
           )}
         </div>
-      )
+      ),
     },
     evaluation: {
       title: "تقييم الخدمة",
@@ -341,9 +402,9 @@ export function AICapabilities() {
         "تقييم موضوعي لجودة الخدمة",
         "تحديد نقاط القوة والضعف",
         "توجيه الموظفين للتحسين",
-        "تحسين مستمر لتجربة العملاء"
+        "تحسين مستمر لتجربة العملاء",
       ],
-      animation: (step) => (
+      animation: (step: number) => (
         <div className="h-full flex flex-col justify-center items-center">
           {step >= 0 && (
             <motion.div
@@ -362,7 +423,7 @@ export function AICapabilities() {
               <p className="text-xs text-gray-700">...</p>
             </motion.div>
           )}
-          
+
           {step >= 1 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -376,34 +437,34 @@ export function AICapabilities() {
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-yellow-700 min-w-[100px]">وقت الاستجابة:</span>
                 <div className="h-2 bg-gray-200 rounded-full flex-1">
-                  <div className="h-2 bg-green-500 rounded-full" style={{ width: '90%' }}></div>
+                  <div className="h-2 bg-green-500 rounded-full" style={{ width: "90%" }}></div>
                 </div>
                 <span className="text-xs text-green-700 font-medium">ممتاز (90%)</span>
               </div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-yellow-700 min-w-[100px]">دقة المعلومات:</span>
                 <div className="h-2 bg-gray-200 rounded-full flex-1">
-                  <div className="h-2 bg-green-500 rounded-full" style={{ width: '85%' }}></div>
+                  <div className="h-2 bg-green-500 rounded-full" style={{ width: "85%" }}></div>
                 </div>
                 <span className="text-xs text-green-700 font-medium">جيد جداً (85%)</span>
               </div>
               <div className="flex items-center gap-2 mb-1">
                 <span className="text-xs text-yellow-700 min-w-[100px]">التعاطف:</span>
                 <div className="h-2 bg-gray-200 rounded-full flex-1">
-                  <div className="h-2 bg-yellow-500 rounded-full" style={{ width: '70%' }}></div>
+                  <div className="h-2 bg-yellow-500 rounded-full" style={{ width: "70%" }}></div>
                 </div>
                 <span className="text-xs text-yellow-700 font-medium">جيد (70%)</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-xs text-yellow-700 min-w-[100px]">حل المشكلة:</span>
                 <div className="h-2 bg-gray-200 rounded-full flex-1">
-                  <div className="h-2 bg-green-500 rounded-full" style={{ width: '100%' }}></div>
+                  <div className="h-2 bg-green-500 rounded-full" style={{ width: "100%" }}></div>
                 </div>
                 <span className="text-xs text-green-700 font-medium">ممتاز (100%)</span>
               </div>
             </motion.div>
           )}
-          
+
           {step >= 2 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -421,7 +482,7 @@ export function AICapabilities() {
               </ul>
             </motion.div>
           )}
-          
+
           {step >= 3 && (
             <motion.div
               initial={{ opacity: 0 }}
@@ -435,7 +496,7 @@ export function AICapabilities() {
               <div className="flex items-center justify-between mb-1">
                 <span className="text-xs text-green-700">التقييم العام:</span>
                 <div className="flex">
-                  {[1, 2, 3, 4].map(i => (
+                  {[1, 2, 3, 4].map((i) => (
                     <Star key={i} className="h-4 w-4 text-yellow-400 fill-current" />
                   ))}
                   <Star className="h-4 w-4 text-yellow-200 fill-current" />
@@ -447,8 +508,8 @@ export function AICapabilities() {
             </motion.div>
           )}
         </div>
-      )
-    }
+      ),
+    },
   };
 
   // Function to start animation
@@ -467,9 +528,7 @@ export function AICapabilities() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">
-              قدرات الذكاء الاصطناعي المتقدمة
-            </h2>
+            <h2 className="text-3xl font-bold mb-4">قدرات الذكاء الاصطناعي المتقدمة</h2>
             <p className="text-gray-600 max-w-3xl mx-auto">
               تعزيز روبوتات المحادثة بقدرات ذكاء اصطناعي متطورة لفهم العملاء بشكل أفضل وتقديم تجربة استثنائية
             </p>
@@ -485,7 +544,11 @@ export function AICapabilities() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className={`absolute -top-6 -right-6 ${features[activeFeature].color} w-24 h-24 rounded-full opacity-60`}></div>
+            <div
+              className={`absolute -top-6 -right-6 ${
+                features[activeFeature as keyof typeof features].color
+              } w-24 h-24 rounded-full opacity-60`}
+            ></div>
             <div className="relative z-10">
               <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 h-[400px]">
                 {/* Header */}
@@ -493,15 +556,17 @@ export function AICapabilities() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       {/* Fixed: Using the correct icon component dynamically */}
-                      {React.createElement(features[activeFeature].icon, { 
-                        className: `h-5 w-5 ${features[activeFeature].textColor}` 
+                      {React.createElement(features[activeFeature as keyof typeof features].icon, {
+                        className: `h-5 w-5 ${features[activeFeature as keyof typeof features].textColor}`,
                       })}
-                      <h3 className="font-medium">{features[activeFeature].title}</h3>
+                      <h3 className="font-medium">{features[activeFeature as keyof typeof features].title}</h3>
                     </div>
                     <div className="flex items-center gap-2">
-                      <button 
+                      <button
                         onClick={startAnimation}
-                        className={`${features[activeFeature].color} ${features[activeFeature].textColor} p-1 rounded hover:opacity-80 transition-opacity`}
+                        className={`${features[activeFeature as keyof typeof features].color} ${
+                          features[activeFeature as keyof typeof features].textColor
+                        } p-1 rounded hover:opacity-80 transition-opacity`}
                         disabled={isAnimating}
                       >
                         <Play className="h-4 w-4" />
@@ -509,10 +574,10 @@ export function AICapabilities() {
                     </div>
                   </div>
                 </div>
-                
+
                 {/* Animation Area */}
                 <div className="p-6 h-[344px]">
-                  {features[activeFeature].animation(animationStep)}
+                  {features[activeFeature as keyof typeof features].animation(animationStep)}
                 </div>
               </div>
             </div>
@@ -536,10 +601,12 @@ export function AICapabilities() {
             {/* AI Features */}
             <div className="space-y-4 mb-8">
               {Object.entries(features).map(([key, feature]) => (
-                <div 
+                <div
                   key={key}
                   className={`flex items-start gap-4 p-4 rounded-lg cursor-pointer transition-colors ${
-                    activeFeature === key ? `${feature.color} border border-${feature.textColor.replace('text-', '')}` : 'hover:bg-gray-50'
+                    activeFeature === key
+                      ? `${feature.color} border border-${feature.textColor.replace("text-", "")}`
+                      : "hover:bg-gray-50"
                   }`}
                   onClick={() => {
                     setActiveFeature(key);
@@ -547,17 +614,17 @@ export function AICapabilities() {
                     setAnimationStep(0);
                   }}
                 >
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    activeFeature === key ? feature.textColor : feature.color
-                  }`}>
-                    {React.createElement(feature.icon, { 
-                      className: `h-5 w-5 ${activeFeature === key ? 'text-white' : feature.textColor}` 
+                  <div
+                    className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                      activeFeature === key ? feature.textColor : feature.color
+                    }`}
+                  >
+                    {React.createElement(feature.icon, {
+                      className: `h-5 w-5 ${activeFeature === key ? "text-white" : feature.textColor}`,
                     })}
                   </div>
                   <div>
-                    <h4 className={`font-medium ${
-                      activeFeature === key ? feature.textColor : 'text-gray-900'
-                    }`}>
+                    <h4 className={`font-medium ${activeFeature === key ? feature.textColor : "text-gray-900"}`}>
                       {feature.title}
                     </h4>
                     <p className="text-gray-600 mt-1">{feature.description}</p>
@@ -577,7 +644,7 @@ export function AICapabilities() {
                   "التعلم المستمر من التفاعلات السابقة",
                   "تخصيص التجربة حسب سلوك وتفضيلات كل عميل",
                   "تحليل البيانات واستخراج الرؤى القيمة",
-                  "تكامل سلس مع أنظمة إدارة علاقات العملاء"
+                  "تكامل سلس مع أنظمة إدارة علاقات العملاء",
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
                     <CheckCircle2 className="h-5 w-5 text-indigo-500 flex-shrink-0" />
@@ -600,7 +667,7 @@ export function AICapabilities() {
 }
 
 // Heart icon component since it's not imported
-function Heart(props) {
+function Heart(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

@@ -371,8 +371,8 @@ export function Features() {
                       <div className="bg-purple-50 rounded-lg p-3 text-sm max-w-[80%] rounded-tl-none">
                         <p>بالتأكيد! لإنشاء حملة تسويقية جديدة، اتبع هذه الخطوات:</p>
                         <ol className="list-decimal list-inside mt-2 space-y-1">
-                          <li>انتقل إلى قسم "الحملات" من القائمة الرئيسية</li>
-                          <li>انقر على زر "إنشاء حملة جديدة"</li>
+                          <li>انتقل إلى قسم &quot;الحملات&quot; من القائمة الرئيسية</li>
+                          <li>انقر على زر &quot;إنشاء حملة جديدة&quot;</li>
                           <li>اختر نوع الحملة (بريد إلكتروني، رسائل نصية، إلخ)</li>
                           <li>حدد الجمهور المستهدف</li>
                           <li>قم بإعداد محتوى الحملة</li>
@@ -446,8 +446,8 @@ export function Features() {
   };
 
   // Handle feature click
-  const handleFeatureClick = (title) => {
-    const featureId = featureMap[title];
+  const handleFeatureClick = (title: string) => {
+    const featureId = featureMap[title as keyof typeof featureMap];
     if (featureId) {
       setActiveFeature(featureId);
     }
@@ -507,7 +507,7 @@ export function Features() {
                         transition={{ duration: 0.3 }}
                         className="h-full w-full"
                       >
-                        {features[activeFeature].content}
+                        {features[activeFeature as keyof typeof features].content}
                       </motion.div>
                     </AnimatePresence>
                   </div>
