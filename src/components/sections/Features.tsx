@@ -487,7 +487,7 @@ export function Features() {
                 <div className="h-3 w-3 rounded-full bg-green-500"></div>
               </div>
               
-              <div className="grid grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
                   className="col-span-2 rounded-xl bg-gray-50 p-6"

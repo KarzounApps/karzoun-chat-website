@@ -9,7 +9,9 @@ import { CustomerData } from "../components/sections/CustomerData";
 import { ChatbotFeature } from "../components/sections/ChatbotFeature";
 import { AutomationFeature } from "../components/sections/AutomationFeature";
 import { TestimonialsAndSecurity } from "../components/sections/TestimonialsAndSecurity";
-import { MobileApps } from "../components/sections/MobileApps";
+import { MobileApps } from "../components/sections/2";
+import { WhatsAppIntegration } from "@/components/chatbot/WhatsAppIntegration";
+import { InstagramComments } from "@/components/chatbot/InstagramComments";
 
 export function Home() {
   return (
@@ -19,9 +21,11 @@ export function Home() {
       <Features />
       <Details />
       <TeamManagement />
+      <WhatsAppIntegration />
       <CustomerData />
       <ChatbotFeature />
       <AutomationFeature />
+      <InstagramComments />
       <TestimonialsAndSecurity />
       <MobileApps />
     </>

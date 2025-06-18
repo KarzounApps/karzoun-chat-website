@@ -3,6 +3,7 @@ import "./globals.css";
 import { MegaMenu } from "@/components/navigation/MegaMenu";
 import { Footer } from "@/components/Footer";
 import { Noto_Sans_Arabic } from "next/font/google";
+import FooterV2 from "@/components/FooterV2";
 
 const notoSansArabic = Noto_Sans_Arabic({
   subsets: ["arabic"],
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   title: "منصة إدارة علاقات العملاء والأتمتة",
   description: "منصة إدارة علاقات العملاء والأتمتة",
   icons: {
-    icon: "/logo.svg",
+    icon: "/icons/logo.webp",
   },
 };
 
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body className={notoSansArabic.className}>
         <MegaMenu />
         {children}
-        <Footer />
+        <FooterV2 />
       </body>
     </html>
   );

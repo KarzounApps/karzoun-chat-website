@@ -3,11 +3,11 @@ import { GitBranch } from 'lucide-react';
 
 export function AutomationFeature() {
   return (
-    <div className="py-24 bg-gradient-to-b from-white to-gray-50">
+    <div className="py-24 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-sm text-gray-600 mb-4">بناء عمليات أتمتة متقدمة</p>
-          <h2 className="text-4xl font-bold mb-4">
+          <h2 className="md:text-4xl text-2xl font-bold mb-4">
             قم بأتمتة أي شيء يمكنك
             <br />
             تخيله، لا حدود سوى مخيلتك

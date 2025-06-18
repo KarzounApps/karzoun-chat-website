@@ -455,7 +455,7 @@ export function MegaMenu() {
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0">
-              <img src="/logo.svg" alt="كرزون" className="h-8 w-auto" />
+              <img src="/icons/logo.webp" alt="كرزون" className="h-8 w-auto" />
             </Link>
 
             <div className="hidden md:block mr-10">
@@ -475,7 +475,7 @@ export function MegaMenu() {
                         exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full right-0 w-screen max-w-screen-lg bg-white shadow-lg rounded-lg mt-2 z-50"
                         style={{
-                          maxWidth: "calc(100vw - 2rem)",
+                          maxWidth: "calc(100vw - 20rem)",
                           right: "0",
                           transform: "translateX(0)",
                         }}
@@ -493,33 +493,33 @@ export function MegaMenu() {
                                 }`}
                               >
                                 <div className="flex items-center justify-between">
-                                  <ChevronLeft
-                                    className={`h-5 w-5 ${
-                                      activeCategory === category ? "text-google-blue" : "text-gray-400"
-                                    }`}
-                                  />
                                   <div className="flex items-center gap-3">
                                     <Icon
                                       className={`h-5 w-5 ${
                                         activeCategory === category ? "text-google-blue" : "text-gray-500"
                                       }`}
                                     />
-                                    <span className="font-medium">{category}</span>
+                                    <span className="font-light">{category}</span>
                                   </div>
+                                  <ChevronLeft
+                                    className={`h-5 w-5 ${
+                                      activeCategory === category ? "text-google-blue" : "text-gray-400"
+                                    }`}
+                                  />
                                 </div>
                                 <p className="text-sm text-gray-500 mt-1 pr-8">{description}</p>
                               </button>
                             ))}
                           </div>
 
-                          <div className="flex-1 p-6">
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                          <div className="flex-1 p-6 ">
+                            <div className="grid grid-cols-1 sm:grid-cols-4 gap-6 ">
                               {featureItems[activeCategory as keyof typeof featureItems] &&
                                 featureItems[activeCategory as keyof typeof featureItems].map((item, index) => (
                                   <a
                                     key={index}
                                     href={item.link}
-                                    className="flex items-start space-x-4 space-x-reverse p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                                    className="flex items-start space-x-4 space-x-reverse p-4 rounded-lg hover:bg-gray-50 transition-colors gap-1"
                                   >
                                     <div className="flex-shrink-0">
                                       <item.icon className="h-6 w-6 text-google-blue" />
@@ -584,7 +584,7 @@ export function MegaMenu() {
                         exit={{ opacity: 0, y: 10 }}
                         className="absolute top-full right-0 w-screen max-w-screen-lg bg-white shadow-lg rounded-lg mt-2 z-50"
                         style={{
-                          maxWidth: "calc(100vw - 2rem)",
+                          maxWidth: "calc(100vw - 45rem)",
                           right: "0",
                           transform: "translateX(0)",
                         }}
@@ -601,12 +601,7 @@ export function MegaMenu() {
                                     : "hover:bg-white/50 text-gray-700"
                                 }`}
                               >
-                                <div className="flex items-center justify-between">
-                                  <ChevronLeft
-                                    className={`h-5 w-5 ${
-                                      activeResourceCategory === category ? "text-google-blue" : "text-gray-400"
-                                    }`}
-                                  />
+                                <div className="flex items-center justify-between ">
                                   <div className="flex items-center gap-3">
                                     <Icon
                                       className={`h-5 w-5 ${
@@ -615,6 +610,11 @@ export function MegaMenu() {
                                     />
                                     <span className="font-medium">{category}</span>
                                   </div>
+                                  <ChevronLeft
+                                    className={`h-5 w-5 ${
+                                      activeResourceCategory === category ? "text-google-blue" : "text-gray-400"
+                                    }`}
+                                  />
                                 </div>
                                 <p className="text-sm text-gray-500 mt-1 pr-8">{description}</p>
                               </button>
@@ -657,7 +657,7 @@ export function MegaMenu() {
               تسجيل الدخول
             </a>
             <a href="#" className="bg-google-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
-              إنشاء حساب مجاني
+              إنشاء حساب
             </a>
           </div>
         </div>

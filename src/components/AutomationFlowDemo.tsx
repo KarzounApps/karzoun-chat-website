@@ -512,6 +512,7 @@ const FlowWithProvider = () => {
   const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
   const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
   const [showHint, setShowHint] = useState(true);
+  const [showHint2, setShowHint2] = useState(false);
 
   const onConnect = useCallback(
     (params: Connection) => {
@@ -550,15 +551,29 @@ const FlowWithProvider = () => {
   );
 
   return (
-    <div className="relative h-[600px] overflow-visible">
+    <div className="relative h-[600px] overflow-visible mt-52">
       {showHint && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          className="absolute top-4 left-1/2 -translate-x-1/12 z-10 bg-white px-10 py-3 rounded-full shadow-lg flex items-center gap-2"
+          animate={{ opacity: 1, y: -30 }}
+          className="absolute -top-10 left-1/2 w-full md:w-auto -translate-x-1/2 z-10 bg-white md:px-10 px-3 py-3 rounded-full shadow-lg flex items-center gap-2"
         >
-          <span className="text-sm text-gray-600 ">
+          <span className="md:text-sm text-xs text-gray-600 ">
             جرب تحريك وربط العناصر لتخصيص التدفق، انقر على الخط لحذف الاتصال 👋
+          </span>
+          <button onClick={() => setShowHint(false)} className="text-gray-400 hover:text-gray-600">
+            ×
+          </button>
+        </motion.div>
+      )}
+      {showHint && (
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: -100 }}
+          className="absolute -top-10 left-1/2 w-full md:w-auto  -translate-x-1/2 z-10 bg-white  md:px-10 px-3 py-3 rounded-full shadow-lg flex items-center gap-2"
+        >
+          <span className=" md:text-sm text-xs text-gray-600 ">
+            صمم رحلات عملاء متطورة مع واجهتنا السهلة للسحب والإفلات. اربط الإجراءات والمحفزات والشروط بسلاسة
           </span>
           <button onClick={() => setShowHint(false)} className="text-gray-400 hover:text-gray-600">
             ×
@@ -583,7 +598,7 @@ const FlowWithProvider = () => {
         elementsSelectable={true}
         minZoom={0.2}
         maxZoom={1.5}
-        defaultViewport={{ x: 0, y: 0, zoom: 0.7 }}
+        defaultViewport={{ x: 0, y: 0, zoom: 1.4 }}
         connectionMode={ConnectionMode.Loose}
         defaultEdgeOptions={{
           animated: true,
