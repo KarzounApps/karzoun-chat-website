@@ -131,19 +131,19 @@ const testimonials = [
 const trustBadges = [
   {
     name: "ISO 27001",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/ISO_27001_Logo.svg/1200px-ISO_27001_Logo.svg.png",
+    logo: "/iso/ISO_27001.png",
   },
   {
     name: "SOC 2",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/5/5c/SOC2_Logo.svg",
+    logo: "/iso/SOC_2.png",
   },
   {
     name: "GDPR Compliant",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/GDPR_Logo.svg/1200px-GDPR_Logo.svg.png",
+    logo: "/iso/DPR_Compliant.png",
   },
   {
     name: "PCI DSS",
-    logo: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/PCI_Logo.svg/1200px-PCI_Logo.svg.png",
+    logo: "/iso/PCI_DSS.png",
   },
 ];
 
@@ -363,7 +363,7 @@ export function TestimonialsAndSecurity() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
                     transition={{ duration: 0.5 }}
-                    className="flex gap-6"
+                    className="flex flex-col md:flex-row gap-6"
                   >
                     {getCurrentPageTestimonials()
                       .slice(0, 3)
@@ -552,7 +552,7 @@ export function TestimonialsAndSecurity() {
                 transition={{ duration: 0.4, delay: index * 0.1 }}
                 className="bg-white/10 backdrop-blur-sm rounded-xl p-6 flex items-center justify-center h-24"
               >
-                <img src={badge.logo} alt={badge.name} className="max-h-12 max-w-full object-contain" />
+                <img src={badge.logo} alt={badge.name} className="max-h-20 max-w-full object-vover" />
               </motion.div>
             ))}
           </div>

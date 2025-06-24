@@ -13,7 +13,7 @@ const companyCategories = [
       },
       {
         name: "مصرف الإنماء",
-        logo: "/brands/alenmaa.webp",
+        logo: "/brands/alenmaa.png",
       },
       {
         name: "البنك الأهلي",
@@ -64,7 +64,7 @@ const companyCategories = [
       },
       {
         name: "شركة المراعي",
-        logo: "/brands/marai.jpeg",
+        logo: "/brands/marai.png",
       },
       {
         name: "مجموعة الحكير",
