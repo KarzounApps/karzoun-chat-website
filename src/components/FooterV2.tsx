@@ -85,25 +85,25 @@ function FooterV2() {
               {/* Social Media Icons */}
               <div className="flex justify-center gap-4">
                 <a
-                  href="#"
+                  href="https://www.youtube.com/channel/UCtVqhxVYaTe5HaOFpBhOpTg"
                   // className="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center hover:bg-white/25 transition-colors"
                 >
                   <Youtube className="w-6 h-6 text-white font-bold" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.instagram.com/karzoun_marketing/"
                   // className="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center hover:bg-white/25 transition-colors"
                 >
                   <Instagram className="w-6 h-6 text-white font-bold" />
                 </a>
                 <a
-                  href="#"
+                  href="https://twitter.com/Karzoun_Tech"
                   // className="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center hover:bg-white/25 transition-colors"
                 >
                   <Twitter className="w-6 h-6 text-white font-bold" />
                 </a>
                 <a
-                  href="#"
+                  href="https://www.facebook.com/karzoun.tech/"
                   // className="w-12 h-12 bg-white/15 rounded-full flex items-center justify-center hover:bg-white/25 transition-colors"
                 >
                   <Facebook className="w-6 h-6 text-white font-bold" />

@@ -21,11 +21,11 @@ export function Home() {
       <Features />
       <Details />
       <TeamManagement />
-      <WhatsAppIntegration />
       <CustomerData />
       <ChatbotFeature />
-      <AutomationFeature />
+      <WhatsAppIntegration />
       <InstagramComments />
+      {/* <AutomationFeature /> */}
       <TestimonialsAndSecurity />
       <MobileApps />
     </>

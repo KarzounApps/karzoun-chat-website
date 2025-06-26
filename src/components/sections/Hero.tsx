@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { AutomationFlowDemo } from "../AutomationFlowDemo";
 import { Bot, MessageSquare, Zap, ArrowRight, Send, Instagram, Mail, Smartphone, Facebook } from "lucide-react";
 import { useState } from "react";
+import Image from "next/image";
 const TelegramIcon = () => (
   <svg width="24" height="24" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg" fill="none">
     <path
@@ -43,6 +44,7 @@ export function Hero() {
             حوّل علاقاتك مع العملاء من خلال أتمتة الرسائل الذكية. قم ببناء تدفقات العمل المرئية، وتواصل مع العملاء،
             ونمّي أعمالك مع منصتنا القوية لإدارة علاقات العملاء.
           </p>
+
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {platforms.map((platform) => (
               <button
@@ -74,7 +76,9 @@ export function Hero() {
             </motion.a>
           </div>
         </motion.div>
-
+        <div className="text-center w-full mt-7">
+          <Image src="/meta-business-partner.png" alt="Hero" width={150} height={150} className="mx-auto" />
+        </div>
         {/* Automation Flow Demo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}

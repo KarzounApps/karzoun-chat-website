@@ -5,12 +5,12 @@ export function TeamManagement() {
   return (
     <div className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid grid-cols-1  gap-12 items-center">
-          <div className="text-center ">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+        <div className="grid md:grid-cols-2 grid-cols-1  gap-12 items-center">
+          <div className="text-start ">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">
               إدارة الفريق والمهام اسهل مع كرزون
             </h2>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <p className="text-gray-600 text-sm leading-relaxed">
               تم توزيع مهام الفريق لمتابعة طلبات وشكاوى العملاء بشكل احترافي. تقسيم الموظفين على فرق مختلفة
               (مبيعات خدمة عملاء، محاسبة، شكاوى) وتوزيع الصلاحيات والمهام حسب القسم او لموظف معين.
             </p>

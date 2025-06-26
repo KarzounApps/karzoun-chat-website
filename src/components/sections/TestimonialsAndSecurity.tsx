@@ -148,7 +148,7 @@ const trustBadges = [
 ];
 
 export function TestimonialsAndSecurity() {
-  const [activeView, setActiveView] = useState("grid"); // 'grid', 'carousel', or 'featured'
+  const [activeView, setActiveView] = useState("carousel"); // 'grid', 'carousel', or 'featured'
   const [currentPage, setCurrentPage] = useState(0);
   const [featuredIndex, setFeaturedIndex] = useState(0);
   const testimonialsRef = useRef(null);
@@ -208,7 +208,7 @@ export function TestimonialsAndSecurity() {
               <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">نجاحنا يقاس برضا عملائنا وتحقيق أهدافهم</p>
 
               {/* View toggle buttons */}
-              <div className="inline-flex bg-gray-100 rounded-lg p-1 mb-8">
+              {/* <div className="inline-flex bg-gray-100 rounded-lg p-1 mb-8">
                 <button
                   onClick={() => setActiveView("grid")}
                   className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
@@ -237,7 +237,7 @@ export function TestimonialsAndSecurity() {
                 >
                   عرض مميز
                 </button>
-              </div>
+              </div> */}
             </motion.div>
           </div>
 
