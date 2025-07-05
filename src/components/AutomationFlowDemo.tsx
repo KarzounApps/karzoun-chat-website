@@ -551,7 +551,7 @@ const FlowWithProvider = () => {
   );
 
   return (
-    <div className="relative h-[600px] overflow-visible mt-52">
+    <div className="relative h-[600px] overflow-visible mt-46">
       {showHint && (
         <motion.div
           initial={{ opacity: 0, y: 20 }}

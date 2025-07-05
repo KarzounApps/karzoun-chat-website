@@ -5,7 +5,7 @@ import { Users, Building2, Globe, CheckCircle2, MessageSquare, ArrowRight } from
 // Company logos data with categories
 const companyCategories = [
   {
-    name: "المؤسسات المالية",
+    name: "تجارة الالكترونية",
     companies: [
       {
         name: "بنك الراجحي",
@@ -22,7 +22,7 @@ const companyCategories = [
     ],
   },
   {
-    name: "الاتصالات والتقنية",
+    name: "مؤسسات حكومية",
     companies: [
       {
         name: "شركة الاتصالات السعودية",
@@ -39,7 +39,7 @@ const companyCategories = [
     ],
   },
   {
-    name: "الطاقة والصناعة",
+    name: "جامعات حكومية",
     companies: [
       {
         name: "أرامكو",
@@ -56,7 +56,7 @@ const companyCategories = [
     ],
   },
   {
-    name: "التجزئة والأغذية",
+    name: "طاقة وصناعة",
     companies: [
       {
         name: "مجموعة صافولا",

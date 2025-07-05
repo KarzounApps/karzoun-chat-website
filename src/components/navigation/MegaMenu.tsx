@@ -94,19 +94,19 @@ const featureItems = {
       icon: MessageSquare,
       title: "محادثة مباشرة للموقع",
       description: "محادثة بسيطة وأنيقة لموقعك الإلكتروني",
-      link: "#",
+      link: "/features/live-chat",
     },
     {
       icon: Boxes,
       title: "صندوق وارد متعدد القنوات",
       description: "اربط أي قناة وتواصل مع عملائك من مكان واحد",
-      link: "#",
+      link: "/features/omnichannel-inbox",
     },
     {
       icon: Brain,
       title: "الذكاء الإصطناعي",
       description: "قم بدعم عملك بالذكاء الاصطناعي لتحسين تجربة العملاء وزيادة الإنتاجية",
-      link: "#",
+      link: "/features/ai-features",
     },
     {
       icon: Users2,
@@ -118,13 +118,13 @@ const featureItems = {
       icon: Bot,
       title: "الرد الآلي (شات بوت)",
       description: "إنشاء روبوتات محادثة ذكية للرد على استفسارات العملاء تلقائياً",
-      link: "#",
+      link: "/features/chatbot",
     },
     {
       icon: Workflow,
       title: "الأتمتة والتخصيص",
       description: "أتمتة المهام المتكررة وتخصيص سير العمل حسب احتياجاتك",
-      link: "#",
+      link: "/features/automation",
     },
     {
       icon: Smartphone,
@@ -136,13 +136,13 @@ const featureItems = {
       icon: BookOpen,
       title: "قاعدة المعرفة",
       description: "إنشاء قاعدة معرفية شاملة لمساعدة العملاء والفريق",
-      link: "#",
+      link: "/features/knowledge-base",
     },
     {
       icon: ClipboardList,
       title: "ادارة المهام والتذاكر",
       description: "تنظيم وتتبع المهام والتذاكر لضمان حل مشاكل العملاء بكفاءة",
-      link: "#",
+      link: "/features/tickets-and-tasks",
     },
     {
       icon: ShoppingCart,
@@ -321,7 +321,7 @@ const featureItems = {
       icon: Send,
       title: "واتساب",
       description: "ربط حساب واتساب الأعمال مع منصة كرزون لإدارة المحادثات",
-      link: "#",
+      link: "/WhatsappWidgetGenerator",
     },
     {
       icon: Instagram,
