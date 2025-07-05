@@ -8,16 +8,16 @@ const companyCategories = [
     name: "تجارة الالكترونية",
     companies: [
       {
-        name: "بنك الراجحي",
-        logo: "/brands/alrajhi.png",
+        name: "بلسم",
+        logo: "/brands/بلسم.png",
       },
       {
-        name: "مصرف الإنماء",
-        logo: "/brands/alenmaa.png",
+        name: "عبايات ديتيلز",
+        logo: "/brands/abaya.png",
       },
       {
-        name: "البنك الأهلي",
-        logo: "/brands/alahli.png",
+        name: "قصر الحاسبات",
+        logo: "/brands/قصر الحاسبات.png",
       },
     ],
   },
@@ -25,54 +25,50 @@ const companyCategories = [
     name: "مؤسسات حكومية",
     companies: [
       {
-        name: "شركة الاتصالات السعودية",
-        logo: "/brands/stc.png",
+        name: "وزارة الدفاع",
+        logo: "/brands/وزارة الدفاع.jpg",
       },
       {
-        name: "موبايلي",
-        logo: "/brands/mobili.png",
+        name: "ندكو",
+        logo: "/brands/nedco.png",
       },
       {
-        name: "زين",
-        logo: "/brands/zain.png",
-      },
-    ],
-  },
-  {
-    name: "جامعات حكومية",
-    companies: [
-      {
-        name: "أرامكو",
-        logo: "/brands/aramco.png",
-      },
-      {
-        name: "سابك",
-        logo: "/brands/sabic.png",
-      },
-      {
-        name: "معادن",
-        logo: "/brands/maaden.png",
+        name: "اعتزاز",
+        logo: "/brands/اعتزاز.png",
       },
     ],
   },
   {
-    name: "طاقة وصناعة",
+    name: "مولات",
     companies: [
       {
-        name: "مجموعة صافولا",
-        logo: "/brands/safola.png",
+        name: "الخبر",
+        logo: "/brands/الخبر.jpeg",
+      },
+      {
+        name: "السيف قلاري",
+        logo: "/brands/السيف قلاري.webp",
+      },
+      {
+        name: "الشامل",
+        logo: "/brands/الشامل.png",
+      },
+    ],
+  },
+  {
+    name: "اتصالات وتقنية",
+    companies: [
+      {
+        name: "وجهتك",
+        logo: "/brands/Ix21PFOjdi1l0IFgJJgkpD6nnEYf9uoaTEr5nmpx.png",
       },
       {
         name: "شركة المراعي",
-        logo: "/brands/marai.png",
+        logo: "/brands/حدود التواصل.png",
       },
       {
-        name: "مجموعة الحكير",
-        logo: "/brands/hker.png",
-      },
-      {
-        name: "عبايات ديتيلز",
-        logo: "/brands/details-abaya.png",
+        name: "بروميت",
+        logo: "/brands/بروميت.png",
       },
     ],
   },
