@@ -86,7 +86,7 @@ const statistics = [
   {
     icon: MessageSquare,
     value: "5M+",
-    label: "محادثة يوميا",
+    label: "رسالة يوميا",
     description: "تتم معالجتها بكفاءة عبر منصتنا",
     color: "bg-google-blue",
   },

@@ -33,7 +33,7 @@ const testimonials = [
     position: "مدير التسويق",
     company: "سارا ميك اب ",
     image:
-      "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
+      "https://images.unsplash.com/pho-1573497019940-1c28c88b4f3e?ixlib=b-1.2.1&auto=format&fit=crop&w=200&h=200&q=80",
     rating: 5,
   },
 
