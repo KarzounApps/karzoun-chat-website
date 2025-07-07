@@ -12,6 +12,7 @@ import { TestimonialsAndSecurity } from "../components/sections/TestimonialsAndS
 import { MobileApps } from "../components/sections/2";
 import { WhatsAppIntegration } from "@/components/chatbot/WhatsAppIntegration";
 import { InstagramComments } from "@/components/chatbot/InstagramComments";
+import WhatsappInstaSwitcher from "@/components/sections/whatsappInstaSwitcher";
 
 export function Home() {
   return (
@@ -23,8 +24,7 @@ export function Home() {
       <TeamManagement />
       <CustomerData />
       <ChatbotFeature />
-      <WhatsAppIntegration />
-      <InstagramComments />
+      <WhatsappInstaSwitcher />
       {/* <AutomationFeature /> */}
       <TestimonialsAndSecurity />
       <MobileApps />

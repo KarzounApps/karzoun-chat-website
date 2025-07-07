@@ -1,31 +1,40 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Bot, ArrowRight, MessageSquare, User, 
-  Sparkles, Zap, Brain, Settings, 
-  CheckCircle2, Clock, Lightbulb
-} from 'lucide-react';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Bot,
+  ArrowRight,
+  MessageSquare,
+  User,
+  Sparkles,
+  Zap,
+  Brain,
+  Settings,
+  CheckCircle2,
+  Clock,
+  Lightbulb,
+} from "lucide-react";
+import Link from "next/link";
 
 // Mock conversation for the interactive demo
 const mockConversation = [
-  { 
-    type: 'bot', 
-    message: 'مرحباً! كيف يمكنني مساعدتك اليوم؟',
-    options: ['استفسار عن المنتجات', 'حالة الطلب', 'الدعم الفني']
+  {
+    type: "bot",
+    message: "مرحباً! كيف يمكنني مساعدتك اليوم؟",
+    options: ["استفسار عن المنتجات", "حالة الطلب", "الدعم الفني"],
   },
-  { 
-    type: 'user', 
-    message: 'أريد معرفة حالة طلبي رقم #45678' 
+  {
+    type: "user",
+    message: "أريد معرفة حالة طلبي رقم #45678",
   },
-  { 
-    type: 'bot', 
-    message: 'بالتأكيد! طلبك رقم #45678 في مرحلة الشحن وسيصل خلال يومين. هل تحتاج إلى مساعدة أخرى؟',
-    options: ['تتبع الشحنة', 'تعديل الطلب', 'لا شكراً']
-  }
+  {
+    type: "bot",
+    message: "بالتأكيد! طلبك رقم #45678 في مرحلة الشحن وسيصل خلال يومين. هل تحتاج إلى مساعدة أخرى؟",
+    options: ["تتبع الشحنة", "تعديل الطلب", "لا شكراً"],
+  },
 ];
 
 export function ChatbotFeature() {
-  const [activeTab, setActiveTab] = useState('visual');
+  const [activeTab, setActiveTab] = useState("visual");
   const [currentStep, setCurrentStep] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
 
@@ -99,15 +108,17 @@ export function ChatbotFeature() {
                       initial={{ opacity: 0, y: 10 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3 }}
-                      className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}
+                      className={`flex ${msg.type === "user" ? "justify-end" : "justify-start"}`}
                     >
-                      <div className={`max-w-[80%] rounded-2xl p-4 ${
-                        msg.type === 'user' 
-                          ? 'bg-blue-600 text-white rounded-tr-none' 
-                          : 'bg-gray-700 text-white rounded-tl-none'
-                      }`}>
+                      <div
+                        className={`max-w-[80%] rounded-2xl p-4 ${
+                          msg.type === "user"
+                            ? "bg-blue-600 text-white rounded-tr-none"
+                            : "bg-gray-700 text-white rounded-tl-none"
+                        }`}
+                      >
                         <div className="flex items-center gap-2 mb-2">
-                          {msg.type === 'user' ? (
+                          {msg.type === "user" ? (
                             <>
                               <span className="font-medium">أنت</span>
                               <User className="h-4 w-4" />
@@ -120,12 +131,12 @@ export function ChatbotFeature() {
                           )}
                         </div>
                         <p>{msg.message}</p>
-                        
+
                         {/* Quick reply options */}
                         {msg.options && (
                           <div className="mt-3 flex flex-wrap gap-2">
                             {msg.options.map((option, i) => (
-                              <button 
+                              <button
                                 key={i}
                                 onClick={handleNextStep}
                                 className="text-xs bg-gray-600 hover:bg-gray-500 px-3 py-1 rounded-full transition-colors"
@@ -138,7 +149,7 @@ export function ChatbotFeature() {
                       </div>
                     </motion.div>
                   ))}
-                  
+
                   {/* Typing indicator */}
                   {isTyping && (
                     <div className="flex justify-start">
@@ -167,12 +178,12 @@ export function ChatbotFeature() {
 
                 {/* Chat input */}
                 <div className="p-4 border-t border-gray-700 flex gap-2">
-                  <input 
-                    type="text" 
+                  <input
+                    type="text"
                     placeholder="اكتب رسالتك هنا..."
                     className="flex-1 bg-gray-700 border border-gray-600 rounded-lg px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
-                  <button 
+                  <button
                     onClick={handleNextStep}
                     className="bg-blue-600 hover:bg-blue-700 text-white p-2 rounded-lg transition-colors"
                   >
@@ -193,17 +204,15 @@ export function ChatbotFeature() {
               {/* Tabs */}
               <div className="flex mb-8 bg-gray-800 rounded-lg p-1 max-w-md mx-auto">
                 {[
-                  { id: 'visual', label: 'بناء بصري', icon: Sparkles },
-                  { id: 'ai', label: 'ذكاء اصطناعي', icon: Brain },
-                  { id: 'templates', label: 'قوالب جاهزة', icon: Zap }
+                  { id: "visual", label: "بناء بصري", icon: Sparkles },
+                  { id: "ai", label: "ذكاء اصطناعي", icon: Brain },
+                  { id: "templates", label: "قوالب جاهزة", icon: Zap },
                 ].map((tab) => (
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
                     className={`flex items-center justify-center gap-2 flex-1 py-2 px-4 rounded-lg transition-colors ${
-                      activeTab === tab.id 
-                        ? 'bg-blue-600 text-white' 
-                        : 'text-gray-400 hover:text-gray-200'
+                      activeTab === tab.id ? "bg-blue-600 text-white" : "text-gray-400 hover:text-gray-200"
                     }`}
                   >
                     <tab.icon className="h-4 w-4" />
@@ -214,7 +223,7 @@ export function ChatbotFeature() {
 
               {/* Tab content */}
               <div className="space-y-6">
-                {activeTab === 'visual' && (
+                {activeTab === "visual" && (
                   <>
                     <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                       <div className="flex items-center gap-3 mb-4">
@@ -226,9 +235,9 @@ export function ChatbotFeature() {
                       </p>
                       <ul className="space-y-2">
                         {[
-                          'إنشاء مسارات محادثة متعددة',
-                          'إضافة أزرار وخيارات سريعة',
-                          'تخصيص الردود حسب سيناريوهات مختلفة'
+                          "إنشاء مسارات محادثة متعددة",
+                          "إضافة أزرار وخيارات سريعة",
+                          "تخصيص الردود حسب سيناريوهات مختلفة",
                         ].map((item, i) => (
                           <li key={i} className="flex items-center gap-2 text-gray-300">
                             <CheckCircle2 className="h-5 w-5 text-green-500 flex-shrink-0" />
@@ -243,14 +252,12 @@ export function ChatbotFeature() {
                         <Settings className="h-6 w-6 text-blue-400" />
                         <h3 className="text-xl font-semibold">تخصيص كامل</h3>
                       </div>
-                      <p className="text-gray-300">
-                        خصص مظهر وسلوك الروبوت ليتناسب مع هوية علامتك التجارية وأهدافك.
-                      </p>
+                      <p className="text-gray-300">خصص مظهر وسلوك الروبوت ليتناسب مع هوية علامتك التجارية وأهدافك.</p>
                     </div>
                   </>
                 )}
 
-                {activeTab === 'ai' && (
+                {activeTab === "ai" && (
                   <>
                     <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                       <div className="flex items-center gap-3 mb-4">
@@ -258,13 +265,14 @@ export function ChatbotFeature() {
                         <h3 className="text-xl font-semibold">قوة الذكاء الاصطناعي</h3>
                       </div>
                       <p className="text-gray-300 mb-4">
-                        استخدم قوة OpenAI مع كرزون للتعرف على نوع استفسارات العملاء وتوجيههم للمسار
-                        الصحيح أو الرد على استفساراتهم بشكل مباشر.
+                        استخدم قوة OpenAI مع كرزون للتعرف على نوع استفسارات العملاء وتوجيههم للمسار الصحيح أو الرد على
+                        استفساراتهم بشكل مباشر.
                       </p>
                       <div className="bg-gray-700 rounded-lg p-4">
                         <p className="text-gray-300 mb-2">
                           <Lightbulb className="h-5 w-5 text-yellow-400 inline mr-2" />
-                          <span className="font-medium">نصيحة:</span> درّب الروبوت على معلومات شركتك للحصول على أفضل النتائج.
+                          <span className="font-medium">نصيحة:</span> درّب الروبوت على معلومات شركتك للحصول على أفضل
+                          النتائج.
                         </p>
                       </div>
                     </div>
@@ -281,7 +289,7 @@ export function ChatbotFeature() {
                   </>
                 )}
 
-                {activeTab === 'templates' && (
+                {activeTab === "templates" && (
                   <>
                     <div className="bg-gray-800 rounded-xl p-6 border border-gray-700">
                       <div className="flex items-center gap-3 mb-4">
@@ -292,13 +300,11 @@ export function ChatbotFeature() {
                         ابدأ بسرعة باستخدام عشرات القوالب الجاهزة المصممة لمختلف الصناعات والاستخدامات.
                       </p>
                       <div className="grid grid-cols-2 gap-3">
-                        {[
-                          'خدمة العملاء',
-                          'المبيعات',
-                          'حجز المواعيد',
-                          'الأسئلة الشائعة'
-                        ].map((template, i) => (
-                          <div key={i} className="bg-gray-700 p-3 rounded-lg text-center hover:bg-gray-600 cursor-pointer transition-colors">
+                        {["خدمة العملاء", "المبيعات", "حجز المواعيد", "الأسئلة الشائعة"].map((template, i) => (
+                          <div
+                            key={i}
+                            className="bg-gray-700 p-3 rounded-lg text-center hover:bg-gray-600 cursor-pointer transition-colors"
+                          >
                             <span className="text-sm">{template}</span>
                           </div>
                         ))}
@@ -314,7 +320,10 @@ export function ChatbotFeature() {
                         لا يوجد لديك وقت؟ يمكنك طلب المساعدة من فريق دعم كرزون أو أحد شركائنا ليقوموا بالمهمة بدلاً عنك.
                       </p>
                       <div className="mt-4">
-                        <a href="#" className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors">
+                        <a
+                          href="#"
+                          className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                        >
                           تواصل مع الدعم للحصول على المساعدة
                           <ArrowRight className="h-4 w-4" />
                         </a>
@@ -331,7 +340,7 @@ export function ChatbotFeature() {
                   whileTap={{ scale: 0.95 }}
                   className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition-all"
                 >
-                  ابدأ بناء روبوت المحادثة الآن
+                  <Link href="/features/chatbot"> ابدأ بناء روبوت المحادثة الآن</Link>
                 </motion.button>
               </div>
             </motion.div>

@@ -59,24 +59,24 @@ export function Features() {
                   {[
                     {
                       name: "Shopify",
-                      icon: "/brands/shopify.svg",
+                      icon: "/brands/features/shopify.png",
                       category: "متاجر إلكترونية",
                     },
                     {
                       name: "Salesforce",
-                      icon: "/brands/salesforce-2.svg",
+                      icon: "/brands/features/salesforce.webp",
                       category: "CRM",
                     },
-                    { name: "HubSpot", icon: "/brands/hubspot.svg", category: "تسويق" },
-                    { name: "Stripe", icon: "/brands/stripe-4.svg", category: "مدفوعات" },
+                    { name: "HubSpot", icon: "/brands/features/hubSpot.svg", category: "تسويق" },
+                    { name: "Stripe", icon: "/brands/features/stripe.jpeg", category: "مدفوعات" },
                     {
                       name: "Slack",
-                      icon: "/brands/slack-new-logo.svg",
+                      icon: "/brands/features/slack.webp",
                       category: "تواصل",
                     },
                     {
                       name: "Google Analytics",
-                      icon: "/brands/google-analytics-4.svg",
+                      icon: "/brands/features/Google-analytics.png",
                       category: "تحليلات",
                     },
                   ].map((app, index) => (
@@ -84,7 +84,7 @@ export function Features() {
                       key={index}
                       className="bg-white border border-gray-100 rounded-lg p-3 flex flex-col items-center shadow-sm"
                     >
-                      <img src={app.icon} alt={app.name} className="h-8 mb-2" />
+                      <img src={app.icon} alt={app.name} className="h-12 mb-0" />
                       <div className="text-xs font-medium text-center">{app.name}</div>
                       <div className="text-[10px] text-gray-500">{app.category}</div>
                     </div>

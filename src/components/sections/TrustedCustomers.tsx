@@ -8,16 +8,16 @@ const companyCategories = [
     name: "تجارة الالكترونية",
     companies: [
       {
-        name: "بلسم",
-        logo: "/brands/بلسم.png",
+        name: "ريفي",
+        logo: "/brands/1-ريفي.jpg",
       },
       {
-        name: "عبايات ديتيلز",
-        logo: "/brands/abaya.png",
+        name: "كبش",
+        logo: "/brands/2.webp",
       },
       {
-        name: "قصر الحاسبات",
-        logo: "/brands/قصر الحاسبات.png",
+        name: "سجادتي",
+        logo: "/brands/3.webp",
       },
     ],
   },
@@ -29,8 +29,8 @@ const companyCategories = [
         logo: "/brands/وزارة الدفاع.jpg",
       },
       {
-        name: "ندكو",
-        logo: "/brands/nedco.png",
+        name: "تجمع ",
+        logo: "/brands/تجمع.png",
       },
       {
         name: "اعتزاز",
@@ -59,16 +59,63 @@ const companyCategories = [
     name: "اتصالات وتقنية",
     companies: [
       {
-        name: "وجهتك",
-        logo: "/brands/Ix21PFOjdi1l0IFgJJgkpD6nnEYf9uoaTEr5nmpx.png",
+        name: "ايوا",
+        logo: "/brands/ايوا.jpg",
       },
       {
-        name: "شركة المراعي",
+        name: "حدود التواصل",
         logo: "/brands/حدود التواصل.png",
       },
       {
         name: "بروميت",
         logo: "/brands/بروميت.png",
+      },
+    ],
+  },
+  {
+    name: "تعليم",
+    companies: [
+      {
+        name: "تاصيل",
+        logo: "/brands/تاصيل.jpg",
+      },
+      {
+        name: "رائز",
+        logo: "/brands/رائز.jpg",
+      },
+      {
+        name: "مدارس سعود",
+        logo: "/brands/مدارس سعود.jpg",
+      },
+    ],
+  },
+  {
+    name: "مطاعم",
+    companies: [
+      {
+        name: "دندن",
+        logo: "/brands/restaurant/دندن.jpg",
+      },
+      {
+        name: "قلزم",
+        logo: "/brands/restaurant/قلزم.jpg",
+      },
+      {
+        name: "يمي",
+        logo: "/brands/restaurant/يمي.jpg",
+      },
+    ],
+  },
+  {
+    name: "جامعات حكومية",
+    companies: [
+      {
+        name: "جامعة جازان",
+        logo: "/brands/jazan.jpg",
+      },
+      {
+        name: "جامعة الملك سعود",
+        logo: "/brands/ksu_logo_out.png",
       },
     ],
   },
@@ -78,7 +125,7 @@ const companyCategories = [
 const statistics = [
   {
     icon: Users,
-    value: "10,000+",
+    value: "24,000+",
     label: "عميل نشط",
     description: "من الشركات الصغيرة إلى المؤسسات الكبرى",
     color: "bg-google-blue",
@@ -223,7 +270,7 @@ export function TrustedCustomers() {
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32"
                     >
-                      <img src={company.logo} alt={company.name} className="max-h-32 max-w-full object-contain" />
+                      <img src={company.logo} alt={company.name} className="max-h-20 max-w-full object-contain" />
                     </motion.div>
                   ))}
                 </motion.div>
