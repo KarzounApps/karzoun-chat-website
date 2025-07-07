@@ -64,7 +64,7 @@ export function Features() {
                     },
                     {
                       name: "Salesforce",
-                      icon: "/brands/features/salesforce.webp",
+                      icon: "/brands/features/salesforce.png",
                       category: "CRM",
                     },
                     { name: "HubSpot", icon: "/brands/features/hubSpot.svg", category: "تسويق" },

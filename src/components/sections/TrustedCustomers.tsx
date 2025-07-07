@@ -9,7 +9,7 @@ const companyCategories = [
     companies: [
       {
         name: "ريفي",
-        logo: "/brands/1-ريفي.jpg",
+        logo: "/brands/1-ريفي.png",
       },
       {
         name: "كبش",
@@ -17,7 +17,7 @@ const companyCategories = [
       },
       {
         name: "سجادتي",
-        logo: "/brands/3.webp",
+        logo: "/brands/3.png",
       },
     ],
   },
@@ -26,7 +26,7 @@ const companyCategories = [
     companies: [
       {
         name: "وزارة الدفاع",
-        logo: "/brands/وزارة الدفاع.jpg",
+        logo: "/brands/وزارة الدفاع.png",
       },
       {
         name: "تجمع ",
@@ -43,11 +43,11 @@ const companyCategories = [
     companies: [
       {
         name: "الخبر",
-        logo: "/brands/الخبر.jpeg",
+        logo: "/brands/الخبر.png",
       },
       {
         name: "السيف قلاري",
-        logo: "/brands/السيف قلاري.webp",
+        logo: "/brands/السيف قلاري.png",
       },
       {
         name: "الشامل",
@@ -60,7 +60,7 @@ const companyCategories = [
     companies: [
       {
         name: "ايوا",
-        logo: "/brands/ايوا.jpg",
+        logo: "/brands/ايوا.png",
       },
       {
         name: "حدود التواصل",
@@ -77,15 +77,15 @@ const companyCategories = [
     companies: [
       {
         name: "تاصيل",
-        logo: "/brands/تاصيل.jpg",
+        logo: "/brands/تاصيل.png",
       },
       {
         name: "رائز",
-        logo: "/brands/رائز.jpg",
+        logo: "/brands/رائز.png",
       },
       {
         name: "مدارس سعود",
-        logo: "/brands/مدارس سعود.jpg",
+        logo: "/brands/مدارس سعود.png",
       },
     ],
   },
@@ -98,11 +98,11 @@ const companyCategories = [
       },
       {
         name: "قلزم",
-        logo: "/brands/restaurant/قلزم.jpg",
+        logo: "/brands/restaurant/قلزم.png",
       },
       {
         name: "يمي",
-        logo: "/brands/restaurant/يمي.jpg",
+        logo: "/brands/restaurant/يمي.png",
       },
     ],
   },
@@ -111,7 +111,7 @@ const companyCategories = [
     companies: [
       {
         name: "جامعة جازان",
-        logo: "/brands/jazan.jpg",
+        logo: "/brands/jazan.png",
       },
       {
         name: "جامعة الملك سعود",
@@ -270,7 +270,7 @@ export function TrustedCustomers() {
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32"
                     >
-                      <img src={company.logo} alt={company.name} className="max-h-20 max-w-full object-contain" />
+                      <img src={company.logo} alt={company.name} className="max-h-24 max-w-full object-contain rounded-lg" />
                     </motion.div>
                   ))}
                 </motion.div>
