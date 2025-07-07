@@ -64,14 +64,14 @@ export function Features() {
                     },
                     {
                       name: "Salesforce",
-                      icon: "/brands/features/salesforce.png",
+                      icon: "/brands/features/sales-force.png",
                       category: "CRM",
                     },
-                    { name: "HubSpot", icon: "/brands/features/hubSpot.svg", category: "تسويق" },
-                    { name: "Stripe", icon: "/brands/features/stripe.jpeg", category: "مدفوعات" },
+                    { name: "HubSpot", icon: "/brands/features/hub-spot.svg", category: "تسويق" },
+                    { name: "Stripe", icon: "/brands/features/stripe-logo.jpeg", category: "مدفوعات" },
                     {
                       name: "Slack",
-                      icon: "/brands/features/slack.webp",
+                      icon: "/brands/features/slack-logo.webp",
                       category: "تواصل",
                     },
                     {
