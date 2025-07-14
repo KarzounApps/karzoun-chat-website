@@ -87,7 +87,8 @@ const resourcesCategories = {
     description: "موارد للمطورين والتكامل",
   },
 };
-
+const Wcatalog = () => <img src="/images/logo1.png" alt="Wcatalog" className="w-10 h-10 object-cover" />;
+const Wautomation = () => <img src="/images/logo2.png" alt="Wautomation" className="w-10 h-10 object-cover" />;
 const featureItems = {
   "المميزات الرئيسية": [
     {
@@ -167,6 +168,18 @@ const featureItems = {
       icon: Database,
       title: "ادارة بيانات العملاء",
       description: "تنظيم وتحليل بيانات العملاء لتحسين استراتيجيات التسويق والمبيعات",
+      link: "#",
+    },
+    {
+      icon: Wcatalog,
+      title: "كتالوج واتساب",
+      description: "اعرض منتجاتك مباشرةً داخل المحادثة، ودَع العملاء يختارون ويطلبون بنقرة واحدة.",
+      link: "#",
+    },
+    {
+      icon: Wautomation,
+      title: "مسارات الواتساب الآليه",
+      description: "صمِّم مسارات تفاعلية داخل محادثة واتساب ترشد العميل خطوةً بخطوة وتجمع البيانات تلقائيًّا.",
       link: "#",
     },
   ],

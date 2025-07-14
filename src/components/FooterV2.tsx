@@ -8,7 +8,8 @@ function FooterV2() {
         <div className="text-white ">
           <h2 className="text-4xl font-bold mb-4">من نحن</h2>
           <p className="md:text-lg text-sm">
-            نحن لسنا فقط شركة تقدم خدمات ومنتجات تقنية, نحن مجتمع متكامل لرواد العمل والتطوير في الوطن العربي
+            لسنا مجرّد شركة تقنية؛ نحن مجتمع روّاد عربي يجمع العقول المبدعة ليطوّر حلولاً ترتقي بتجربة عملائك وتنمّي
+            أعمالك.{" "}
           </p>
         </div>
         <div className="relative w-[350px] h-full">
@@ -27,34 +28,31 @@ function FooterV2() {
             <p className="text-white md:text-xl  font-bold">جدراء بالثقة</p>
           </div>
           <p className="text-gray-300 md:text-lg text-[15px]">
-            موثوقون لدى الآلاف من التجار في الوطن العربي, ابحث عن تقييماتنا او اسئل عنا.. سوف نكون سعداء لو قمت بالبحث
-            عن كرزون في الإنترنت
+            أكثر من 25000 تاجر ومؤسسة عربية يعتمدون علينا يوميًّا لإدارة تواصلهم وخدمة عملائهم بكفاءة.
           </p>
         </div>
         <div>
           <div className="flex items-center gap-2">
             <CircleCheckBig className="w-7 h-7 text-white" />
-            <p className="text-white text-xl font-bold">فريق مبدع</p>
+            <p className="text-white text-xl font-bold">مبتكرون</p>
           </div>
           <p className="text-gray-300 md:text-lg text-[15px]">
-            جميع منتجات وخدمات شركتنا بدأت بفكرة رائعة حولناها لمشروع حقيقي, نحن نفكر في المستقبل 7 ساعات في اليوم ونعمل
-            ساعة واحدة فقط
+            نحوِّل الأفكار الجريئة إلى منتجات حقيقية بفرق عربية شغوفة بالتقنية؛ نفكّر للمستقبل وننفّذ اليوم.
           </p>
         </div>
         <div>
           <div className="flex items-center gap-2">
             <CircleCheckBig className="w-7 h-7 text-white" />
-            <p className="text-white text-xl font-bold">متواضعون وبسطاء</p>
+            <p className="text-white text-xl font-bold">قريبون منك</p>
           </div>
           <p className="text-gray-300 md:text-lg text-[15px]">
-            نحن ايضاً تجار مثلك تماماً, انت تقوم ببيع منتجاتك ونحن نساعدك على ذلك… الأمر بسيط وواضح ” نحن نفهم تماماً
-            احتياجاتك ونوفرها لك”
+            نحن روّاد أعمال قبل أن نكون مطوّرين؛ نفهم تحدّياتك ونبني الحلول التي تحتاجها بلغتك وببساطة تناسب فريقك.
           </p>
         </div>
       </div>
       <div className="bg-[#74C2EF] p-7 flex md:flex-row flex-col justify-between items-center mt-10">
         <div>
-          <h2 className="text-white text-2xl font-bold">هل لديك ما تقوله لنا ؟</h2>
+          <h2 className="text-white text-2xl font-bold">جاهز تبدأ رحلتك معنا؟</h2>
           <p className="text-black text-lg font-[500] mt-5 ">
             ما رأيك بأن تحصل على مكالمة من مسؤول المبيعات ليقوم بالإجابة على اسفساراتك …؟!
           </p>
@@ -114,7 +112,7 @@ function FooterV2() {
             {/* Column 2 - Contact Info */}
             <div dir="rtl" className="text-right">
               <h3 className="text-xl font-bold md:mb-8 mb-4 text-white">معلومات التواصل</h3>
-               <div className=" md:space-y-3 space-y-2">
+              <div className=" md:space-y-3 space-y-2">
                 <p className="text-white/80 text-lg leading-relaxed">كورون ميديا ماركتينغ إند ديجيتال سيرفيسز</p>
                 <p className="text-white/80 text-lg">ش.ذ.م.م</p>
                 <div className="flex items-center gap-3 justify-start text-white/80 text-lg ">

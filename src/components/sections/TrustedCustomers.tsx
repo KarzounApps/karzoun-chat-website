@@ -19,6 +19,14 @@ const companyCategories = [
         name: "سجادتي",
         logo: "/brands/3.png",
       },
+      {
+        name: "بلسم ",
+        logo: "/brands/بلسم.png",
+      },
+      {
+        name: "abaya ",
+        logo: "/brands/abaya.png",
+      },
     ],
   },
   {
@@ -35,6 +43,10 @@ const companyCategories = [
       {
         name: "اعتزاز",
         logo: "/brands/اعتزاز.png",
+      },
+      {
+        name: "nedco",
+        logo: "/brands/nedco.png",
       },
     ],
   },
@@ -69,6 +81,10 @@ const companyCategories = [
       {
         name: "بروميت",
         logo: "/brands/بروميت.png",
+      },
+      {
+        name: "قصر الحاسبات",
+        logo: "/brands/قصر الحاسبات.png",
       },
     ],
   },
@@ -261,7 +277,7 @@ export function TrustedCustomers() {
                   exit={{ opacity: 0, y: -20 }}
                   transition={{ duration: 0.5 }}
                   className={`grid grid-cols-1 ${
-                    companyCategories[activeCategory].companies.length > 3 ? "md:grid-cols-4" : "md:grid-cols-3"
+                    companyCategories[activeCategory].companies.length > 4 ? "md:grid-cols-5" : "md:grid-cols-4"
                   } gap-8`}
                 >
                   {companyCategories[activeCategory].companies.map((company, index) => (

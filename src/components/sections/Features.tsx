@@ -63,20 +63,20 @@ export function Features() {
                       category: "متاجر إلكترونية",
                     },
                     {
-                      name: "Salesforce",
-                      icon: "/brands/features/sales-force.png",
+                      name: "sallah",
+                      icon: "/brands/features/sallah.png",
                       category: "CRM",
                     },
-                    { name: "HubSpot", icon: "/brands/features/hub-spot.svg", category: "تسويق" },
-                    { name: "Stripe", icon: "/brands/features/stripe-logo.jpeg", category: "مدفوعات" },
+                    { name: "wocommerce", icon: "/brands/features/wocommerce.jpeg", category: "تسويق" },
+                    { name: "zd", icon: "/brands/features/zd.jpeg", category: "مدفوعات" },
                     {
                       name: "Slack",
                       icon: "/brands/features/slack-logo.webp",
                       category: "تواصل",
                     },
                     {
-                      name: "Google Analytics",
-                      icon: "/brands/features/Google-analytics.png",
+                      name: "Google Sheets",
+                      icon: "/brands/features/google-sheets.jpeg",
                       category: "تحليلات",
                     },
                   ].map((app, index) => (
