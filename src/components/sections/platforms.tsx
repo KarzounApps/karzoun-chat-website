@@ -41,11 +41,11 @@ function Platforms({
   className?: string;
 }) {
   const platforms = [
-    { id: "whatsapp", name: "واتساب", icon: whatsappIcon, color: "bg-green-500" },
-    { id: "instagram", name: "انستغرام", icon: Instagram, color: "bg-pink-500" },
-    { id: "facebook", name: "فيسبوك", icon: Facebook, color: "bg-blue-600" },
-    { id: "telegram", name: "تيليغرام", icon: TelegramIcon, color: "bg-blue-500" },
-    { id: "email", name: "البريد الإلكتروني", icon: Mail, color: "bg-red-500" },
+    { id: "whatsapp", name: "واتساب", icon: whatsappIcon, color: "bg-green-500", hoverColor: "hover:bg-green-600" },
+    { id: "instagram", name: "انستغرام", icon: Instagram, color: "bg-pink-500", hoverColor: "hover:bg-pink-600" },
+    { id: "facebook", name: "فيسبوك", icon: Facebook, color: "bg-blue-600", hoverColor: "hover:bg-blue-700" },
+    { id: "telegram", name: "تيليغرام", icon: TelegramIcon, color: "bg-blue-500", hoverColor: "hover:bg-blue-600" },
+    { id: "email", name: "البريد الإلكتروني", icon: Mail, color: "bg-red-500", hoverColor: "hover:bg-red-600" },
   ];
   return (
     <>
@@ -56,13 +56,13 @@ function Platforms({
             key={platform.id}
             onClick={() => setActiveTab?.(platform.id)}
             className={cn(
-              `flex items-center gap-2 md:px-4 px-2 py-2 rounded-lg transition-colors ${`bg-gray-100 text-gray-500 hover:text-white hover:${
-                platform.color
+              `flex items-center gap-2 md:px-4 px-2 py-2 rounded-lg transition-colors ${`bg-gray-100 text-gray-500 hover:text-white   ${
+                platform.hoverColor
               } ${activeTab === platform.id ? `${platform.color} text-white` : ""}`}`,
               className
             )}
           >
-            <platform.icon className="h-5 w-5" />
+            <platform.icon className="h-5 w-5 ml-2" />
             <span>{platform.name}</span>
           </button>
         ))}

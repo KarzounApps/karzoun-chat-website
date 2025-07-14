@@ -24,8 +24,8 @@ export function Hero() {
             <span className="text-google-blue"> بكل سهولة</span>
           </h1>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            حوّل علاقاتك مع العملاء من خلال أتمتة الرسائل الذكية. قم ببناء تدفقات العمل المرئية، وتواصل مع العملاء،
-            ونمّي أعمالك مع منصتنا القوية لإدارة علاقات العملاء.
+            أنشئ مسارات تواصل ذكيّة تتعقّب طلب العميل من أول رسالة حتى الإغلاق، عبر قنوات التواصل المختلفه. وفِّر وقت
+            فريقك وارفع رضا عملائك بفضل أتمتة شاملة وسهلة الإعداد.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mb-8">
@@ -40,13 +40,10 @@ export function Hero() {
             >
               ابدأ مجاناً
             </motion.a>
-            <motion.a whileHover={{ scale: 1.05 }} href="#" className="text-base font-semibold leading-6 text-gray-900">
-              شاهد العرض التوضيحي <span aria-hidden="true">←</span>
-            </motion.a>
           </div>
         </motion.div>
         <div className="text-center w-full mt-7">
-          <Image src="/meta-business-partner.png" alt="Hero" width={150} height={150} className="mx-auto" />
+          <Image src="/meta-business-partner.png" alt="Hero" width={250} height={250} className="mx-auto" />
         </div>
         {/* Automation Flow Demo */}
         <motion.div

@@ -140,15 +140,15 @@ const statistics = [
   {
     icon: Globe,
     value: "25+",
-    label: "دولة حول العالم",
-    description: "نخدم عملاء في مختلف أنحاء العالم",
+    label: " دولة",
+    description: "نخدمك أينما كنت",
     color: "bg-google-blue",
   },
   {
     icon: CheckCircle2,
     value: "99.9%",
     label: "وقت تشغيل",
-    description: "موثوقية عالية على مدار الساعة",
+    description: "خدمة لا تنقطع 24/7",
     color: "bg-google-blue",
   },
 ];
@@ -160,8 +160,8 @@ const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) 
   const isInView = useInView(countRef, { once: true, amount: 0.5 });
 
   // Parse the numeric part of the value
-  const finalValue = parseInt(value.replace(/[^0-9]/g, "")) || 0;
-  const suffix = value.replace(/[0-9]/g, "");
+  const finalValue = parseFloat(value.replace(/[^0-9.]/g, "")) || 0;
+  const suffix = value.replace(/[0-9.]/g, "");
 
   useEffect(() => {
     let start = 0;
@@ -188,7 +188,7 @@ const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) 
   }, [finalValue, duration, isInView]);
 
   return (
-    <span ref={countRef} className="inline-block">
+    <span dir="ltr" ref={countRef} className="inline-block">
       {count}
       {suffix}
     </span>
@@ -202,7 +202,7 @@ export function TrustedCustomers() {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveCategory((prev) => (prev + 1) % companyCategories.length);
-    }, 7000);
+    }, 4000);
     return () => clearInterval(interval);
   }, [activeCategory]);
 
@@ -218,10 +218,12 @@ export function TrustedCustomers() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              أكثر من
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-google-blue to-blue-600">
-                الشركات الرائدة
+                {" "}
+                25000 عميل نشط{" "}
               </span>{" "}
-              تثق بنا
+              يثقون بكرزون
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               انضم إلى آلاف الشركات التي تعتمد على كرزون لتحسين تجربة عملائها وتنمية أعمالها
@@ -270,7 +272,11 @@ export function TrustedCustomers() {
                       transition={{ duration: 0.3, delay: index * 0.1 }}
                       className="bg-gray-50 rounded-xl p-6 flex items-center justify-center h-32"
                     >
-                      <img src={company.logo} alt={company.name} className="max-h-24 max-w-full object-contain rounded-lg" />
+                      <img
+                        src={company.logo}
+                        alt={company.name}
+                        className="max-h-24 max-w-full object-contain rounded-lg"
+                      />
                     </motion.div>
                   ))}
                 </motion.div>
@@ -279,8 +285,12 @@ export function TrustedCustomers() {
 
             {/* View all clients button */}
             <div className="px-8 pb-8 text-center">
-              <a href="#" className="inline-flex items-center gap-2 text-google-blue hover:text-blue-700 font-medium">
-                عرض جميع عملائنا
+              <a
+                dir="ltr"
+                href="#"
+                className="inline-flex items-center gap-2 text-google-blue hover:text-blue-700 font-medium"
+              >
+                استعرض قصص النجاح
                 <ArrowRight className="h-4 w-4" />
               </a>
             </div>
@@ -290,8 +300,8 @@ export function TrustedCustomers() {
         {/* Modern animated counters */}
         <div className="mb-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">أرقام تتحدث عن نجاحنا</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">نفخر بالنتائج التي نحققها لعملائنا حول العالم</p>
+            <h3 className="text-3xl font-bold text-gray-900 mb-4">أرقام ننمو بها كل يوم</h3>
+            <p className="text-gray-600 max-w-2xl mx-auto">ثقة متجدّدة من عملائنا حول العالم</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

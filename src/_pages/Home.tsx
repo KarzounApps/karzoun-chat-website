@@ -19,15 +19,15 @@ export function Home() {
     <>
       <Hero />
       <TrustedCustomers />
-      <Features />
       <Details />
-      <TeamManagement />
-      <CustomerData />
-      <ChatbotFeature />
       <WhatsappInstaSwitcher />
-      {/* <AutomationFeature /> */}
-      <TestimonialsAndSecurity />
+      <ChatbotFeature />
+      <CustomerData />
+      <Features />
+      <TeamManagement />
       <MobileApps />
+      <TestimonialsAndSecurity />
+      {/* <AutomationFeature /> */}
     </>
   );
 }

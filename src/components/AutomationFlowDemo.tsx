@@ -573,7 +573,8 @@ const FlowWithProvider = () => {
           className="absolute -top-10 left-1/2 w-full md:w-auto  -translate-x-1/2 z-10 bg-white  md:px-10 px-3 py-3 rounded-full shadow-lg flex items-center gap-2"
         >
           <span className=" md:text-sm text-xs text-gray-600 ">
-            صمم رحلات عملاء متطورة مع واجهتنا السهلة للسحب والإفلات. اربط الإجراءات والمحفزات والشروط بسلاسة
+            صَمِّم رحلات عميل متقدّمة عبر واجهتنا المرئيّة للسحب والإفلات، ووصل الإجراءات بالمحفِّزات والشروط بانسيابيّة
+            تامّة.{" "}
           </span>
           <button onClick={() => setShowHint(false)} className="text-gray-400 hover:text-gray-600">
             ×

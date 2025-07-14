@@ -362,7 +362,7 @@ export function Features() {
 
     copilot: {
       icon: BrainCircuit,
-      title: "المساعد الخاص copilot",
+      title: "مساعدك الآلي(Copilot) بالعربي",
       description: "خصصنا لكم مساعد ذكي خاص ليقوم بمساعدتكم مع مختلف مميزات كرزون شات",
       content: (
         <div className="bg-white rounded-xl h-full p-6 shadow-sm border border-gray-100">
@@ -511,8 +511,8 @@ export function Features() {
             أتمتة ذكية لتجربة عملاء استثنائية
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            صمم تدفقات أتمتة متقدمة بسهولة مع محرك الأتمتة المرئي. أرسل رسائل مخصصة، أتمم المهام المتكررة، وقدم تجربة
-            شخصية لكل عميل.
+            ابنِ حملات متعددة القنوات خلال دقائق، وبواجهة عربية 100٪. محرّكنا المرئي يربط الخطوات ويخصص الرسائل آليًّا،
+            فتوفّر وقت فريقك وتزيد تفاعل العملاء.
           </p>
         </motion.div>
 
