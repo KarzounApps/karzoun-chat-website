@@ -145,6 +145,7 @@ const statistics = [
     label: "عميل نشط",
     description: "من الشركات الصغيرة إلى المؤسسات الكبرى",
     color: "bg-google-blue",
+    startValue: 20000,
   },
   {
     icon: MessageSquare,
@@ -170,8 +171,16 @@ const statistics = [
 ];
 
 // Counter animation component
-const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) => {
-  const [count, setCount] = useState(0);
+const Counter = ({
+  value,
+  duration = 2,
+  startValue = 0,
+}: {
+  value: string;
+  duration?: number;
+  startValue?: number;
+}) => {
+  const [count, setCount] = useState(startValue);
   const countRef = useRef<HTMLSpanElement>(null);
   const isInView = useInView(countRef, { once: true, amount: 0.5 });
 
@@ -180,7 +189,7 @@ const Counter = ({ value, duration = 2 }: { value: string; duration?: number }) 
   const suffix = value.replace(/[0-9.]/g, "");
 
   useEffect(() => {
-    let start = 0;
+    let start = startValue;
     let timeoutId: NodeJS.Timeout;
 
     if (isInView) {
@@ -339,7 +348,7 @@ export function TrustedCustomers() {
 
                   <div className="mt-8 mb-2">
                     <div className="text-4xl font-bold text-gray-900">
-                      <Counter value={stat.value} />
+                      <Counter value={stat.value} startValue={stat.startValue} />
                     </div>
                     <div className="text-lg font-medium text-google-blue mt-1">{stat.label}</div>
                   </div>
