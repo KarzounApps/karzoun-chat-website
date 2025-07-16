@@ -86,6 +86,10 @@ const companyCategories = [
         name: "قصر الحاسبات",
         logo: "/brands/قصر الحاسبات.png",
       },
+      {
+        name: "متجر-دليل-الشبكة",
+        logo: "/brands/متجر-دليل-الشبكة.png",
+      },
     ],
   },
   {
@@ -119,6 +123,40 @@ const companyCategories = [
       {
         name: "يمي",
         logo: "/brands/restaurant/يمي.png",
+      },
+    ],
+  },
+  {
+    name: "جمعيات خيرية",
+    companies: [
+      {
+        name: "جمعية حسان",
+        logo: "/brands/جمعية حسان.png",
+      },
+      {
+        name: "جمعية رعاية",
+        logo: "/brands/جمعية رعاية .png",
+      },
+      {
+        name: "جمعية",
+        logo: "/brands/جمعية.jpg",
+      },
+    ],
+  },
+  {
+    name: "عقارات",
+    companies: [
+      {
+        name: "logo-1.png",
+        logo: "/brands/logo-1.png",
+      },
+      {
+        name: "عقار 1.png",
+        logo: "/brands/عقار 1.png",
+      },
+      {
+        name: "ايفاد.png",
+        logo: "/brands/ايفاد.png",
       },
     ],
   },
@@ -309,16 +347,6 @@ export function TrustedCustomers() {
             </div>
 
             {/* View all clients button */}
-            <div className="px-8 pb-8 text-center">
-              <a
-                dir="ltr"
-                href="#"
-                className="inline-flex items-center gap-2 text-google-blue hover:text-blue-700 font-medium"
-              >
-                استعرض قصص النجاح
-                <ArrowRight className="h-4 w-4" />
-              </a>
-            </div>
           </div>
         </div>
 

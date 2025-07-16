@@ -473,12 +473,12 @@ export function TestimonialsAndSecurity() {
           )}
 
           {/* View all testimonials button */}
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <a href="#" className="inline-flex items-center gap-2 text-google-blue hover:text-blue-700 font-medium">
               عرض جميع قصص النجاح
               <ArrowRight className="h-4 w-4" />
             </a>
-          </div>
+          </div> */}
         </div>
 
         {/* Trust and Security Section */}

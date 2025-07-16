@@ -5,10 +5,10 @@ export function TeamManagement() {
   return (
     <div className="py-24 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 grid-cols-1  gap-12 items-center">
-          <div className="text-start ">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">إدارة الفريق والمهام اسهل مع كرزون</h2>
-            <p className="text-gray-600 text-sm leading-relaxed">
+        <div className="grid md:grid-cols-2 grid-cols-1  gap-12 items-start">
+          <div className="text-start h-full">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">إدارة الفريق والمهام اسهل مع كرزون</h2>
+            <p className="text-gray-600  leading-relaxed mt-4 text-lg">
               تابِع حالة كل تذكرة لحظة بلحظة، وحدّد أولوياتها، وعيِّن المسؤول المناسب تلقائيًا. كرونز يجمع كل طلبات
               العملاء في مكان واحد، فيمنع ضياعها بين الأقسام ويُسرّع حلّها.
             </p>
