@@ -41,11 +41,46 @@ function Platforms({
   className?: string;
 }) {
   const platforms = [
-    { id: "whatsapp", name: "واتساب", icon: whatsappIcon, color: "bg-green-500", hoverColor: "hover:bg-green-600" },
-    { id: "instagram", name: "انستغرام", icon: Instagram, color: "bg-pink-500", hoverColor: "hover:bg-pink-600" },
-    { id: "facebook", name: "فيسبوك", icon: Facebook, color: "bg-blue-600", hoverColor: "hover:bg-blue-700" },
-    { id: "telegram", name: "تيليغرام", icon: TelegramIcon, color: "bg-blue-500", hoverColor: "hover:bg-blue-600" },
-    { id: "email", name: "البريد الإلكتروني", icon: Mail, color: "bg-red-500", hoverColor: "hover:bg-red-600" },
+    { 
+      id: "whatsapp", 
+      name: "واتساب", 
+      icon: whatsappIcon, 
+      color: "text-white",
+      bgColor: "#25D366",
+      hoverBgColor: "#2BE373"
+    },
+    { 
+      id: "instagram", 
+      name: "انستغرام", 
+      icon: Instagram, 
+      color: "text-white",
+      bgColor: "#EF3A78",
+      hoverBgColor: "#F24D85"
+    },
+    { 
+      id: "facebook", 
+      name: "فيسبوك", 
+      icon: Facebook, 
+      color: "text-white",
+      bgColor: "#1877F2",
+      hoverBgColor: "#2B84F3"
+    },
+    { 
+      id: "telegram", 
+      name: "تيليغرام", 
+      icon: TelegramIcon, 
+      color: "text-white",
+      bgColor: "#0088CC",
+      hoverBgColor: "#1A95D6"
+    },
+    { 
+      id: "email", 
+      name: "إيميل", 
+      icon: Mail, 
+      color: "text-gray-900",
+      bgColor: "#FFBC0D",
+      hoverBgColor: "#FFC629"
+    },
   ];
   return (
     <>
@@ -56,11 +91,26 @@ function Platforms({
             key={platform.id}
             onClick={() => setActiveTab?.(platform.id)}
             className={cn(
-              `flex items-center gap-2 md:px-4 px-2 py-2 rounded-lg transition-colors ${`bg-gray-100 text-gray-500 hover:text-white   ${
-                platform.hoverColor
-              } ${activeTab === platform.id ? `${platform.color} text-white` : ""}`}`,
+              `flex items-center gap-2 md:px-4 px-2 py-2 rounded-lg transition-all duration-200 ${
+                activeTab === platform.id 
+                  ? `${platform.color} shadow-md` 
+                  : "bg-gray-100 text-gray-500 hover:text-white"
+              }`,
               className
             )}
+            style={{
+              backgroundColor: activeTab === platform.id ? platform.bgColor : undefined,
+            }}
+            onMouseEnter={(e) => {
+              if (activeTab !== platform.id) {
+                e.currentTarget.style.backgroundColor = platform.hoverBgColor;
+              }
+            }}
+            onMouseLeave={(e) => {
+              if (activeTab !== platform.id) {
+                e.currentTarget.style.backgroundColor = '';
+              }
+            }}
           >
             <platform.icon className="h-5 w-5 ml-2" />
             <span>{platform.name}</span>
