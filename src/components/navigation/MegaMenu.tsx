@@ -113,7 +113,7 @@ const featureItems = {
       icon: Users2,
       title: "تعاون الفريق",
       description: "تعاون وإدارة المحادثات باستخدام صندوق وارد مشترك",
-      link: "#",
+      link: "/features/team-collaboration",
     },
     {
       icon: Bot,
@@ -130,8 +130,8 @@ const featureItems = {
     {
       icon: Smartphone,
       title: "تطبيق كرزون شات للجوال",
-      description: "إدارة محادثات العملاء من أي مكان باستخدام تطبيقات الجوال",
-      link: "#",
+      description: "إدارة محادثات العملاء من الهاتف المحمول بسهولة وفعالية",
+      link: "/features/mobile-app",
     },
     {
       icon: BookOpen,
@@ -200,7 +200,7 @@ const featureItems = {
       icon: Tag,
       title: "الوسوم",
       description: "تصنيف المحادثات والعملاء باستخدام نظام وسوم مرن وقابل للتخصيص",
-      link: "#",
+      link: "/features/tags",
     },
     {
       icon: Users2,
@@ -218,7 +218,7 @@ const featureItems = {
       icon: MessageSquare,
       title: "ملاحظات المحادثة",
       description: "إضافة ملاحظات داخلية للمحادثات للتواصل مع أعضاء الفريق",
-      link: "#",
+      link: "/features/conversation-notes",
     },
     {
       icon: Layers,
@@ -559,6 +559,15 @@ export function MegaMenu() {
                 </div>
 
                 <Link
+                  href="/features/ai-features"
+                  className={`px-3 py-2 ${
+                    location.pathname === "/features/ai-features" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
+                  }`}
+                >
+                  الذكاء الاصطناعي
+                </Link>
+
+                <Link
                   href="/pricing"
                   className={`px-3 py-2 ${
                     location.pathname === "/pricing" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
@@ -666,9 +675,6 @@ export function MegaMenu() {
           </div>
 
           <div className="flex items-center space-x-10 space-x-reverse">
-            <a href="#" className="text-gray-700 hover:text-google-blue mx-4">
-              تسجيل الدخول
-            </a>
             <a href="#" className="bg-google-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
               إنشاء حساب
             </a>

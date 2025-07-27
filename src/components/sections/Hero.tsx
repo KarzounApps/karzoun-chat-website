@@ -38,7 +38,7 @@ export function Hero() {
               href="#"
               className="rounded-md bg-google-blue px-8 py-3 text-base font-semibold text-white shadow-sm hover:bg-blue-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
-              ابدأ مجاناً
+              ابدأ الآن مجانا
             </motion.a>
           </div>
         </motion.div>
