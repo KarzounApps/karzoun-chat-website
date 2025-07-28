@@ -103,7 +103,7 @@ export function InstagramComments() {
             data-aos="fade-up"
           >
             <h2 className="text-3xl font-bold mb-4 text-right">
-              أتمتة التعليقات على <span className="text-[#25D366]">انستغرام</span>
+              أتمتة التعليقات على <span className="text-[#EF3A78]">انستغرام</span>
             </h2>
             <p className="text-gray-600 max-w-3xl mx-auto text-right">
               الرد التلقائي على تعليقات المتابعين على منشورات انستغرام، وتوفير تجربة تفاعلية تزيد من مشاركة الجمهور
@@ -313,7 +313,7 @@ export function InstagramComments() {
           >
             <h3 className="text-2xl font-bold mb-6">
               تفاعل مع متابعيك
-              <span className="block text-[#25D366]">بشكل فوري وذكي</span>
+              <span className="block text-[#EF3A78]">بشكل فوري وذكي</span>
             </h3>
             <p className="text-lg text-gray-600 mb-8">
               أتمت الردود على تعليقات المتابعين على منشورات انستغرام، وقدم تجربة تفاعلية تزيد من مشاركة الجمهور وتعزز من تواجدك على المنصة.
@@ -343,8 +343,8 @@ export function InstagramComments() {
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="bg-[#25D366] bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="h-6 w-6 text-[#25D366]" />
+                  <div className="bg-[#EF3A78] bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="h-6 w-6 text-[#EF3A78]" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">{feature.title}</h4>
@@ -368,13 +368,13 @@ export function InstagramComments() {
                   "تعزيز صورة العلامة التجارية من خلال التفاعل المستمر"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-[#25D366] flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-[#EF3A78] flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <a href="#" className="text-[#25D366] hover:text-green-700 font-medium flex items-center gap-1">
+                <a href="#" className="text-[#EF3A78] hover:text-pink-700 font-medium flex items-center gap-1">
                   <span>اكتشف المزيد عن أتمتة التعليقات على انستغرام</span>
                   <ArrowRight className="h-4 w-4" />
                 </a>
