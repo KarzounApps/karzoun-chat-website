@@ -119,15 +119,15 @@ export function WhatsAppIntegration() {
   return (
     <div className="py-24 bg-gradient-to-r from-green-50 to-emerald-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-right mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl font-bold mb-4">روبوتات واتساب للأعمال</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-right">روبوتات واتساب للأعمال</h2>
+            <p className="text-gray-600 max-w-3xl text-right">
               أتمتة التواصل مع العملاء عبر واتساب للأعمال، وتوفير تجربة سلسة وفعالة على المنصة الأكثر استخداماً
             </p>
           </motion.div>

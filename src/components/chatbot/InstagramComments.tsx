@@ -94,7 +94,7 @@ export function InstagramComments() {
   return (
     <section id="channel-instagram" className="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
       <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-right mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ export function InstagramComments() {
             <h2 className="text-3xl font-bold mb-4 text-right">
               أتمتة التعليقات على <span className="text-[#EF3A78]">انستغرام</span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-right">
+            <p className="text-gray-600 max-w-3xl text-right">
               الرد التلقائي على تعليقات المتابعين على منشورات انستغرام، وتوفير تجربة تفاعلية تزيد من مشاركة الجمهور
             </p>
           </motion.div>
