@@ -10,6 +10,7 @@ import {
 export function TelegramReplies() {
   const [currentMessage, setCurrentMessage] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   // Sample Telegram group messages
   const groupMessages = [
@@ -54,8 +55,15 @@ export function TelegramReplies() {
     }
   ];
 
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Auto-advance messages and replies
   useEffect(() => {
+    if (!mounted) return;
+    
     if (currentMessage < groupMessages.length) {
       const timer = setTimeout(() => {
         setIsTyping(true);
@@ -71,7 +79,7 @@ export function TelegramReplies() {
         setCurrentMessage(0);
       }, 3000);
     }
-  }, [currentMessage]);
+  }, [currentMessage, mounted]);
 
   return (
     <div className="py-24 bg-gradient-to-r from-cyan-50 to-blue-50">

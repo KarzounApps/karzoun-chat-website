@@ -11,6 +11,7 @@ export function InstagramComments() {
   const [activeTab, setActiveTab] = useState('comments');
   const [currentComment, setCurrentComment] = useState(0);
   const [isReplying, setIsReplying] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   // Sample Instagram post and comments
   const post = {
@@ -64,8 +65,15 @@ export function InstagramComments() {
     ]
   };
 
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Auto-advance comments and replies
   useEffect(() => {
+    if (!mounted) return;
+    
     if (currentComment < post.comments.length) {
       const timer = setTimeout(() => {
         setIsReplying(true);
@@ -81,39 +89,41 @@ export function InstagramComments() {
         setCurrentComment(0);
       }, 3000);
     }
-  }, [currentComment]);
+  }, [currentComment, mounted]);
 
   return (
-    <div className="py-24 bg-gradient-to-r from-pink-50 to-purple-50">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="channel-instagram" className="py-16 bg-gradient-to-r from-pink-50 to-purple-50">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            data-aos="fade-up"
           >
-            <h2 className="text-3xl font-bold mb-4">
-              أتمتة التعليقات على انستغرام
+            <h2 className="text-3xl font-bold mb-4 text-right">
+              أتمتة التعليقات على <span className="text-[#25D366]">انستغرام</span>
             </h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">
+            <p className="text-gray-600 max-w-3xl mx-auto text-right">
               الرد التلقائي على تعليقات المتابعين على منشورات انستغرام، وتوفير تجربة تفاعلية تزيد من مشاركة الجمهور
             </p>
           </motion.div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center overflow-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center overflow-hidden">
           {/* Instagram Demo */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative"
+            data-aos="fade-up"
+            className="relative order-2 lg:order-1"
           >
             <div className="absolute -top-6 -left-6 bg-pink-100 w-24 h-24 rounded-full opacity-60"></div>
             <div className="relative z-10">
-              <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-200 max-w-md mx-auto">
+              <div className="bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 max-w-md mx-auto aspect-square">
                 {/* Instagram Header */}
                 <div className="bg-white border-b border-gray-200 p-4">
                   <div className="flex items-center justify-between">
@@ -129,7 +139,7 @@ export function InstagramComments() {
                 </div>
                 
                 {/* Instagram Post */}
-                <div className="bg-white">
+                <div className="bg-white flex-1 flex flex-col">
                   {/* Post Header */}
                   <div className="p-3 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -147,7 +157,7 @@ export function InstagramComments() {
                   <img
                     src={post.image}
                     alt="Instagram Post"
-                    className="w-full h-64 object-cover"
+                    className="w-full h-32 object-cover"
                   />
                   
                   {/* Post Actions */}
@@ -195,7 +205,7 @@ export function InstagramComments() {
                   </div>
                   
                   {/* Comments Section */}
-                  <div className="max-h-64 overflow-y-auto p-3 space-y-4">
+                  <div className="flex-1 overflow-y-auto p-3 space-y-4">
                     {post.comments.slice(0, currentComment).map((comment, index) => (
                       <div key={comment.id} className="space-y-2">
                         <div className="flex items-start gap-2">
@@ -298,10 +308,12 @@ export function InstagramComments() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            data-aos="fade-up"
+            className="text-right order-1 lg:order-2"
           >
             <h3 className="text-2xl font-bold mb-6">
               تفاعل مع متابعيك
-              <span className="block text-pink-600">بشكل فوري وذكي</span>
+              <span className="block text-[#25D366]">بشكل فوري وذكي</span>
             </h3>
             <p className="text-lg text-gray-600 mb-8">
               أتمت الردود على تعليقات المتابعين على منشورات انستغرام، وقدم تجربة تفاعلية تزيد من مشاركة الجمهور وتعزز من تواجدك على المنصة.
@@ -331,8 +343,8 @@ export function InstagramComments() {
                 }
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="bg-pink-100 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <feature.icon className="h-6 w-6 text-pink-600" />
+                  <div className="bg-[#25D366] bg-opacity-10 w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <feature.icon className="h-6 w-6 text-[#25D366]" />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">{feature.title}</h4>
@@ -356,13 +368,13 @@ export function InstagramComments() {
                   "تعزيز صورة العلامة التجارية من خلال التفاعل المستمر"
                 ].map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
-                    <CheckCircle2 className="h-5 w-5 text-pink-500 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-[#25D366] flex-shrink-0" />
                     <span className="text-gray-700">{item}</span>
                   </li>
                 ))}
               </ul>
               <div className="mt-6 pt-4 border-t border-gray-100">
-                <a href="#" className="text-pink-600 hover:text-pink-700 font-medium flex items-center gap-1">
+                <a href="#" className="text-[#25D366] hover:text-green-700 font-medium flex items-center gap-1">
                   <span>اكتشف المزيد عن أتمتة التعليقات على انستغرام</span>
                   <ArrowRight className="h-4 w-4" />
                 </a>
@@ -371,6 +383,6 @@ export function InstagramComments() {
           </motion.div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

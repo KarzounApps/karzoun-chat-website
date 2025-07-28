@@ -11,6 +11,7 @@ export function FacebookComments() {
   const [activeTab, setActiveTab] = useState('comments');
   const [currentComment, setCurrentComment] = useState(0);
   const [isReplying, setIsReplying] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   // Sample Facebook post and comments
   const post = {
@@ -65,8 +66,15 @@ export function FacebookComments() {
     ]
   };
 
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Auto-advance comments and replies
   useEffect(() => {
+    if (!mounted) return;
+    
     if (currentComment < post.comments.length) {
       const timer = setTimeout(() => {
         setIsReplying(true);
@@ -82,7 +90,7 @@ export function FacebookComments() {
         setCurrentComment(0);
       }, 3000);
     }
-  }, [currentComment]);
+  }, [currentComment, mounted]);
 
   return (
     <div className="py-24 bg-gradient-to-r from-blue-50 to-indigo-50">

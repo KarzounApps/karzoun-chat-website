@@ -11,6 +11,7 @@ import {
 export function EmailAutomation() {
   const [currentEmail, setCurrentEmail] = useState(0);
   const [isReplying, setIsReplying] = useState(false);
+  const [mounted, setMounted] = useState(false);
   
   // Sample emails
   const emails = [
@@ -64,8 +65,15 @@ export function EmailAutomation() {
     }
   ];
 
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Auto-advance emails and replies
   useEffect(() => {
+    if (!mounted) return;
+    
     if (currentEmail < emails.length) {
       const timer = setTimeout(() => {
         setIsReplying(true);
@@ -81,7 +89,7 @@ export function EmailAutomation() {
         setCurrentEmail(0);
       }, 3000);
     }
-  }, [currentEmail]);
+  }, [currentEmail, mounted]);
 
   const getPriorityColor = (priority) => {
     switch (priority) {

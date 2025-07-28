@@ -23,6 +23,7 @@ export function WhatsAppIntegration() {
   const [activeChat, setActiveChat] = useState(0);
   const [isTyping, setIsTyping] = useState(false);
   const [currentMessage, setCurrentMessage] = useState(0);
+  const [mounted, setMounted] = useState(false);
 
   // Sample WhatsApp conversations
   const conversations = [
@@ -72,8 +73,15 @@ export function WhatsAppIntegration() {
     },
   ];
 
+  // Set mounted to true after component mounts
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   // Auto-advance messages in the active chat
   useEffect(() => {
+    if (!mounted) return;
+    
     if (currentMessage < conversations[activeChat].messages.length - 1) {
       const timer = setTimeout(() => {
         if (conversations[activeChat].messages[currentMessage + 1].type === "bot") {
@@ -89,21 +97,24 @@ export function WhatsAppIntegration() {
       return () => clearTimeout(timer);
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeChat, currentMessage]);
+  }, [activeChat, currentMessage, mounted]);
 
   // Reset current message when changing chat
   useEffect(() => {
+    if (!mounted) return;
     setCurrentMessage(0);
-  }, [activeChat]);
+  }, [activeChat, mounted]);
 
   // Auto rotate between chats
   useEffect(() => {
+    if (!mounted) return;
+    
     const timer = setInterval(() => {
       setActiveChat((prev) => (prev + 1) % conversations.length);
     }, 15000);
     return () => clearInterval(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [mounted]);
 
   return (
     <div className="py-24 bg-gradient-to-r from-green-50 to-emerald-50">
