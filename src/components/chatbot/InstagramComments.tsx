@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Instagram, MessageSquare, Heart, Send, 
-  ArrowRight, CheckCircle2, Users, BarChart, 
+  ArrowRight, CheckCircle2, Users, BarChart3, 
   Zap, RefreshCw, Clock, Search, MoreHorizontal,
-  User, Settings, BellRing, Image, Camera, Smile
+  User, Settings, BellRing, Image, Camera, Smile,
+  MessageCircle, UsersRound, Timer, TrendingUp
 } from 'lucide-react';
 
 export function InstagramComments() {
@@ -322,22 +323,22 @@ export function InstagramComments() {
             <div className="space-y-6 mb-8">
               {[
                 {
-                  icon: MessageSquare,
+                  icon: MessageCircle,
                   title: "ردود تلقائية ذكية",
                   description: "الرد على الاستفسارات الشائعة في التعليقات بشكل فوري وذكي"
                 },
                 {
-                  icon: Users,
+                  icon: UsersRound,
                   title: "زيادة التفاعل",
                   description: "تعزيز مشاركة المتابعين وبناء مجتمع نشط حول علامتك التجارية"
                 },
                 {
-                  icon: Clock,
+                  icon: Timer,
                   title: "توفير الوقت",
                   description: "التعامل مع مئات التعليقات يومياً دون الحاجة للتدخل اليدوي"
                 },
                 {
-                  icon: BarChart,
+                  icon: TrendingUp,
                   title: "تحليلات التفاعل",
                   description: "قياس مستوى التفاعل وتحليل المحتوى الأكثر جذباً للجمهور"
                 }
