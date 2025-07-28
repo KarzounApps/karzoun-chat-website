@@ -2,9 +2,6 @@ import React, { useState } from "react";
 import Platforms from "./platforms";
 import { WhatsAppIntegration } from "../chatbot/WhatsAppIntegration";
 import { InstagramComments } from "../chatbot/InstagramComments";
-import { FacebookComments } from "../chatbot/FacebookComments";
-import { TelegramReplies } from "../chatbot/TelegramReplies";
-import { EmailAutomation } from "../chatbot/EmailAutomation";
 
 function WhatsappInstaSwitcher() {
   const [activeTab, setActiveTab] = useState("whatsapp");
@@ -14,14 +11,12 @@ function WhatsappInstaSwitcher() {
         <Platforms
           setActiveTab={setActiveTab}
           activeTab={activeTab}
+          hideTabs={["facebook", "telegram", "email"]}
         />
       </div>
 
       {activeTab === "whatsapp" && <WhatsAppIntegration />}
       {activeTab === "instagram" && <InstagramComments />}
-      {activeTab === "facebook" && <FacebookComments />}
-      {activeTab === "telegram" && <TelegramReplies />}
-      {activeTab === "email" && <EmailAutomation />}
     </div>
   );
 }
