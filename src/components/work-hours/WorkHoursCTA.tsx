@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Clock, Users, BarChart3, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function WorkHoursCTA() {
   const benefits = [
@@ -8,12 +8,6 @@ export function WorkHoursCTA() {
     'زيادة رضا الموظفين بنسبة 60%',
     'تقليل أخطاء الجدولة بنسبة 90%',
     'تحسين الإنتاجية بنسبة 40%'
-  ];
-
-  const stats = [
-    { icon: Clock, value: '24/7', label: 'دعم متواصل' },
-    { icon: Users, value: '500+', label: 'فريق راضي' },
-    { icon: BarChart3, value: '95%', label: 'دقة في الجدولة' }
   ];
 
   return (
@@ -40,25 +34,6 @@ export function WorkHoursCTA() {
             </p>
           </motion.div>
         </div>
-
-        {/* Stats Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-        >
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <stat.icon className="w-8 h-8 text-white" />
-              </div>
-              <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
-              <div className="text-blue-200">{stat.label}</div>
-            </div>
-          ))}
-        </motion.div>
 
         {/* Benefits Grid */}
         <motion.div
@@ -100,41 +75,6 @@ export function WorkHoursCTA() {
           >
             طلب عرض توضيحي
           </motion.button>
-        </motion.div>
-
-        {/* Trust Indicators */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-center"
-        >
-          <p className="text-blue-200 mb-4">موثوق به من قبل الشركات الرائدة</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
-            <div className="bg-white/10 px-6 py-3 rounded-lg">
-              <span className="text-white font-semibold">شركة التقنية</span>
-            </div>
-            <div className="bg-white/10 px-6 py-3 rounded-lg">
-              <span className="text-white font-semibold">مؤسسة الابتكار</span>
-            </div>
-            <div className="bg-white/10 px-6 py-3 rounded-lg">
-              <span className="text-white font-semibold">مجموعة النجاح</span>
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Bottom Note */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1, delay: 1 }}
-          className="text-center mt-12 pt-8 border-t border-white/20"
-        >
-          <p className="text-blue-200 text-sm">
-            تجربة مجانية لمدة 14 يوم • لا حاجة لبطاقة ائتمان • إلغاء في أي وقت
-          </p>
         </motion.div>
       </div>
     </div>
