@@ -30,8 +30,7 @@ export function WhatsAppCatalogHero() {
             </div>
             
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-              كتالوج 
-              <span className="block text-green-400 mt-2">واتساب</span>
+              كتالوج <span className="text-green-400">واتساب</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
               اعرض منتجاتك مباشرةً داخل المحادثة
