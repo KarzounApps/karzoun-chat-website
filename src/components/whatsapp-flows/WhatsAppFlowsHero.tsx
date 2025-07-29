@@ -127,17 +127,7 @@ const WhatsAppFlowsHero = () => {
           })}
         </motion.div>
 
-        {/* Bottom Features */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center mt-12"
-        >
-          <div className="text-sm text-gray-400">
-            ✅ تجربة مجانية لمدة 14 يوم • ✅ لا حاجة لبطاقة ائتمان • ✅ إعداد في دقائق
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )
