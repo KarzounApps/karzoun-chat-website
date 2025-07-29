@@ -236,7 +236,7 @@ const featureItems = {
       icon: Calendar,
       title: "ادارة ساعات العمل",
       description: "تحديد ساعات العمل وجداول المناوبة للفريق",
-      link: "#",
+      link: "/features/work-hours",
     },
     {
       icon: Shield,
