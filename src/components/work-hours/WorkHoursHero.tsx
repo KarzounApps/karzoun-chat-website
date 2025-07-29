@@ -6,7 +6,7 @@ export function WorkHoursHero() {
   const scheduleExamples = [
     { name: 'الصباح', time: '9:00 - 13:00', color: 'bg-blue-100 text-blue-800 border-blue-200' },
     { name: 'المساء', time: '14:00 - 18:00', color: 'bg-green-100 text-green-800 border-green-200' },
-    { name: 'الليل', time: '19:00 - 23:00', color: 'bg-purple-100 text-purple-800 border-purple-200' },
+    { name: 'استراحة الغداء', time: '19:00 - 23:00', color: 'bg-purple-100 text-purple-800 border-purple-200' },
     { name: 'عطلة نهاية الأسبوع', time: '10:00 - 16:00', color: 'bg-orange-100 text-orange-800 border-orange-200' },
   ];
 
@@ -45,17 +45,17 @@ export function WorkHoursHero() {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors"
-              >
-                عرض توضيحي
-              </motion.button>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
                 className="bg-google-blue hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors flex items-center gap-2"
               >
                 ابدأ الآن مجاناً
                 <ArrowRight className="w-4 h-4" />
+              </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-gray-700 hover:bg-gray-600 text-white px-6 py-3 rounded-lg transition-colors"
+              >
+                عرض توضيحي
               </motion.button>
             </div>
 
