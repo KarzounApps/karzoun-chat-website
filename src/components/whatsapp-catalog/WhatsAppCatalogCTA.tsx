@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, CheckCircle2, TrendingUp, Users, Zap } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 
 export function WhatsAppCatalogCTA() {
   const benefits = [
@@ -8,12 +8,6 @@ export function WhatsAppCatalogCTA() {
     'تقليل وقت معالجة الطلبات بنسبة 80%',
     'تحسين تجربة العملاء وزيادة الرضا',
     'أتمتة كاملة لعملية البيع والشراء'
-  ];
-
-  const successMetrics = [
-    { icon: TrendingUp, value: '300%', label: 'زيادة في المبيعات', color: 'text-green-400' },
-    { icon: Users, value: '10K+', label: 'عميل راضي', color: 'text-blue-400' },
-    { icon: Zap, value: '80%', label: 'توفير في الوقت', color: 'text-purple-400' }
   ];
 
   return (
@@ -40,25 +34,6 @@ export function WhatsAppCatalogCTA() {
             </p>
           </motion.div>
         </div>
-
-        {/* Success Metrics */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16"
-        >
-          {successMetrics.map((metric, index) => (
-            <div key={index} className="text-center">
-              <div className="bg-white/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                <metric.icon className={`w-8 h-8 ${metric.color}`} />
-              </div>
-              <div className={`text-3xl font-bold ${metric.color} mb-2`}>{metric.value}</div>
-              <div className="text-green-200">{metric.label}</div>
-            </div>
-          ))}
-        </motion.div>
 
         {/* Benefits Grid */}
         <motion.div
@@ -100,28 +75,6 @@ export function WhatsAppCatalogCTA() {
           >
             طلب عرض توضيحي
           </motion.button>
-        </motion.div>
-
-        {/* Feature Highlight */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center"
-        >
-          <h3 className="text-xl font-bold text-white mb-4">
-            🚀 ميزة خاصة: التكامل مع أنظمة الدفع
-          </h3>
-          <p className="text-green-100 mb-6">
-            اربط كتالوجك مع بوابات الدفع المحلية والعالمية لتسهيل عملية الشراء على عملائك
-          </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <span className="bg-white/20 px-3 py-1 rounded-full text-white">💳 فيزا وماستركارد</span>
-            <span className="bg-white/20 px-3 py-1 rounded-full text-white">📱 مدى</span>
-            <span className="bg-white/20 px-3 py-1 rounded-full text-white">💰 تحويل بنكي</span>
-            <span className="bg-white/20 px-3 py-1 rounded-full text-white">📦 الدفع عند الاستلام</span>
-          </div>
         </motion.div>
       </div>
     </div>
