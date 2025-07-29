@@ -162,7 +162,7 @@ const featureItems = {
       icon: Clock,
       title: "متابعة الدوام والحضور",
       description: "تتبع ساعات عمل الفريق وإدارة الحضور والانصراف",
-      link: "#",
+      link: "/features/work-hours",
     },
     {
       icon: Database,
