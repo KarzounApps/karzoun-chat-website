@@ -6,7 +6,6 @@ export function WhatsAppCatalogHero() {
   const catalogFeatures = [
     { name: 'عرض المنتجات', icon: '🛍️', color: 'bg-green-100 text-green-800 border-green-200' },
     { name: 'طلب بنقرة واحدة', icon: '👆', color: 'bg-blue-100 text-blue-800 border-blue-200' },
-    { name: 'دفع آمن', icon: '💳', color: 'bg-purple-100 text-purple-800 border-purple-200' },
     { name: 'متابعة الطلبات', icon: '📦', color: 'bg-orange-100 text-orange-800 border-orange-200' },
   ];
 
@@ -66,7 +65,7 @@ export function WhatsAppCatalogHero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 max-w-4xl mx-auto"
             >
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {catalogFeatures.map((feature, index) => (
                   <motion.div
                     key={feature.name}
