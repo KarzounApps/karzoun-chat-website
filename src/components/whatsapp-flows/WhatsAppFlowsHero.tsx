@@ -46,12 +46,48 @@ const WhatsAppFlowsHero = () => {
 
       <div className="relative container mx-auto px-4 py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Content */}
+          {/* Flow Types - Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-right"
+            className="grid grid-cols-2 gap-4 order-2 lg:order-1"
+          >
+            {flowTypes.map((flow, index) => {
+              const IconComponent = flow.icon
+              return (
+                <motion.div
+                  key={flow.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.1 * index }}
+                  whileHover={{ scale: 1.05, y: -5 }}
+                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+                >
+                  <div className={`${flow.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}>
+                    <IconComponent className="w-6 h-6 text-white" />
+                  </div>
+                  
+                  <h3 className="font-bold text-gray-800 mb-2 text-right">{flow.title}</h3>
+                  <p className="text-sm text-gray-600 mb-3 text-right leading-relaxed">{flow.description}</p>
+                  
+                  <div className="flex justify-between items-center">
+                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                      {flow.time}
+                    </span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  </div>
+                </motion.div>
+              )
+            })}
+          </motion.div>
+
+          {/* Content - Right Side */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="text-center lg:text-right order-1 lg:order-2"
           >
             <h1 className="text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-gray-800">مسارات </span>
@@ -86,42 +122,6 @@ const WhatsAppFlowsHero = () => {
             <div className="text-sm text-gray-500">
               ✅ تجربة مجانية لمدة 14 يوم • ✅ لا حاجة لبطاقة ائتمان • ✅ إعداد في دقائق
             </div>
-          </motion.div>
-
-          {/* Flow Types */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="grid grid-cols-2 gap-4"
-          >
-            {flowTypes.map((flow, index) => {
-              const IconComponent = flow.icon
-              return (
-                <motion.div
-                  key={flow.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.1 * index }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                  className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
-                >
-                  <div className={`${flow.color} w-12 h-12 rounded-xl flex items-center justify-center mb-4`}>
-                    <IconComponent className="w-6 h-6 text-white" />
-                  </div>
-                  
-                  <h3 className="font-bold text-gray-800 mb-2 text-right">{flow.title}</h3>
-                  <p className="text-sm text-gray-600 mb-3 text-right leading-relaxed">{flow.description}</p>
-                  
-                  <div className="flex justify-between items-center">
-                    <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
-                      {flow.time}
-                    </span>
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  </div>
-                </motion.div>
-              )
-            })}
           </motion.div>
         </div>
       </div>
