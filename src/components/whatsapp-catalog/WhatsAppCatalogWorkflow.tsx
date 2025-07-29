@@ -148,6 +148,167 @@ export function WhatsAppCatalogWorkflow() {
           ))}
         </div>
 
+        {/* Personalized Shopping Experience */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="mb-20"
+        >
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+              تجربة تسوق شخصية ومخصصة
+            </h3>
+            <p className="text-gray-600 text-lg max-w-3xl mx-auto">
+              يحصل كل عميل على تجربة تسوق مخصصة بناءً على احتياجاته واهتماماته
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* WhatsApp Chat Mockup */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="relative"
+            >
+              {/* Phone Frame */}
+              <div className="bg-gray-900 rounded-3xl p-2 shadow-2xl max-w-sm mx-auto">
+                <div className="bg-white rounded-2xl overflow-hidden">
+                  {/* WhatsApp Header */}
+                  <div className="bg-green-500 text-white p-4 flex items-center gap-3">
+                    <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-green-500 font-bold text-sm">متجر</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold">متجر الجمال</div>
+                      <div className="text-xs opacity-90">متصل الآن</div>
+                    </div>
+                  </div>
+
+                  {/* Chat Messages */}
+                  <div className="p-4 space-y-3 bg-gray-50 min-h-96">
+                    {/* Customer Message */}
+                    <div className="flex justify-end">
+                      <div className="bg-green-100 text-gray-800 rounded-lg p-3 max-w-xs text-sm">
+                        أحتاج منتجات للعناية بالبشرة المعرضة لحب الشباب
+                      </div>
+                    </div>
+
+                    {/* Store Response */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-lg p-3 max-w-xs text-sm shadow-sm">
+                        مرحباً! إليك مجموعة منتجاتنا المخصصة لعلاج حب الشباب
+                      </div>
+                    </div>
+
+                    {/* Catalog Card */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-lg p-4 max-w-xs shadow-lg border">
+                        <div className="flex items-center gap-2 mb-3">
+                          <ShoppingCart className="w-4 h-4 text-blue-500" />
+                          <span className="font-semibold text-sm">مجموعة علاج حب الشباب</span>
+                        </div>
+                        
+                        <div className="space-y-2">
+                          <div className="flex items-center gap-2 p-2 bg-gray-50 rounded">
+                            <div className="w-8 h-8 bg-orange-200 rounded"></div>
+                            <span className="text-xs">غسول الوجه</span>
+                          </div>
+                          <div className="flex items-center gap-2 p-2 bg-gray-50 rounded">
+                            <div className="w-8 h-8 bg-brown-200 rounded"></div>
+                            <span className="text-xs">كريم علاج البقع</span>
+                          </div>
+                          <div className="flex items-center gap-2 p-2 bg-gray-50 rounded">
+                            <div className="w-8 h-8 bg-blue-200 rounded"></div>
+                            <span className="text-xs">مرطب مهدئ</span>
+                          </div>
+                        </div>
+
+                        <button className="w-full bg-blue-500 text-white text-xs py-2 rounded mt-3">
+                          استكشف الكتالوج
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Customer Response */}
+                    <div className="flex justify-end">
+                      <div className="bg-green-100 text-gray-800 rounded-lg p-3 max-w-xs text-sm">
+                        أريد شراء هذه المنتجات
+                      </div>
+                    </div>
+
+                    {/* Order Confirmation */}
+                    <div className="flex justify-start">
+                      <div className="bg-white rounded-lg p-3 max-w-xs shadow-sm border border-green-200">
+                        <div className="text-center">
+                          <CheckCircle className="w-6 h-6 text-green-500 mx-auto mb-2" />
+                          <div className="text-sm font-semibold text-gray-800">سلتك جاهزة!</div>
+                          <div className="text-xs text-gray-600 mb-3">اضغط على الزر أدناه لإتمام الطلب</div>
+                          <button className="bg-green-500 text-white text-xs py-2 px-4 rounded">
+                            إتمام الطلب
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Features List */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="space-y-6"
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-blue-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <MessageSquare className="w-6 h-6 text-blue-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">محادثة طبيعية</h4>
+                  <p className="text-gray-600">العملاء يطلبون المنتجات بطريقة طبيعية كما لو كانوا يتحدثون مع صديق</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-green-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <Package className="w-6 h-6 text-green-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">اقتراحات ذكية</h4>
+                  <p className="text-gray-600">النظام يقترح المنتجات المناسبة بناءً على طلب العميل واهتماماته</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-purple-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <ShoppingCart className="w-6 h-6 text-purple-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">طلب فوري</h4>
+                  <p className="text-gray-600">من الاستفسار إلى الطلب في ثوانٍ معدودة دون مغادرة المحادثة</p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <div className="bg-orange-100 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <CheckCircle className="w-6 h-6 text-orange-600" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-2">تأكيد تلقائي</h4>
+                  <p className="text-gray-600">تأكيد الطلبات وإرسال التفاصيل تلقائياً مع خيارات الدفع والتوصيل</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+
         {/* Catalog Types */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
