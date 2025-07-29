@@ -343,33 +343,6 @@ export function WhatsAppCatalogWorkflow() {
             ))}
           </div>
         </motion.div>
-
-        {/* Interactive Demo Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mt-20 text-center"
-        >
-          <div className="bg-gradient-to-r from-green-500 to-blue-500 rounded-3xl p-8 md:p-12 text-white">
-            <Smartphone className="w-16 h-16 mx-auto mb-6 text-white" />
-            <h3 className="text-2xl md:text-3xl font-bold mb-4">
-              جرب الكتالوج التفاعلي الآن
-            </h3>
-            <p className="text-green-100 text-lg mb-8 max-w-2xl mx-auto">
-              شاهد كيف يبدو كتالوجك داخل محادثة واتساب واختبر تجربة العميل
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-green-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-50 transition-colors inline-flex items-center gap-2"
-            >
-              تجربة تفاعلية
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
-          </div>
-        </motion.div>
       </div>
     </div>
   );

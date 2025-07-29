@@ -171,7 +171,7 @@ const featureItems = {
       link: "#",
     },
     {
-      icon: Wcatalog,
+      icon: ShoppingCart,
       title: "كتالوج واتساب",
       description: "اعرض منتجاتك مباشرةً داخل المحادثة، ودَع العملاء يختارون ويطلبون بنقرة واحدة.",
       link: "/features/whatsapp-catalog",
