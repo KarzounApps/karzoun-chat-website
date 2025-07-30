@@ -12,16 +12,34 @@ import {
 
 const TeamOrganizationHero = () => {
   return (
-    <section className="py-20 bg-slate-800 text-white relative overflow-hidden">
+    <section className="py-20 text-white relative overflow-hidden" style={{
+      background: 'linear-gradient(135deg, #06142E 0%, #0B2A52 100%)'
+    }}>
       {/* Background Pattern */}
       <div className="absolute inset-0">
-        {/* Dot Pattern */}
-        <div className="absolute inset-0 opacity-20" style={{
-          backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.15) 1px, transparent 1px)',
-          backgroundSize: '24px 24px'
-        }}></div>
-        {/* Subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/50 via-slate-900/30 to-slate-800/50"></div>
+        {/* Digital Matrix Dot Grid */}
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `
+              radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 1px, transparent 1px),
+              radial-gradient(circle at center, rgba(147, 197, 253, 0.3) 0.5px, transparent 0.5px)
+            `,
+            backgroundSize: '32px 32px, 16px 16px',
+            backgroundPosition: '0 0, 8px 8px'
+          }}
+        />
+        
+        {/* Glowing Edge Fade */}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-transparent">
+          <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-[#06142E] to-transparent opacity-60"></div>
+          <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#06142E] to-transparent opacity-60"></div>
+          <div className="absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#06142E] to-transparent opacity-40"></div>
+          <div className="absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#06142E] to-transparent opacity-40"></div>
+        </div>
+        
+        {/* Subtle Blue Glow Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-blue-400/5"></div>
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
