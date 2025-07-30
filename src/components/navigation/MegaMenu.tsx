@@ -150,7 +150,7 @@ const featureItems = {
       title: "ادارة عمليات البيع والمبيعات",
       description:
         "ميزة مخصصة للشركات الخدمية، التجارية أو شركات المنتجات الرقمية SAAS التي تتطلب متابعة خاصة لكل عميل على حدى",
-      link: "#",
+      link: "/features/sales-management",
     },
     {
       icon: Building2,

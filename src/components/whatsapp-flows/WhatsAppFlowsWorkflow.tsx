@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import WhatsAppBookingDemo from './WhatsAppBookingDemo'
 import { 
   Settings, 
+  MessageCircle,
   Database, 
   TrendingUp, 
   ArrowDown
