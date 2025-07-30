@@ -59,10 +59,6 @@ export default function ActivityLogCTA() {
                 تحدث مع خبير
               </button>
             </div>
-
-            <p className="text-blue-200 text-sm mt-4">
-              إعداد سريع في أقل من 10 دقائق
-            </p>
           </motion.div>
         </div>
       </div>
