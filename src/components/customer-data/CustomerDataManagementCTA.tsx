@@ -71,12 +71,55 @@ const CustomerDataManagementCTA: React.FC = () => {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Right Side - CTA */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center lg:text-right order-1 lg:order-2"
+          >
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+              <h3 className="text-2xl font-bold mb-4">
+                جرب إدارة بيانات العملاء مجاناً
+              </h3>
+              <p className="text-blue-100 mb-6">
+                احصل على رؤى فورية حول عملائك وابدأ في تحسين حملاتك التسويقية خلال دقائق.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="space-y-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center gap-3"
+                >
+                  ابدأ التجربة المجانية
+                  <ArrowLeft className="w-5 h-5 rotate-180" />
+                </motion.button>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-full border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300"
+                >
+                  تحدث مع خبير
+                </motion.button>
+              </div>
+
+              <p className="text-sm text-blue-200 mt-4">
+                إعداد سريع في أقل من 5 دقائق
+              </p>
+            </div>
+          </motion.div>
+
           {/* Left Side - Benefits */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
+            className="order-2 lg:order-1"
           >
             <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-right">
               ابدأ في تحسين استراتيجياتك التسويقية اليوم
@@ -100,48 +143,6 @@ const CustomerDataManagementCTA: React.FC = () => {
                   <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                 </motion.div>
               ))}
-            </div>
-          </motion.div>
-
-          {/* Right Side - CTA */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-            className="text-center lg:text-right"
-          >
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-4">
-                جرب إدارة بيانات العملاء مجاناً
-              </h3>
-              <p className="text-blue-100 mb-6">
-                احصل على رؤى فورية حول عملائك وابدأ في تحسين حملاتك التسويقية خلال دقائق.
-              </p>
-
-              {/* CTA Buttons */}
-              <div className="space-y-4">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-white text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold hover:bg-blue-50 transition-all duration-300 flex items-center justify-center gap-3"
-                >
-                  <ArrowLeft className="w-5 h-5 rotate-180" />
-                  ابدأ التجربة المجانية
-                </motion.button>
-                
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full border-2 border-white text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-white hover:text-blue-900 transition-all duration-300"
-                >
-                  تحدث مع خبير
-                </motion.button>
-              </div>
-
-              <p className="text-sm text-blue-200 mt-4">
-                إعداد سريع في أقل من 5 دقائق
-              </p>
             </div>
           </motion.div>
         </div>

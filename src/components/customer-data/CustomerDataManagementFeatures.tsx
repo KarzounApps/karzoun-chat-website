@@ -107,7 +107,7 @@ const CustomerDataManagementFeatures: React.FC = () => {
               className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-gray-100"
             >
               {/* Icon */}
-              <div className="flex justify-start mb-6">
+              <div className="flex justify-end mb-6">
                 <div className="bg-blue-100 p-4 rounded-xl">
                   <feature.icon className="w-8 h-8 text-blue-600" />
                 </div>

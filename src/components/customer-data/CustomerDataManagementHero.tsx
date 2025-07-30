@@ -29,7 +29,7 @@ const CustomerDataManagementHero: React.FC = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" style={{
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" dir="rtl" style={{
       background: `linear-gradient(135deg, #06142E 0%, #0B2A52 100%)`
     }}>
       {/* Digital Matrix Background */}
@@ -94,13 +94,13 @@ const CustomerDataManagementHero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center mb-16"
+          className="flex flex-col sm:flex-row-reverse gap-4 justify-center mb-16"
         >
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-            ابدأ الآن مجاناً
-          </button>
           <button className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105">
             عرض توضيحي
+          </button>
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+            ابدأ الآن مجاناً
           </button>
         </motion.div>
 
