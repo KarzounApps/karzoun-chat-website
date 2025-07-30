@@ -119,7 +119,7 @@ const WhatsAppFlowsWorkflow = () => {
                     <div className="flex-1">
                       <div className="flex items-center gap-3 mb-3 justify-end">
                         <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
-                          الخطوة {index + 1}
+                          {index + 1 === 1 ? '١ الخطوة' : index + 1 === 2 ? '٢ الخطوة' : index + 1 === 3 ? '٣ الخطوة' : '٤ الخطوة'}
                         </span>
                       </div>
                       
