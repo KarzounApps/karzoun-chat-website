@@ -28,13 +28,30 @@ export default function ChatbotsHero() {
   ];
 
   return (
-    <section dir="rtl" className="relative min-h-screen bg-gradient-to-l from-[#06142E] to-[#0B2A52] overflow-hidden">
-      {/* Digital Matrix Background */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
-          backgroundSize: '20px 20px'
-        }}></div>
+    <section dir="rtl" className="relative min-h-screen bg-gradient-to-br from-[#06142E] via-[#0B2A52] to-[#06142E] overflow-hidden">
+      {/* Digital Matrix Background with Glowing Dots */}
+      <div className="absolute inset-0">
+        {/* Base dot pattern */}
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 1px, transparent 1px)`,
+            backgroundSize: '24px 24px'
+          }}
+        ></div>
+        
+        {/* Glowing effect overlay */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `radial-gradient(circle at center, rgba(59, 130, 246, 0.8) 0.5px, transparent 0.5px)`,
+            backgroundSize: '24px 24px'
+          }}
+        ></div>
+        
+        {/* Fade out edges */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06142E]/80 via-transparent to-[#06142E]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#06142E]/60 via-transparent to-[#06142E]/80"></div>
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-20">
