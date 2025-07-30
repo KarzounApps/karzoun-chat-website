@@ -1,77 +1,68 @@
 'use client';
 
-import React from 'react';
 import { motion } from 'framer-motion';
-import { 
-  Database, 
-  BarChart3, 
-  Users, 
-  Target, 
-  Shield, 
-  Zap,
-  CheckCircle
-} from 'lucide-react';
+import { Database, BarChart3, Users, Target, Shield, Zap, CheckCircle } from 'lucide-react';
 
-const CustomerDataManagementFeatures: React.FC = () => {
+export default function CustomerDataManagementFeatures() {
   const features = [
     {
       icon: Database,
-      title: 'تجميع البيانات الشامل',
-      description: 'اجمع بيانات العملاء من جميع نقاط التفاعل في مكان واحد',
+      title: "تجميع البيانات الشامل",
+      description: "اجمع بيانات العملاء من جميع نقاط التفاعل في مكان واحد",
       benefits: [
-        'تكامل مع جميع القنوات الرقمية',
-        'تحديث تلقائي للبيانات',
-        'تخزين آمن ومنظم'
+        "تكامل مع جميع القنوات الرقمية",
+        "تحديث تلقائي للبيانات",
+        "تخزين آمن ومنظم"
       ]
     },
     {
       icon: BarChart3,
-      title: 'تحليل السلوك المتقدم',
-      description: 'فهم أعمق لسلوك العملاء وأنماط الشراء',
+      title: "تحليل السلوك المتقدم",
+      description: "فهم أعمق لسلوك العملاء وأنماط الشراء",
       benefits: [
-        'تحليل رحلة العميل',
-        'تتبع التفاعلات',
-        'توقع الاحتياجات المستقبلية'
+        "تحليل رحلة العميل",
+        "تتبع التفاعلات",
+        "توقع الاحتياجات المستقبلية"
       ]
     },
     {
       icon: Users,
-      title: 'تجميع العملاء الذكي',
-      description: 'تصنيف العملاء إلى مجموعات متجانسة لاستهداف أفضل',
+      title: "تجميع العملاء الذكي",
+      description: "تصنيف العملاء إلى مجموعات متجانسة لاستهداف أفضل",
       benefits: [
-        'تجميع تلقائي بالذكاء الاصطناعي',
-        'معايير تصنيف مخصصة',
-        'تحديث ديناميكي للمجموعات'
+        "تجميع تلقائي بالذكاء الاصطناعي",
+        "معايير تصنيف مخصصة",
+        "تحديث ديناميكي للمجموعات"
       ]
     },
     {
       icon: Target,
-      title: 'الاستهداف الدقيق',
-      description: 'إنشاء حملات تسويقية مخصصة لكل مجموعة عملاء',
+      title: "الاستهداف الدقيق",
+      description: "إنشاء حملات تسويقية مخصصة لكل مجموعة عملاء",
       benefits: [
-        'رسائل مخصصة لكل مجموعة',
-        'توقيت مثالي للحملات',
-        'قياس فعالية الاستهداف'
+        "رسائل مخصصة لكل مجموعة",
+        "توقيت مثالي للحملات",
+        "قياس فعالية الاستهداف"
       ]
     },
     {
       icon: Shield,
-      title: 'الأمان والخصوصية',
-      description: 'حماية متقدمة لبيانات العملاء مع الامتثال للقوانين',
+      title: "الأمان والخصوصية",
+      description: "حماية متقدمة لبيانات العملاء مع الامتثال للقوانين",
       benefits: [
-        'تشفير متقدم للبيانات',
-        'امتثال لقوانين الخصوصية',
-        'تحكم في صلاحيات الوصول'
+        "تشفير متقدم للبيانات",
+        "امتثال لقوانين الخصوصية",
+        "تحكم في صلاحيات الوصول"
       ]
     },
     {
       icon: Zap,
-      title: 'الأتمتة الذكية',
-      description: 'أتمتة عمليات إدارة البيانات وتحليلها',
+      title: "الأتمتة الذكية",
+      description: "أتمتة عمليات إدارة البيانات وتحليلها",
       benefits: [
-        'تحديث تلقائي للملفات',
-        'تنبيهات ذكية',
-        'تقارير دورية تلقائية'
+        "تحديث تلقائي للملفات",
+        "تنبيهات ذكية",
+        "تقارير دورية تلقائية"
       ]
     }
   ];
@@ -87,10 +78,10 @@ const CustomerDataManagementFeatures: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-right">
             مميزات إدارة بيانات العملاء
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-right">
             استفد من أدوات متقدمة لتنظيم وتحليل بيانات عملائك وتحسين استراتيجياتك التسويقية
           </p>
         </motion.div>
@@ -126,9 +117,9 @@ const CustomerDataManagementFeatures: React.FC = () => {
               {/* Benefits List */}
               <ul className="space-y-3">
                 {feature.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-center justify-end text-right">
-                    <span className="text-gray-700 mr-3">{benefit}</span>
-                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                  <li key={benefitIndex} className="flex items-start justify-end text-right">
+                    <span className="text-gray-700 ml-3 flex-1">{benefit}</span>
+                    <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" />
                   </li>
                 ))}
               </ul>
@@ -138,7 +129,5 @@ const CustomerDataManagementFeatures: React.FC = () => {
       </div>
     </section>
   );
-};
-
-export default CustomerDataManagementFeatures;
+}
 
