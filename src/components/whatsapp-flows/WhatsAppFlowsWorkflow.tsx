@@ -111,13 +111,9 @@ const WhatsAppFlowsWorkflow = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="relative"
                 >
-                  <div className="flex items-start gap-6 flex-row-reverse">
-                    <div className={`${step.color} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </div>
-                    
+                  <div className="flex items-start gap-6" dir="rtl">
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3 justify-end">
+                      <div className="flex items-center gap-3 mb-3 justify-start">
                         <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
                           الخطوة {index + 1}
                         </span>
@@ -139,6 +135,10 @@ const WhatsAppFlowsWorkflow = () => {
                           </li>
                         ))}
                       </ul>
+                    </div>
+                    
+                    <div className={`${step.color} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                      <IconComponent className="w-8 h-8 text-white" />
                     </div>
                   </div>
 
