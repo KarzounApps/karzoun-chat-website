@@ -3,7 +3,6 @@
 import ChatbotsHero from '@/components/chatbots/ChatbotsHero';
 import ChatbotsFeatures from '@/components/chatbots/ChatbotsFeatures';
 import ChatbotsWorkflow from '@/components/chatbots/ChatbotsWorkflow';
-import ChatbotsCTA from '@/components/chatbots/ChatbotsCTA';
 
 export default function Chatbots() {
   return (
@@ -16,9 +15,6 @@ export default function Chatbots() {
       
       {/* Workflow Section */}
       <ChatbotsWorkflow />
-      
-      {/* CTA Section */}
-      <ChatbotsCTA />
     </main>
   );
 }
