@@ -156,7 +156,7 @@ const featureItems = {
       icon: Building2,
       title: "تنظيم الفريق وهيكل الشركة",
       description: "إنشاء هيكل تنظيمي للفريق وتحديد الأدوار والصلاحيات",
-      link: "#",
+      link: "/features/team-organization",
     },
     {
       icon: Clock,
