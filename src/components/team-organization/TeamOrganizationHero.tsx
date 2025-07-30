@@ -52,9 +52,10 @@ const TeamOrganizationHero = () => {
         >
           <h1 className="text-4xl lg:text-6xl font-bold mb-6">
             تنظيم الفريق وهيكل الشركة
-            <br />
-            <span className="text-blue-400">إدارة متقدمة للأدوار</span>
           </h1>
+          <h2 className="text-3xl lg:text-5xl font-bold text-blue-400 mb-8">
+            إدارة متقدمة للأدوار
+          </h2>
           <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
             إنشاء هيكل تنظيمي للفريق وتحديد الأدوار والصلاحيات بطريقة احترافية ومرنة
           </p>
