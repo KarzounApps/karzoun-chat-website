@@ -230,7 +230,7 @@ const featureItems = {
       icon: History,
       title: "سجل النشاطات",
       description: "تتبع جميع النشاطات والتغييرات في النظام للمراجعة والتدقيق",
-      link: "#",
+      link: "/features/activity-log",
     },
     {
       icon: Calendar,
