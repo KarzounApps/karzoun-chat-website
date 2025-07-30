@@ -177,7 +177,7 @@ const featureItems = {
       link: "/features/whatsapp-catalog",
     },
     {
-      icon: Wautomation,
+      icon: Workflow,
       title: "مسارات الواتساب الآليه",
       description: "صمِّم مسارات تفاعلية داخل محادثة واتساب ترشد العميل خطوةً بخطوة وتجمع البيانات تلقائيًّا.",
       link: "/features/whatsapp-flows",
