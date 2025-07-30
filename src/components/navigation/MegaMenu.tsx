@@ -188,7 +188,7 @@ const featureItems = {
       icon: Bot,
       title: "روبوتات المحادثة",
       description: "دمج سهل مع منصات المحادثة الآلية لتقليل عبء العمل",
-      link: "#",
+      link: "/features/chatbots",
     },
     {
       icon: Workflow,
