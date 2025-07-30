@@ -80,10 +80,10 @@ export default function CustomerDataManagementCTA() {
             viewport={{ once: true }}
             className="order-1 lg:order-2"
           >
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-right">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center lg:text-right">
               ابدأ في تحسين استراتيجياتك التسويقية اليوم
             </h2>
-            <p className="text-xl text-blue-100 mb-8 text-right leading-relaxed">
+            <p className="text-xl text-blue-100 mb-8 text-center lg:text-right leading-relaxed">
               انضم إلى آلاف الشركات التي تستخدم أدواتنا المتقدمة لإدارة بيانات العملاء وتحقيق نتائج استثنائية في التسويق والمبيعات.
             </p>
 
@@ -111,13 +111,13 @@ export default function CustomerDataManagementCTA() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center lg:text-right order-2 lg:order-1"
+            className="text-center order-2 lg:order-1"
           >
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-              <h3 className="text-2xl font-bold mb-4 text-right">
+              <h3 className="text-2xl font-bold mb-4">
                 جرب إدارة بيانات العملاء مجاناً
               </h3>
-              <p className="text-blue-100 mb-6 text-right">
+              <p className="text-blue-100 mb-6">
                 احصل على رؤى فورية حول عملائك وابدأ في تحسين حملاتك التسويقية خلال دقائق.
               </p>
 
@@ -141,7 +141,7 @@ export default function CustomerDataManagementCTA() {
                 </motion.button>
               </div>
 
-              <p className="text-sm text-blue-200 mt-4 text-right">
+              <p className="text-sm text-blue-200 mt-4">
                 إعداد سريع في أقل من 5 دقائق
               </p>
             </div>

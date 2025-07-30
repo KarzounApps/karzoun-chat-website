@@ -78,10 +78,10 @@ export default function CustomerDataManagementFeatures() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 text-right">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             مميزات إدارة بيانات العملاء
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed text-right">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             استفد من أدوات متقدمة لتنظيم وتحليل بيانات عملائك وتحسين استراتيجياتك التسويقية
           </p>
         </motion.div>

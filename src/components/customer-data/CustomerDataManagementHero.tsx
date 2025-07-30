@@ -63,7 +63,7 @@ export default function CustomerDataManagementHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 text-right"
+          className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6"
         >
           إدارة بيانات العملاء
         </motion.h1>
@@ -73,7 +73,7 @@ export default function CustomerDataManagementHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-300 mb-8 text-right"
+          className="text-xl sm:text-2xl lg:text-3xl font-semibold text-blue-300 mb-8"
         >
           تحليل ذكي للبيانات
         </motion.h2>
@@ -83,7 +83,7 @@ export default function CustomerDataManagementHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed text-right"
+          className="text-lg sm:text-xl text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
         >
           تنظيم وتحليل بيانات العملاء لتحسين استراتيجيات التسويق والمبيعات. احصل على رؤى عميقة حول سلوك عملائك وقم بإنشاء حملات تسويقية مخصصة تحقق أفضل النتائج.
         </motion.p>
