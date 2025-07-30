@@ -174,9 +174,9 @@ const WhatsAppFlowsIndustries = () => {
                 </h4>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   {industries[activeIndustry].useCases.map((useCase, index) => (
-                    <div key={index} className="flex items-center justify-end gap-2">
-                      <span className="text-gray-700">{useCase}</span>
+                    <div key={index} className="flex items-center justify-start gap-2">
                       <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700">{useCase}</span>
                     </div>
                   ))}
                 </div>
@@ -214,8 +214,8 @@ const WhatsAppFlowsIndustries = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`${industries[activeIndustry].color} text-white px-8 py-3 rounded-xl font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300`}
               >
+                <ArrowRight className="w-5 h-5 rotate-180" />
                 ابدأ مع {industries[activeIndustry].name}
-                <ArrowRight className="w-5 h-5" />
               </motion.button>
             </div>
 
@@ -232,7 +232,7 @@ const WhatsAppFlowsIndustries = () => {
                     initial={{ opacity: 0, x: 20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100"
+                    className="flex items-center gap-4 p-4 bg-white rounded-xl shadow-sm border border-gray-100 flex-row-reverse"
                   >
                     <div className={`${industries[activeIndustry].color} w-8 h-8 rounded-full flex items-center justify-center text-white font-bold text-sm flex-shrink-0`}>
                       {index + 1}

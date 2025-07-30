@@ -72,14 +72,14 @@ const WhatsAppFlowsHero = () => {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
-            >
-              ابدأ الآن مجاناً
-              <ArrowRight className="w-5 h-5" />
-            </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
+              >
+                <ArrowRight className="w-5 h-5 rotate-180" />
+                ابدأ الآن مجاناً
+              </motion.button>
             
             <motion.button
               whileHover={{ scale: 1.05 }}

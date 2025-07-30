@@ -111,13 +111,13 @@ const WhatsAppFlowsWorkflow = () => {
                   transition={{ duration: 0.6, delay: index * 0.2 }}
                   className="relative"
                 >
-                  <div className="flex items-start gap-6">
+                  <div className="flex items-start gap-6 flex-row-reverse">
                     <div className={`${step.color} w-16 h-16 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
                       <IconComponent className="w-8 h-8 text-white" />
                     </div>
                     
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-3">
+                      <div className="flex items-center gap-3 mb-3 justify-end">
                         <span className="bg-gray-200 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
                           الخطوة {index + 1}
                         </span>
@@ -133,9 +133,9 @@ const WhatsAppFlowsWorkflow = () => {
 
                       <ul className="space-y-2">
                         {step.details.map((detail, detailIndex) => (
-                          <li key={detailIndex} className="flex items-center justify-end gap-2 text-sm text-gray-600">
-                            <span>{detail}</span>
+                          <li key={detailIndex} className="flex items-center justify-start gap-2 text-sm text-gray-600">
                             <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                            <span>{detail}</span>
                           </li>
                         ))}
                       </ul>
@@ -178,12 +178,12 @@ const WhatsAppFlowsWorkflow = () => {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.3 }}
-                    className={`flex ${chat.type === 'user' ? 'justify-start' : 'justify-end'}`}
+                    className={`flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`max-w-xs rounded-2xl p-3 ${
                       chat.type === 'user' 
-                        ? 'bg-white text-gray-800 rounded-br-sm' 
-                        : 'bg-green-500 text-white rounded-bl-sm'
+                        ? 'bg-green-500 text-white rounded-bl-sm' 
+                        : 'bg-white text-gray-800 rounded-br-sm'
                     }`}>
                       <p className="text-sm mb-1">{chat.message}</p>
                       
@@ -192,7 +192,7 @@ const WhatsAppFlowsWorkflow = () => {
                           {chat.options.map((option, optionIndex) => (
                             <button
                               key={optionIndex}
-                              className="block w-full text-left bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs transition-colors duration-200"
+                              className="block w-full text-right bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs transition-colors duration-200"
                             >
                               {option}
                             </button>

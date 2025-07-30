@@ -129,10 +129,10 @@ const WhatsAppFlowsCTA = () => {
                 initial={{ opacity: 0, x: -20 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className="flex items-center justify-end gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
+                className="flex items-center justify-start gap-3 p-3 rounded-lg hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="text-gray-700">{feature}</span>
                 <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
+                <span className="text-gray-700">{feature}</span>
               </motion.div>
             ))}
           </div>
@@ -182,8 +182,8 @@ const WhatsAppFlowsCTA = () => {
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-green-600 px-8 py-4 rounded-xl font-semibold text-lg flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transition-all duration-300"
               >
+                <ArrowRight className="w-5 h-5 rotate-180" />
                 ابدأ التجربة المجانية
-                <ArrowRight className="w-5 h-5" />
               </motion.button>
               
               <motion.button

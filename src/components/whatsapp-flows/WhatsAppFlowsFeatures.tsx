@@ -104,19 +104,19 @@ const WhatsAppFlowsFeatures = () => {
 
                 <div className="space-y-2">
                   {feature.benefits.map((benefit, benefitIndex) => (
-                    <div key={benefitIndex} className="flex items-center justify-end gap-2">
-                      <span className="text-sm text-gray-600">{benefit}</span>
+                    <div key={benefitIndex} className="flex items-center justify-start gap-2">
                       <CheckCircle className="w-4 h-4 text-green-500" />
+                      <span className="text-sm text-gray-600">{benefit}</span>
                     </div>
                   ))}
                 </div>
 
                 <motion.div
-                  whileHover={{ x: -5 }}
-                  className="mt-6 flex items-center justify-end gap-2 text-green-500 font-semibold cursor-pointer"
+                  whileHover={{ x: 5 }}
+                  className="mt-6 flex items-center justify-start gap-2 text-green-500 font-semibold cursor-pointer"
                 >
+                  <ArrowRight className="w-4 h-4 rotate-180" />
                   <span className="text-sm">اكتشف المزيد</span>
-                  <ArrowRight className="w-4 h-4" />
                 </motion.div>
               </motion.div>
             )
