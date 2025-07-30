@@ -242,7 +242,7 @@ const featureItems = {
       icon: Shield,
       title: "سجلات التدقيق",
       description: "مراقبة وتتبع جميع الإجراءات في النظام لأغراض الأمان والامتثال",
-      link: "#",
+      link: "/features/audit-logs",
     },
   ],
   التحليل: [
