@@ -168,7 +168,7 @@ const featureItems = {
       icon: Database,
       title: "ادارة بيانات العملاء",
       description: "تنظيم وتحليل بيانات العملاء لتحسين استراتيجيات التسويق والمبيعات",
-      link: "#",
+      link: "/features/customer-data-management",
     },
     {
       icon: ShoppingCart,
