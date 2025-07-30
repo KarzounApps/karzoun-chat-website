@@ -218,28 +218,6 @@ export function WorkHoursScheduling() {
                 ))}
               </div>
             </div>
-
-            <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-6">
-              <h4 className="font-semibold text-gray-900 mb-3">مميزات إضافية</h4>
-              <ul className="space-y-2 text-sm text-gray-600">
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  إشعارات تلقائية للموظفين
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  تقارير الحضور والغياب
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  إدارة الإجازات والعطل
-                </li>
-                <li className="flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-green-500" />
-                  تكامل مع أنظمة الرواتب
-                </li>
-              </ul>
-            </div>
           </motion.div>
         </div>
       </div>
