@@ -2,15 +2,12 @@
 
 import React from 'react'
 import { motion } from 'framer-motion'
+import WhatsAppBookingDemo from './WhatsAppBookingDemo'
 import { 
   Settings, 
-  MessageCircle, 
   Database, 
   TrendingUp, 
-  ArrowDown,
-  Smartphone,
-  User,
-  Bot
+  ArrowDown
 } from 'lucide-react'
 
 const WhatsAppFlowsWorkflow = () => {
@@ -42,41 +39,6 @@ const WhatsAppFlowsWorkflow = () => {
       description: 'تحليل شامل لأداء المسارات ومعدلات الإكمال',
       details: ['تقارير مفصلة', 'معدلات التحويل', 'اقتراحات التحسين'],
       color: 'bg-orange-500'
-    }
-  ]
-
-  const chatExample = [
-    {
-      type: 'bot',
-      message: 'مرحباً! أهلاً بك في خدمة حجز المواعيد 👋',
-      time: '14:30'
-    },
-    {
-      type: 'bot',
-      message: 'ما نوع الخدمة التي تحتاجها؟',
-      options: ['استشارة طبية', 'فحص دوري', 'متابعة حالة'],
-      time: '14:30'
-    },
-    {
-      type: 'user',
-      message: 'استشارة طبية',
-      time: '14:32'
-    },
-    {
-      type: 'bot',
-      message: 'ممتاز! ما هو التخصص المطلوب؟',
-      options: ['باطنية', 'جلدية', 'عظام'],
-      time: '14:32'
-    },
-    {
-      type: 'user',
-      message: 'باطنية',
-      time: '14:33'
-    },
-    {
-      type: 'bot',
-      message: 'تم حفظ اختيارك. يرجى إدخال اسمك الكامل:',
-      time: '14:33'
     }
   ]
 
@@ -153,74 +115,14 @@ const WhatsAppFlowsWorkflow = () => {
             })}
           </div>
 
-          {/* Chat Example */}
+          {/* WhatsApp Booking Demo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="sticky top-8"
           >
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden max-w-sm mx-auto">
-              {/* Phone Header */}
-              <div className="bg-green-600 text-white p-4 flex items-center gap-3">
-                <Smartphone className="w-6 h-6" />
-                <div>
-                  <h4 className="font-semibold">عيادة الصحة الشاملة</h4>
-                  <p className="text-xs text-green-100">متصل الآن</p>
-                </div>
-              </div>
-
-              {/* Chat Messages */}
-              <div className="p-4 space-y-4 max-h-96 overflow-y-auto bg-gray-50">
-                {chatExample.map((chat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.3 }}
-                    className={`flex ${chat.type === 'user' ? 'justify-end' : 'justify-start'}`}
-                  >
-                    <div className={`max-w-xs rounded-2xl p-3 ${
-                      chat.type === 'user' 
-                        ? 'bg-green-500 text-white rounded-bl-sm' 
-                        : 'bg-white text-gray-800 rounded-br-sm'
-                    }`}>
-                      <p className="text-sm mb-1">{chat.message}</p>
-                      
-                      {chat.options && (
-                        <div className="space-y-1 mt-2">
-                          {chat.options.map((option, optionIndex) => (
-                            <button
-                              key={optionIndex}
-                              className="block w-full text-right bg-green-600 hover:bg-green-700 text-white px-3 py-2 rounded-lg text-xs transition-colors duration-200"
-                            >
-                              {option}
-                            </button>
-                          ))}
-                        </div>
-                      )}
-                      
-                      <p className="text-xs opacity-70 mt-1">{chat.time}</p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-
-              {/* Input Area */}
-              <div className="p-4 bg-white border-t border-gray-200">
-                <div className="flex items-center gap-2">
-                  <input
-                    type="text"
-                    placeholder="اكتب رسالتك..."
-                    className="flex-1 bg-gray-100 rounded-full px-4 py-2 text-sm"
-                    disabled
-                  />
-                  <button className="bg-green-500 text-white p-2 rounded-full">
-                    <MessageCircle className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-            </div>
+            <WhatsAppBookingDemo />
           </motion.div>
         </div>
       </div>
