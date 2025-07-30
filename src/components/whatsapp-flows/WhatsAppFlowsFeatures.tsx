@@ -110,14 +110,6 @@ const WhatsAppFlowsFeatures = () => {
                     </div>
                   ))}
                 </div>
-
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="mt-6 flex items-center justify-start gap-2 text-green-500 font-semibold cursor-pointer"
-                >
-                  <ArrowRight className="w-4 h-4 rotate-180" />
-                  <span className="text-sm">اكتشف المزيد</span>
-                </motion.div>
               </motion.div>
             )
           })}

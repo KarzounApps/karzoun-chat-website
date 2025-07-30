@@ -8,9 +8,7 @@ import {
   TrendingUp, 
   Users, 
   Calendar,
-  Zap,
-  Shield,
-  Headphones
+  Zap
 } from 'lucide-react'
 
 const WhatsAppFlowsCTA = () => {
@@ -44,24 +42,6 @@ const WhatsAppFlowsCTA = () => {
     'تحليلات مفصلة في الوقت الفعلي',
     'أمان وخصوصية على أعلى مستوى',
     'قوالب جاهزة لجميع الصناعات'
-  ]
-
-  const supportFeatures = [
-    {
-      icon: Shield,
-      title: 'أمان متقدم',
-      description: 'حماية شاملة لبيانات عملائك'
-    },
-    {
-      icon: Headphones,
-      title: 'دعم مستمر',
-      description: 'فريق دعم متخصص متاح دائماً'
-    },
-    {
-      icon: Zap,
-      title: 'إعداد سريع',
-      description: 'ابدأ في دقائق بدون تعقيدات'
-    }
   ]
 
   return (
@@ -138,29 +118,6 @@ const WhatsAppFlowsCTA = () => {
           </div>
         </motion.div>
 
-        {/* Support Features */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          {supportFeatures.map((feature, index) => {
-            const IconComponent = feature.icon
-            return (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-white rounded-xl p-6 shadow-lg text-center border border-gray-100"
-              >
-                <div className="bg-gradient-to-br from-blue-500 to-purple-500 w-12 h-12 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <IconComponent className="w-6 h-6 text-white" />
-                </div>
-                
-                <h4 className="font-bold text-gray-800 mb-2">{feature.title}</h4>
-                <p className="text-sm text-gray-600">{feature.description}</p>
-              </motion.div>
-            )
-          })}
-        </div>
-
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -173,7 +130,7 @@ const WhatsAppFlowsCTA = () => {
               جاهز لبدء رحلتك مع مسارات واتساب الآلية؟
             </h3>
             <p className="text-green-100 mb-8 max-w-2xl mx-auto">
-              ابدأ تجربتك المجانية الآن ولا تحتاج لبطاقة ائتمان. إعداد سريع في أقل من 10 دقائق
+              ابدأ تجربتك المجانية الآن. إعداد سريع في أقل من 10 دقائق
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -193,10 +150,6 @@ const WhatsAppFlowsCTA = () => {
               >
                 طلب عرض توضيحي
               </motion.button>
-            </div>
-
-            <div className="mt-6 text-sm text-green-100">
-              ✅ تجربة مجانية لمدة 14 يوم • ✅ لا حاجة لبطاقة ائتمان • ✅ إلغاء في أي وقت
             </div>
           </div>
         </motion.div>

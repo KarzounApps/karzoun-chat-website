@@ -48,7 +48,7 @@ const WhatsAppFlowsIndustries = () => {
     },
     {
       icon: ShoppingBag,
-      name: 'التجارة الإلكترونية',
+      name: 'العقارات',
       color: 'bg-green-500',
       description: 'تحسين تجربة التسوق والمبيعات',
       useCases: [
@@ -208,15 +208,6 @@ const WhatsAppFlowsIndustries = () => {
                   <div className="text-sm text-gray-600">توفير الوقت</div>
                 </div>
               </div>
-
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`${industries[activeIndustry].color} text-white px-8 py-3 rounded-xl font-semibold flex items-center gap-2 hover:shadow-lg transition-all duration-300`}
-              >
-                <ArrowRight className="w-5 h-5 rotate-180" />
-                ابدأ مع {industries[activeIndustry].name}
-              </motion.button>
             </div>
 
             {/* Example Flow */}
