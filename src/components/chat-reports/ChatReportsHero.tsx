@@ -33,18 +33,14 @@ const ChatReportsHero = () => {
       </div>
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
-        <div className="max-w-4xl mx-auto text-center" dir="rtl">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-center">
             تقارير المحادثات
           </h1>
           
-          <div className="w-full flex justify-center items-center mb-8">
-            <div className="max-w-4xl w-full">
-              <h2 className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed" style={{textAlign: 'center', margin: '0 auto', display: 'block', width: '100%'}}>
-                تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
-              </h2>
-            </div>
-          </div>
+          <h2 className="text-xl md:text-2xl font-semibold text-blue-400 mb-8 text-center leading-relaxed">
+            تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
+          </h2>
           
           <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
             احصل على رؤى عميقة حول أداء خدمة العملاء من خلال تقارير تفصيلية تساعدك على تحسين جودة الخدمة وزيادة رضا العملاء
