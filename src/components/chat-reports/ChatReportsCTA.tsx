@@ -40,10 +40,10 @@ const ChatReportsCTA = () => {
               ابدأ التجربة المجانية
             </button>
             <button className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg text-lg font-semibold transition-colors flex items-center justify-center gap-2">
-              تحدث مع خبير
               <svg className="w-5 h-5 rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
+              تحدث مع خبير
             </button>
           </div>
         </div>

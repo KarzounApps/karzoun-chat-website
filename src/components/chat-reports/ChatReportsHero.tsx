@@ -58,11 +58,11 @@ const ChatReportsHero = () => {
           {/* Analytics Dashboard Demo */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-between mb-6">
-              <h3 className="text-xl font-semibold text-white">لوحة تحليل المحادثات</h3>
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                 <span className="text-green-400 text-sm">متصل الآن</span>
               </div>
+              <h3 className="text-xl font-semibold text-white">لوحة تحليل المحادثات</h3>
             </div>
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">

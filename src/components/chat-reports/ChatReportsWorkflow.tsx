@@ -67,14 +67,14 @@ const ChatReportsWorkflow = () => {
           <div className="bg-white rounded-xl shadow-lg p-6">
             <div className="flex items-center justify-between mb-6">
               <div className="flex items-center gap-4">
+                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                  تصدير التقرير
+                </button>
                 <select className="border border-gray-300 rounded-lg px-4 py-2">
                   <option>آخر 30 يوم</option>
                   <option>آخر 7 أيام</option>
                   <option>آخر 3 أشهر</option>
                 </select>
-                <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
-                  تصدير التقرير
-                </button>
               </div>
               <h4 className="text-lg font-semibold text-gray-900">تقرير الأداء الشهري</h4>
             </div>
@@ -99,70 +99,70 @@ const ChatReportsWorkflow = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
               <div className="bg-gray-50 rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-3">أداء الفريق</h5>
+                <h5 className="font-semibold text-gray-900 mb-3 text-right">أداء الفريق</h5>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">أ</div>
-                      <span className="text-gray-700">أحمد محمد</span>
-                    </div>
                     <div className="text-right">
                       <div className="text-sm font-semibold text-gray-900">247 محادثة</div>
                       <div className="text-xs text-gray-500">96% رضا</div>
                     </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-gray-700">أحمد محمد</span>
+                      <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-bold">أ</div>
+                    </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">س</div>
-                      <span className="text-gray-700">سارة العتيبي</span>
-                    </div>
                     <div className="text-right">
                       <div className="text-sm font-semibold text-gray-900">198 محادثة</div>
                       <div className="text-xs text-gray-500">98% رضا</div>
                     </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-gray-700">سارة العتيبي</span>
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-bold">س</div>
+                    </div>
                   </div>
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-3">
-                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">خ</div>
-                      <span className="text-gray-700">خالد الشمري</span>
-                    </div>
                     <div className="text-right">
                       <div className="text-sm font-semibold text-gray-900">156 محادثة</div>
                       <div className="text-xs text-gray-500">92% رضا</div>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-gray-700">خالد الشمري</span>
+                      <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center text-white text-sm font-bold">خ</div>
                     </div>
                   </div>
                 </div>
               </div>
               
               <div className="bg-gray-50 rounded-lg p-4">
-                <h5 className="font-semibold text-gray-900 mb-3">أوقات الذروة</h5>
+                <h5 className="font-semibold text-gray-900 mb-3 text-right">أوقات الذروة</h5>
                 <div className="space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">9:00 - 11:00 ص</span>
                     <div className="flex items-center gap-2">
+                      <span className="text-sm text-gray-600">80%</span>
                       <div className="w-20 h-2 bg-gray-200 rounded-full">
                         <div className="w-16 h-2 bg-blue-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-gray-600">80%</span>
                     </div>
+                    <span className="text-gray-700">9:00 - 11:00 ص</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">2:00 - 4:00 م</span>
                     <div className="flex items-center gap-2">
+                      <span className="text-sm text-gray-600">100%</span>
                       <div className="w-20 h-2 bg-gray-200 rounded-full">
                         <div className="w-20 h-2 bg-red-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-gray-600">100%</span>
                     </div>
+                    <span className="text-gray-700">2:00 - 4:00 م</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-700">7:00 - 9:00 م</span>
                     <div className="flex items-center gap-2">
+                      <span className="text-sm text-gray-600">60%</span>
                       <div className="w-20 h-2 bg-gray-200 rounded-full">
                         <div className="w-12 h-2 bg-green-500 rounded-full"></div>
                       </div>
-                      <span className="text-sm text-gray-600">60%</span>
                     </div>
+                    <span className="text-gray-700">7:00 - 9:00 م</span>
                   </div>
                 </div>
               </div>

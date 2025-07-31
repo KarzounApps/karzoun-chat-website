@@ -87,13 +87,13 @@ const ChatReportsFeatures = () => {
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
               <div className="flex items-center gap-4 mb-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
-                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-gray-900 text-right">
                     {feature.title}
                   </h3>
+                </div>
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
               
