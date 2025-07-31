@@ -32,20 +32,20 @@ export default function AuditLogsHero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
         background: `
-          radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.6) 0%, transparent 50%),
-          radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.8) 0%, transparent 50%),
-          radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 20% 80%, rgba(59, 130, 246, 0.4) 0%, transparent 50%),
+          radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.6) 0%, transparent 50%),
+          radial-gradient(circle at 40% 40%, rgba(59, 130, 246, 0.3) 0%, transparent 50%),
           linear-gradient(135deg, #06142E 0%, #0B2A52 50%, #06142E 100%),
-          radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 1px, transparent 1px),
-          radial-gradient(circle at center, rgba(59, 130, 246, 0.8) 1px, transparent 1px)
+          radial-gradient(circle at center, rgba(59, 130, 246, 0.8) 1px, transparent 1px),
+          radial-gradient(circle at center, rgba(59, 130, 246, 0.4) 1px, transparent 1px)
         `,
         backgroundSize: `
           100% 100%,
           100% 100%,
           100% 100%,
           100% 100%,
-          24px 24px,
-          48px 48px
+          20px 20px,
+          40px 40px
         `,
         backgroundPosition: `
           0 0,
@@ -53,17 +53,18 @@ export default function AuditLogsHero() {
           0 0,
           0 0,
           0 0,
-          12px 12px
+          10px 10px
         `
       }}
     >
-      {/* Fade overlay */}
+      {/* Enhanced fade overlay with stronger edge fade */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(to right, rgba(6, 20, 46, 0.8) 0%, transparent 20%, transparent 80%, rgba(6, 20, 46, 0.8) 100%),
-            linear-gradient(to bottom, rgba(6, 20, 46, 0.6) 0%, transparent 20%, transparent 80%, rgba(6, 20, 46, 0.8) 100%)
+            radial-gradient(ellipse at center, transparent 30%, rgba(6, 20, 46, 0.4) 70%, rgba(6, 20, 46, 0.8) 100%),
+            linear-gradient(to right, rgba(6, 20, 46, 0.9) 0%, transparent 15%, transparent 85%, rgba(6, 20, 46, 0.9) 100%),
+            linear-gradient(to bottom, rgba(6, 20, 46, 0.7) 0%, transparent 15%, transparent 85%, rgba(6, 20, 46, 0.9) 100%)
           `
         }}
       />
