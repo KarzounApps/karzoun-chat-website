@@ -38,10 +38,12 @@ const ChatReportsHero = () => {
             تقارير المحادثات
           </h1>
           
-          <div className="max-w-3xl mx-auto mb-8">
-            <h2 className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed" style={{textAlign: 'center', width: '100%', display: 'block'}}>
-              تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
-            </h2>
+          <div className="w-full flex justify-center items-center mb-8">
+            <div className="max-w-4xl w-full">
+              <h2 className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed" style={{textAlign: 'center', margin: '0 auto', display: 'block', width: '100%'}}>
+                تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
+              </h2>
+            </div>
           </div>
           
           <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
