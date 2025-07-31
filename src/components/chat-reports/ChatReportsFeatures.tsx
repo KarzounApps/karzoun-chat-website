@@ -86,14 +86,14 @@ const ChatReportsFeatures = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition-shadow">
-              <div className="flex items-center gap-4 mb-6">
+              <div className="flex items-center gap-4 mb-6 flex-row-reverse">
+                <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                  <feature.icon className="w-6 h-6 text-blue-600" />
+                </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-gray-900 text-right">
                     {feature.title}
                   </h3>
-                </div>
-                <div className="flex-shrink-0 w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
                 </div>
               </div>
               
@@ -103,13 +103,13 @@ const ChatReportsFeatures = () => {
               
               <ul className="space-y-3">
                 {feature.benefits.map((benefit, benefitIndex) => (
-                  <li key={benefitIndex} className="flex items-start justify-end gap-3">
-                    <span className="text-gray-700 text-right">{benefit}</span>
+                  <li key={benefitIndex} className="flex items-start gap-3 flex-row-reverse">
                     <div className="flex-shrink-0 w-5 h-5 bg-green-100 rounded-full flex items-center justify-center mt-0.5">
                       <svg className="w-3 h-3 text-green-600" fill="currentColor" viewBox="0 0 20 20">
                         <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                       </svg>
                     </div>
+                    <span className="text-gray-700 text-right">{benefit}</span>
                   </li>
                 ))}
               </ul>
