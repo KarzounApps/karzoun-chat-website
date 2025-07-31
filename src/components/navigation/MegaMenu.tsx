@@ -268,7 +268,7 @@ const featureItems = {
       icon: UserCheck,
       title: "تقارير الموظفين",
       description: "قياس أداء الموظفين وإنتاجيتهم ومعدلات الاستجابة",
-      link: "#",
+      link: "/features/employee-reports",
     },
     {
       icon: Megaphone,
