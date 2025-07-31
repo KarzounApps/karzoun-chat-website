@@ -19,7 +19,6 @@ import {
   Newspaper,
   History,
   Globe,
-  Bot,
   Send,
   Database,
   Tag,
