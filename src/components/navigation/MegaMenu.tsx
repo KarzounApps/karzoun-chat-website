@@ -560,10 +560,11 @@ export function MegaMenu() {
 
                 <Link
                   href="/features/ai-features"
-                  className={`px-3 py-2 ${
+                  className={`px-3 py-2 flex items-center gap-2 ${
                     location.pathname === "/features/ai-features" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
                   }`}
                 >
+                  <Sparkles className="w-4 h-4" />
                   الذكاء الاصطناعي
                 </Link>
 
