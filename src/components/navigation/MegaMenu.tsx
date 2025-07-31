@@ -668,7 +668,7 @@ export function MegaMenu() {
                     location.pathname === "/features/ai-features" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
                   }`}
                 >
-                  <Bot className="w-4 h-4 text-blue-500" />
+                  <Sparkles className="w-4 h-4 text-blue-500" />
                   ذكي AI
                 </Link>
               </div>
