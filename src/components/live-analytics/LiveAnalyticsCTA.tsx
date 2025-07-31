@@ -31,6 +31,57 @@ export default function LiveAnalyticsCTA() {
             واتخاذ قرارات مدروسة بناءً على بيانات دقيقة.
           </p>
 
+          {/* Feature Cards */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12"
+          >
+            {[
+              {
+                icon: "📊",
+                title: "تحليلات فورية",
+                description: "مراقبة البيانات والمؤشرات في الوقت الفعلي"
+              },
+              {
+                icon: "📈",
+                title: "تتبع الاتجاهات",
+                description: "تحليل الاتجاهات والأنماط لاتخاذ قرارات أفضل"
+              },
+              {
+                icon: "⚡",
+                title: "مراقبة النشاط",
+                description: "تتبع نشاط العملاء والفريق لحظة بلحظة"
+              },
+              {
+                icon: "🎯",
+                title: "قياس الأداء",
+                description: "مؤشرات أداء شاملة لتقييم جودة الخدمة"
+              }
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300"
+              >
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <span className="text-2xl">{feature.icon}</span>
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h3 className="text-lg font-semibold text-white mb-2">
+                      {feature.title}
+                    </h3>
+                    <p className="text-blue-200 text-sm">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </motion.div>
+
           {/* Benefits Grid */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

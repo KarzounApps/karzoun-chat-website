@@ -91,36 +91,47 @@ export default function LiveAnalyticsHero() {
           </button>
         </motion.div>
 
-        {/* Feature Cards */}
+        {/* Analytics Dashboard Demo */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-3xl p-8 shadow-lg max-w-5xl mx-auto"
         >
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 hover:bg-white/15 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-blue-300" />
-                </div>
-                <div className="flex-1 text-right">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-blue-200 text-sm">
-                    {feature.description}
-                  </p>
-                </div>
+          <div className="text-center mb-8">
+            <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-sm text-blue-200">متصل الآن</span>
               </div>
-            </motion.div>
-          ))}
+              <h4 className="text-lg font-semibold text-white">لوحة التحليلات الحية</h4>
+            </div>
+
+            {/* Stats Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+              <div className="bg-blue-50/90 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-blue-600 mb-2">127</div>
+                <div className="text-sm text-gray-700">محادثات نشطة</div>
+              </div>
+              <div className="bg-green-50/90 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-green-600 mb-2">2.3 دقيقة</div>
+                <div className="text-sm text-gray-700">متوسط الاستجابة</div>
+              </div>
+              <div className="bg-yellow-50/90 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-yellow-600 mb-2">94%</div>
+                <div className="text-sm text-gray-700">معدل الرضا</div>
+              </div>
+              <div className="bg-purple-50/90 rounded-lg p-6 text-center">
+                <div className="text-3xl font-bold text-purple-600 mb-2">15</div>
+                <div className="text-sm text-gray-700">فريق متاح</div>
+              </div>
+            </div>
+
+            {/* Chart Area */}
+            <div className="bg-gray-50/90 rounded-lg h-32 flex items-center justify-center">
+              <div className="text-gray-600 text-sm">رسم بياني للأداء في الوقت الفعلي</div>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
