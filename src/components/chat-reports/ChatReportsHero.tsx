@@ -38,7 +38,7 @@ const ChatReportsHero = () => {
             تقارير المحادثات
           </h1>
           
-          <h2 className="text-2xl md:text-3xl font-semibold text-blue-300 mb-8">
+          <h2 className="text-xl md:text-2xl font-semibold text-blue-400 mb-8">
             تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
           </h2>
           
