@@ -5,31 +5,35 @@ const ChatReportsHero = () => {
   return (
     <section 
       dir="rtl" 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{
-        background: `
-          linear-gradient(135deg, #06142E 0%, #0B2A52 50%, #06142E 100%),
-          radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.4) 1px, transparent 1px),
-          radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.2) 0.5px, transparent 0.5px)
-        `,
-        backgroundSize: '100% 100%, 24px 24px, 24px 24px',
-        backgroundPosition: '0 0, 0 0, 12px 12px'
-      }}
+      className="relative min-h-screen bg-gradient-to-br from-[#06142E] via-[#0B2A52] to-[#06142E] overflow-hidden"
     >
-      {/* Fade overlay */}
-      <div 
-        className="absolute inset-0"
-        style={{
-          background: `
-            radial-gradient(ellipse at center, transparent 30%, rgba(6, 20, 46, 0.4) 70%, rgba(6, 20, 46, 0.8) 100%),
-            linear-gradient(to right, rgba(6, 20, 46, 0.8) 0%, transparent 15%, transparent 85%, rgba(6, 20, 46, 0.8) 100%),
-            linear-gradient(to bottom, rgba(6, 20, 46, 0.6) 0%, transparent 15%, transparent 85%, rgba(6, 20, 46, 0.8) 100%)
-          `
-        }}
-      />
+      {/* Digital Matrix Background with Glowing Dots */}
+      <div className="absolute inset-0">
+        {/* Base dot pattern */}
+        <div 
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage: `radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 1px, transparent 1px)`,
+            backgroundSize: '24px 24px'
+          }}
+        ></div>
+        
+        {/* Glowing effect overlay */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{
+            backgroundImage: `radial-gradient(circle at center, rgba(59, 130, 246, 0.8) 0.5px, transparent 0.5px)`,
+            backgroundSize: '24px 24px'
+          }}
+        ></div>
+        
+        {/* Fade out edges */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#06142E]/80 via-transparent to-[#06142E]/80"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-[#06142E]/60 via-transparent to-[#06142E]/80"></div>
+      </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <div className="max-w-4xl mx-auto">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
+        <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             تقارير المحادثات
           </h1>
