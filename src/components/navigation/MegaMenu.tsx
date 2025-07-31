@@ -5,6 +5,7 @@ import {
   BarChart,
   Boxes,
   Brain,
+  Bot,
   LayoutGrid,
   MessageSquare,
   Smartphone,
@@ -559,16 +560,6 @@ export function MegaMenu() {
                 </div>
 
                 <Link
-                  href="/features/ai-features"
-                  className={`px-3 py-2 flex items-center gap-2 ${
-                    location.pathname === "/features/ai-features" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
-                  }`}
-                >
-                  <Sparkles className="w-4 h-4 text-blue-500" />
-                  الذكاء الاصطناعي
-                </Link>
-
-                <Link
                   href="/pricing"
                   className={`px-3 py-2 ${
                     location.pathname === "/pricing" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
@@ -676,6 +667,15 @@ export function MegaMenu() {
           </div>
 
           <div className="flex items-center space-x-10 space-x-reverse">
+            <Link
+              href="/features/ai-features"
+              className={`px-3 py-2 flex items-center gap-2 ${
+                location.pathname === "/features/ai-features" ? "text-google-blue" : "text-gray-700 hover:text-google-blue"
+              }`}
+            >
+              <Bot className="w-4 h-4 text-blue-500" />
+              ذكي AI
+            </Link>
             <a href="#" className="bg-google-blue text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors">
               إنشاء حساب
             </a>
