@@ -262,7 +262,7 @@ const featureItems = {
       icon: MessageSquare,
       title: "تقارير المحادثات",
       description: "تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا",
-      link: "#",
+      link: "/features/chat-reports",
     },
     {
       icon: UserCheck,
