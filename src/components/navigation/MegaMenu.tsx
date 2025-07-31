@@ -250,7 +250,7 @@ const featureItems = {
       icon: Gauge,
       title: "التحليلات الحية",
       description: "احصل على تحليلات حية حول وضع خدمة العملاء والضغط الحالي على الخدمة",
-      link: "#",
+      link: "/features/live-analytics",
     },
     {
       icon: BarChart2,
