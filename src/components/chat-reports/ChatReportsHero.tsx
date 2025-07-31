@@ -34,27 +34,33 @@ const ChatReportsHero = () => {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-center min-h-screen">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6" style={{textAlign: 'center !important'}}>
+          <div className="text-center flex flex-col items-center justify-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 text-center w-full" style={{textAlign: 'center !important'}}>
               تقارير المحادثات
             </h1>
             
-            <h2 
-              className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed mb-8"
-              style={{
-                textAlign: 'center !important',
-                display: 'block !important',
-                width: '100% !important',
-                margin: '0 auto 2rem auto !important',
-                padding: '0 !important',
-                position: 'relative !important',
-                left: 'auto !important',
-                right: 'auto !important',
-                transform: 'none !important'
-              }}
-            >
-              تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
-            </h2>
+            <div className="w-full flex justify-center items-center mb-8">
+              <h2 
+                className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed text-center w-full max-w-4xl mx-auto"
+                style={{
+                  textAlign: 'center !important',
+                  display: 'block !important',
+                  width: '100% !important',
+                  maxWidth: '100% !important',
+                  margin: '0 auto !important',
+                  padding: '0 !important',
+                  position: 'static !important',
+                  left: 'auto !important',
+                  right: 'auto !important',
+                  transform: 'none !important',
+                  textIndent: '0 !important',
+                  direction: 'ltr !important',
+                  unicodeBidi: 'normal !important'
+                }}
+              >
+                تحليل شامل لحجم المحادثات وأوقات الاستجابة ومعدلات الرضا
+              </h2>
+            </div>
           </div>
           
           <p className="text-lg md:text-xl text-gray-300 mb-12 leading-relaxed max-w-3xl mx-auto">
