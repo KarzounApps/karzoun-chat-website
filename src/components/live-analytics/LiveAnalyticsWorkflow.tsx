@@ -77,6 +77,7 @@ export default function LiveAnalyticsWorkflow() {
               </p>
             </motion.div>
           ))}
+        </div>
       </div>
     </section>
   );
