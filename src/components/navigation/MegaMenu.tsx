@@ -308,7 +308,7 @@ const featureItems = {
       icon: FileText2,
       title: "قوالب الردود السريعة",
       description: "إنشاء قوالب ردود جاهزة للاستخدام المتكرر وتوفير الوقت",
-      link: "#",
+      link: "/features/quick-reply-templates",
     },
     {
       icon: Sparkles,
