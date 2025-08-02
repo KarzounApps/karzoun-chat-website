@@ -2,7 +2,6 @@ import React from 'react';
 import QuickReplyTemplatesHero from '@/components/quick-reply-templates/QuickReplyTemplatesHero';
 import QuickReplyTemplatesFeatures from '@/components/quick-reply-templates/QuickReplyTemplatesFeatures';
 import QuickReplyTemplatesTrial from '@/components/quick-reply-templates/QuickReplyTemplatesTrial';
-import QuickReplyTemplatesCTA from '@/components/quick-reply-templates/QuickReplyTemplatesCTA';
 
 const QuickReplyTemplates = () => {
   return (
@@ -10,7 +9,6 @@ const QuickReplyTemplates = () => {
       <QuickReplyTemplatesHero />
       <QuickReplyTemplatesFeatures />
       <QuickReplyTemplatesTrial />
-      <QuickReplyTemplatesCTA />
     </div>
   );
 };
