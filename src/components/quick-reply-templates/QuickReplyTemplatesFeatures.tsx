@@ -37,50 +37,6 @@ const QuickReplyTemplatesFeatures = () => {
         "ردود مخصصة حسب السياق",
         "تحديث تلقائي للقوالب"
       ]
-    },
-    {
-      icon: Users,
-      title: "تعدد المشغلين",
-      description: "دعم لعدة مشغلين في نفس الوقت مع إدارة الصلاحيات",
-      benefits: [
-        "إدارة فرق متعددة",
-        "توزيع المحادثات تلقائياً",
-        "صلاحيات مخصصة لكل مشغل",
-        "تتبع أداء الفريق"
-      ]
-    },
-    {
-      icon: Smartphone,
-      title: "تطبيق جوال",
-      description: "تطبيقات Android و iOS للرد من أي مكان",
-      benefits: [
-        "تطبيق أصلي للهواتف",
-        "إشعارات فورية",
-        "مزامنة مع النسخة الويب",
-        "واجهة محسنة للجوال"
-      ]
-    },
-    {
-      icon: BarChart3,
-      title: "تحليلات شاملة",
-      description: "تقارير تفصيلية عن أداء خدمة العملاء",
-      benefits: [
-        "إحصائيات مفصلة",
-        "تقارير الأداء",
-        "تحليل رضا العملاء",
-        "مؤشرات الأداء الرئيسية"
-      ]
-    },
-    {
-      icon: Shield,
-      title: "حماية متقدمة",
-      description: "تشفير من طرف إلى طرف وحماية ضد البريد المزعج",
-      benefits: [
-        "تشفير عالي المستوى",
-        "حماية من الرسائل المزعجة",
-        "نسخ احتياطية آمنة",
-        "امتثال لمعايير الأمان"
-      ]
     }
   ];
 
@@ -98,24 +54,24 @@ const QuickReplyTemplatesFeatures = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow" dir="rtl">
               <div className="flex items-start gap-4 mb-6 flex-row-reverse">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
-                <div className="text-right">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                <div className="text-right" dir="rtl">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2" dir="rtl">{feature.title}</h3>
+                  <p className="text-gray-600" dir="rtl">{feature.description}</p>
                 </div>
               </div>
               
-              <div className="space-y-3">
+              <div className="space-y-3" dir="rtl">
                 {feature.benefits.map((benefit, benefitIndex) => (
-                  <div key={benefitIndex} className="flex items-center gap-3 flex-row-reverse">
+                  <div key={benefitIndex} className="flex items-center gap-3 flex-row-reverse" dir="rtl">
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 text-right">{benefit}</span>
+                    <span className="text-gray-700 text-right" dir="rtl">{benefit}</span>
                   </div>
                 ))}
               </div>
