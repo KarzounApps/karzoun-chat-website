@@ -1,5 +1,5 @@
 import React from 'react';
-import EmployeeReports from '@/pages/features/EmployeeReports';
+import EmployeeReports from '@/_pages/features/EmployeeReports';
 
 export const metadata = {
   title: 'تقارير الموظفين - قياس أداء الموظفين وإنتاجيتهم | كرزون',
