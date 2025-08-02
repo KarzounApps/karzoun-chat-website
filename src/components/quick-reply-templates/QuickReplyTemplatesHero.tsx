@@ -3,7 +3,7 @@ import { MessageSquare, Clock, Users, Zap } from 'lucide-react';
 
 const QuickReplyTemplatesHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-[#06142E] via-[#0B2A52] to-[#06142E] overflow-hidden" dir="rtl">
+    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-5 lg:pt-6 bg-gradient-to-br from-[#06142E] via-[#0B2A52] to-[#06142E] overflow-hidden" dir="rtl">
       {/* Digital Matrix Background */}
       <div className="absolute inset-0">
         {/* Base dot pattern */}
