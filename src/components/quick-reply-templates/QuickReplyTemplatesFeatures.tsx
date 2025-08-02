@@ -54,24 +54,24 @@ const QuickReplyTemplatesFeatures = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow" dir="rtl">
+            <div key={index} className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
               <div className="flex items-start gap-4 mb-6 flex-row-reverse">
                 <div className="flex-shrink-0">
                   <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
                     <feature.icon className="w-6 h-6 text-blue-600" />
                   </div>
                 </div>
-                <div className="text-right" dir="rtl">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2" dir="rtl">{feature.title}</h3>
-                  <p className="text-gray-600" dir="rtl">{feature.description}</p>
+                <div className="text-right flex-1" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                  <h3 className="text-xl font-bold text-gray-900 mb-2 text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>{feature.title}</h3>
+                  <p className="text-gray-600 text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>{feature.description}</p>
                 </div>
               </div>
               
-              <div className="space-y-3" dir="rtl">
+              <div className="space-y-3" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                 {feature.benefits.map((benefit, benefitIndex) => (
-                  <div key={benefitIndex} className="flex items-center gap-3 flex-row-reverse" dir="rtl">
+                  <div key={benefitIndex} className="flex items-center gap-3 flex-row-reverse text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 text-right" dir="rtl">{benefit}</span>
+                    <span className="text-gray-700 text-right flex-1" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>{benefit}</span>
                   </div>
                 ))}
               </div>
