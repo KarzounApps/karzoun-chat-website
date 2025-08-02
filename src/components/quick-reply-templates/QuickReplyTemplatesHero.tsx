@@ -1,5 +1,5 @@
 import React from 'react';
-import { MessageSquare, Clock, Users, Zap } from 'lucide-react';
+import { MessageSquare } from 'lucide-react';
 
 const QuickReplyTemplatesHero = () => {
   return (
@@ -103,38 +103,6 @@ const QuickReplyTemplatesHero = () => {
                   <span>اكتب رسالتك هنا...</span>
                 </div>
               </div>
-            </div>
-          </div>
-
-          {/* Quick Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12">
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Clock className="w-8 h-8 text-blue-400" />
-              </div>
-              <div className="text-2xl font-bold text-white">70%</div>
-              <div className="text-sm text-gray-300">توفير في الوقت</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Zap className="w-8 h-8 text-green-400" />
-              </div>
-              <div className="text-2xl font-bold text-white">3x</div>
-              <div className="text-sm text-gray-300">سرعة الاستجابة</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <Users className="w-8 h-8 text-purple-400" />
-              </div>
-              <div className="text-2xl font-bold text-white">95%</div>
-              <div className="text-sm text-gray-300">رضا العملاء</div>
-            </div>
-            <div className="text-center">
-              <div className="flex justify-center mb-2">
-                <MessageSquare className="w-8 h-8 text-yellow-400" />
-              </div>
-              <div className="text-2xl font-bold text-white">500+</div>
-              <div className="text-sm text-gray-300">قالب جاهز</div>
             </div>
           </div>
         </div>
