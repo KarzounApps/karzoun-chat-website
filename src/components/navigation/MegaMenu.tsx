@@ -197,6 +197,12 @@ const featureItems = {
       link: "#",
     },
     {
+      icon: Boxes,
+      title: "تنفيذ إجراءات بالجملة",
+      description: "قم بتغيير حالة أو حذف أو إضافة العملاء، المحادثات والكثير عبر تحديد الكل أو البعض",
+      link: "/features/bulk-actions",
+    },
+    {
       icon: Tag,
       title: "الوسوم",
       description: "تصنيف المحادثات والعملاء باستخدام نظام وسوم مرن وقابل للتخصيص",
