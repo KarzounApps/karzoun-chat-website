@@ -56,42 +56,7 @@ const QuickReplyTemplatesCTA = () => {
           </div>
         </div>
 
-        {/* Additional CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4">
-              تحليلات وتقارير متقدمة
-            </h3>
-            <p className="text-blue-100 mb-6">
-              تحليلات شاملة لفهم أداء خدمة العملاء وتحسين تجربة المستخدم
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">تقارير الأداء</div>
-                <div className="text-blue-200 text-sm">مؤشرات مفصلة</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">تحليل المحادثات</div>
-                <div className="text-blue-200 text-sm">فهم احتياجات العملاء</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">تقييم المشغلين</div>
-                <div className="text-blue-200 text-sm">قياس أداء الفريق</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold text-white mb-2">تنبيهات مخصصة</div>
-                <div className="text-blue-200 text-sm">إشعارات ذكية</div>
-              </div>
-            </div>
-            
-            <div className="flex justify-center">
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
-                استكشف التحليلات
-              </button>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
