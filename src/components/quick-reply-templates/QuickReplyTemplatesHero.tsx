@@ -29,18 +29,18 @@ const QuickReplyTemplatesHero = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight text-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight text-center">
             قوالب الردود السريعة
           </h1>
           
-          <div className="text-center flex flex-col items-center justify-center">
-            <div className="w-full flex justify-center items-center mb-8">
+          <div className="text-center flex flex-col items-center justify-center mb-4">
+            <div className="w-full flex justify-center items-center">
               <h2 className="text-xl md:text-2xl font-semibold text-blue-400 leading-relaxed text-center w-full max-w-4xl mx-auto"
                   style={{
                     textAlign: 'center !important',
                     display: 'block !important',
                     width: '100% !important',
-                    margin: '0 auto 2rem auto !important',
+                    margin: '0 auto !important',
                     padding: '0 !important',
                     position: 'relative !important',
                     left: 'auto !important',
