@@ -56,28 +56,23 @@ const BulkActionsWorkflow = () => {
                 {index + 1}
               </div>
               
-              {/* Connecting Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-8 left-0 w-full h-0.5 bg-gray-200 z-0" style={{right: '-50%', width: '100%'}} />
-              )}
-              
-              <div className="bg-gray-50 rounded-xl p-6 pt-8 h-full" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+              <div className="bg-gray-50 rounded-xl p-6 pt-8 h-full" dir="rtl">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 ml-auto">
                   <step.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dir="rtl" style={{textAlign: 'right'}}>
                   {step.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                <p className="text-gray-600 mb-4" dir="rtl" style={{textAlign: 'right'}}>
                   {step.description}
                 </p>
                 
-                <ul className="space-y-2" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                <ul className="space-y-2" dir="rtl" style={{textAlign: 'right', listStylePosition: 'inside'}}>
                   {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500" dir="rtl" style={{textAlign: 'right', direction: 'rtl', justifyContent: 'flex-end'}}>
-                      <span className="text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>{detail}</span>
+                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500" dir="rtl" style={{textAlign: 'right', justifyContent: 'flex-end'}}>
+                      <span style={{textAlign: 'right'}}>{detail}</span>
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
                     </li>
                   ))}
