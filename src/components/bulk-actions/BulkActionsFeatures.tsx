@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckSquare, Users, MessageSquare, Archive, Trash2, UserPlus, CheckCircle, Settings, BarChart3, Clock, Shield, Zap } from 'lucide-react';
+import { CheckSquare, CheckCircle, Settings } from 'lucide-react';
 
 const BulkActionsFeatures = () => {
   const features = [
@@ -24,29 +24,6 @@ const BulkActionsFeatures = () => {
         "إضافة علامات وتصنيفات",
         "تحديث البيانات الجماعي"
       ]
-    }
-  ];
-
-  const additionalFeatures = [
-    {
-      icon: Clock,
-      title: "توفير الوقت",
-      description: "تقليل وقت المعالجة بنسبة 90%"
-    },
-    {
-      icon: Shield,
-      title: "أمان متقدم",
-      description: "حماية البيانات أثناء العمليات"
-    },
-    {
-      icon: Zap,
-      title: "معالجة سريعة",
-      description: "تنفيذ آلاف العمليات في ثوانٍ"
-    },
-    {
-      icon: BarChart3,
-      title: "تقارير مفصلة",
-      description: "تتبع نتائج العمليات المجمعة"
     }
   ];
 
@@ -89,23 +66,7 @@ const BulkActionsFeatures = () => {
           ))}
         </div>
 
-        {/* Additional Features Grid */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-12" style={{textAlign: 'center', direction: 'rtl'}}>
-            المزيد من الميزات المتقدمة
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {additionalFeatures.map((feature, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow text-center" dir="rtl" style={{textAlign: 'center', direction: 'rtl'}}>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <feature.icon className="w-6 h-6 text-blue-600" />
-                </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2 text-center" dir="rtl" style={{textAlign: 'center', direction: 'rtl'}}>{feature.title}</h4>
-                <p className="text-gray-600 text-sm text-center" dir="rtl" style={{textAlign: 'center', direction: 'rtl'}}>{feature.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </section>
   );
