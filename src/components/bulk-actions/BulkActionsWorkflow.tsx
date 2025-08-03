@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckSquare, Filter, Play, BarChart3 } from 'lucide-react';
+import { CheckSquare, Filter, Play } from 'lucide-react';
 
 const BulkActionsWorkflow = () => {
   const steps = [
@@ -33,16 +33,6 @@ const BulkActionsWorkflow = () => {
         "مراقبة التقدم",
         "إيقاف أو إلغاء العملية"
       ]
-    },
-    {
-      icon: BarChart3,
-      title: "مراجعة النتائج",
-      description: "عرض تقرير مفصل عن نتائج العملية والعناصر المعالجة",
-      details: [
-        "تقرير النتائج",
-        "إحصائيات مفصلة",
-        "تصدير التقارير"
-      ]
     }
   ];
 
@@ -54,11 +44,11 @@ const BulkActionsWorkflow = () => {
             كيف تعمل الإجراءات المجمعة؟
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto" style={{textAlign: 'center', direction: 'rtl'}}>
-            عملية بسيطة من 4 خطوات لتنفيذ إجراءات متعددة بكفاءة وأمان
+            عملية بسيطة من 3 خطوات لتنفيذ إجراءات متعددة بكفاءة وأمان
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div key={index} className="relative">
               {/* Step Number */}
@@ -72,23 +62,23 @@ const BulkActionsWorkflow = () => {
               )}
               
               <div className="bg-gray-50 rounded-xl p-6 pt-8 h-full" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 mr-auto">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 ml-auto">
                   <step.icon className="w-6 h-6 text-blue-600" />
                 </div>
                 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                <h3 className="text-xl font-bold text-gray-900 mb-3" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                   {step.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
+                <p className="text-gray-600 mb-4" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                   {step.description}
                 </p>
                 
                 <ul className="space-y-2" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                   {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500 flex-row-reverse" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
-                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
+                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500" dir="rtl" style={{textAlign: 'right', direction: 'rtl', justifyContent: 'flex-end'}}>
                       <span className="text-right" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>{detail}</span>
+                      <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
                     </li>
                   ))}
                 </ul>
