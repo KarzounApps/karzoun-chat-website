@@ -230,7 +230,7 @@ const featureItems = {
       icon: Layers,
       title: "قوائم العملاء المتقدمة",
       description: "إنشاء وإدارة قوائم عملاء مخصصة بناءً على معايير متعددة",
-      link: "#",
+      link: "/features/advanced-customer-lists",
     },
     {
       icon: History,
