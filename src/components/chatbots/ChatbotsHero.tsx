@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Bot, Zap, MessageCircle, Settings } from 'lucide-react';
+import AnimatedChatDemo from './AnimatedChatDemo';
 
 export default function ChatbotsHero() {
   const features = [
@@ -91,59 +92,8 @@ export default function ChatbotsHero() {
           </button>
         </motion.div>
 
-        {/* Chat Demo Mockup */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="max-w-4xl mx-auto mt-16"
-        >
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <h3 className="text-2xl font-bold text-white mb-6 text-center">
-              مثال على محادثة مع الروبوت
-            </h3>
-            
-            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
-              <div className="space-y-4">
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
-                    <p className="text-sm">مرحبا، أريد معرفة أوقات العمل</p>
-                  </div>
-                </div>
-
-                {/* Bot Response */}
-                <div className="flex justify-start">
-                  <div className="bg-white/90 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
-                    <div className="flex items-center mb-2">
-                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
-                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
-                    </div>
-                    <p className="text-sm">مرحباً بك! أوقات العمل لدينا من الأحد إلى الخميس من 9 صباحاً حتى 6 مساءً. هل تحتاج لمساعدة أخرى؟</p>
-                  </div>
-                </div>
-
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
-                    <p className="text-sm">نعم، كيف يمكنني حجز موعد؟</p>
-                  </div>
-                </div>
-
-                {/* Bot Response */}
-                <div className="flex justify-start">
-                  <div className="bg-white/90 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
-                    <div className="flex items-center mb-2">
-                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
-                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
-                    </div>
-                    <p className="text-sm">يمكنك حجز موعد عبر الرابط التالي أو الاتصال على رقم 123456789. سأقوم بتحويلك لأحد المختصين لمساعدتك.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        {/* Animated Chat Demo */}
+        <AnimatedChatDemo />
       </div>
     </section>
   );
