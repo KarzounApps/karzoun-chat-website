@@ -91,37 +91,59 @@ export default function ChatbotsHero() {
           </button>
         </motion.div>
 
-        {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
-            >
-              <div className="flex items-center gap-4">
-                {/* Icon */}
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                    <feature.icon className="w-6 h-6 text-blue-400" />
+        {/* Chat Demo Mockup */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="max-w-4xl mx-auto mt-16"
+        >
+          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <h3 className="text-2xl font-bold text-white mb-6 text-center">
+              مثال على محادثة مع الروبوت
+            </h3>
+            
+            <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 border border-white/30">
+              <div className="space-y-4">
+                {/* Customer Message */}
+                <div className="flex justify-end">
+                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
+                    <p className="text-sm">مرحبا، أريد معرفة أوقات العمل</p>
                   </div>
                 </div>
-                
-                {/* Text Content */}
-                <div className="flex-1 text-right">
-                  <h3 className="text-lg font-semibold text-white mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-blue-100 text-sm leading-relaxed">
-                    {feature.description}
-                  </p>
+
+                {/* Bot Response */}
+                <div className="flex justify-start">
+                  <div className="bg-white/90 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
+                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
+                    </div>
+                    <p className="text-sm">مرحباً بك! أوقات العمل لدينا من الأحد إلى الخميس من 9 صباحاً حتى 6 مساءً. هل تحتاج لمساعدة أخرى؟</p>
+                  </div>
+                </div>
+
+                {/* Customer Message */}
+                <div className="flex justify-end">
+                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
+                    <p className="text-sm">نعم، كيف يمكنني حجز موعد؟</p>
+                  </div>
+                </div>
+
+                {/* Bot Response */}
+                <div className="flex justify-start">
+                  <div className="bg-white/90 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
+                    <div className="flex items-center mb-2">
+                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
+                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
+                    </div>
+                    <p className="text-sm">يمكنك حجز موعد عبر الرابط التالي أو الاتصال على رقم 123456789. سأقوم بتحويلك لأحد المختصين لمساعدتك.</p>
+                  </div>
                 </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );

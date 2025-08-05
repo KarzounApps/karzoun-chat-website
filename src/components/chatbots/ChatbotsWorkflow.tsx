@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MessageSquare, Settings, Bot, CheckCircle } from 'lucide-react';
+import { MessageSquare, Settings, Bot, CheckCircle, Zap, MessageCircle } from 'lucide-react';
 
 export default function ChatbotsWorkflow() {
   const workflowSteps = [
@@ -91,54 +91,92 @@ export default function ChatbotsWorkflow() {
           ))}
         </div>
 
-        {/* Chat Demo Mockup */}
+        {/* Feature Cards */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto"
+          className="max-w-7xl mx-auto"
         >
           <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-8 shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">
-              مثال على محادثة مع الروبوت
+            <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">
+              مميزات روبوتات المحادثة المتقدمة
             </h3>
             
-            <div className="bg-white rounded-xl p-6 shadow-sm">
-              <div className="space-y-4">
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
-                    <p className="text-sm">مرحبا، أريد معرفة أوقات العمل</p>
-                  </div>
-                </div>
-
-                {/* Bot Response */}
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
-                    <div className="flex items-center mb-2">
-                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
-                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* تخصيص مرن */}
+              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                      <Settings className="w-6 h-6 text-blue-600" />
                     </div>
-                    <p className="text-sm">مرحباً بك! أوقات العمل لدينا من الأحد إلى الخميس من 9 صباحاً حتى 6 مساءً. هل تحتاج لمساعدة أخرى؟</p>
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      تخصيص مرن
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      إعداد وتخصيص الروبوتات حسب احتياجات عملك
+                    </p>
                   </div>
                 </div>
+              </div>
 
-                {/* Customer Message */}
-                <div className="flex justify-end">
-                  <div className="bg-blue-600 text-white px-4 py-2 rounded-lg max-w-xs">
-                    <p className="text-sm">نعم، كيف يمكنني حجز موعد؟</p>
-                  </div>
-                </div>
-
-                {/* Bot Response */}
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 text-gray-800 px-4 py-2 rounded-lg max-w-xs">
-                    <div className="flex items-center mb-2">
-                      <Bot className="w-4 h-4 text-blue-600 ml-2" />
-                      <span className="text-xs font-semibold text-blue-600">روبوت المساعدة</span>
+              {/* أتمتة كاملة */}
+              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                      <Zap className="w-6 h-6 text-blue-600" />
                     </div>
-                    <p className="text-sm">يمكنك حجز موعد عبر الرابط التالي أو الاتصال على رقم 123456789. سأقوم بتحويلك لأحد المختصين لمساعدتك.</p>
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      أتمتة كاملة
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      تقليل عبء العمل من خلال أتمتة المحادثات الروتينية
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ردود فورية */}
+              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                      <MessageCircle className="w-6 h-6 text-blue-600" />
+                    </div>
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      ردود فورية
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      إجابات سريعة ودقيقة على استفسارات العملاء على مدار الساعة
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* ذكاء اصطناعي */}
+              <div className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center">
+                      <Bot className="w-6 h-6 text-blue-600" />
+                    </div>
+                  </div>
+                  <div className="flex-1 text-right">
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      ذكاء اصطناعي
+                    </h4>
+                    <p className="text-gray-600 text-sm leading-relaxed">
+                      روبوتات ذكية تفهم وتتفاعل مع العملاء بطريقة طبيعية
+                    </p>
                   </div>
                 </div>
               </div>
