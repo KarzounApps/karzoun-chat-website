@@ -69,11 +69,11 @@ const BulkActionsWorkflow = () => {
                   {step.description}
                 </p>
                 
-                <ul className="space-y-2" dir="rtl">
+                <ul className="space-y-2" dir="rtl" style={{direction: 'rtl', textAlign: 'right'}}>
                   {step.details.map((detail, detailIndex) => (
-                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500 flex-row-reverse" dir="rtl" style={{textAlign: 'right'}}>
+                    <li key={detailIndex} className="flex items-center gap-2 text-sm text-gray-500 flex-row-reverse" dir="rtl" style={{textAlign: 'right', direction: 'rtl'}}>
                       <div className="w-1.5 h-1.5 bg-blue-400 rounded-full flex-shrink-0" />
-                      <span style={{textAlign: 'right'}}>{detail}</span>
+                      <span style={{textAlign: 'right', direction: 'rtl'}}>{detail}</span>
                     </li>
                   ))}
                 </ul>
