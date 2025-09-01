@@ -29,8 +29,7 @@ export function WhatsAppIntegration() {
   const conversations = [
     {
       name: "أحمد محمد",
-      avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      avatar: "/images/saudi-man-ahmed.jpg",
       status: "متصل",
       messages: [
         { type: "user", text: "مرحباً، أريد الاستفسار عن المنتج الجديد" },
@@ -44,8 +43,7 @@ export function WhatsAppIntegration() {
     },
     {
       name: "سارة العتيبي",
-      avatar:
-        "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      avatar: "/images/saudi-woman-sara.jpg",
       status: "قبل 5 دقائق",
       messages: [
         { type: "user", text: "متى سيتم توصيل طلبي رقم #45678؟" },
@@ -55,8 +53,7 @@ export function WhatsAppIntegration() {
     },
     {
       name: "خالد السعيد",
-      avatar:
-        "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      avatar: "/images/saudi-man-khalid.jpg",
       status: "قبل ساعة",
       messages: [
         { type: "user", text: "أريد حجز موعد للصيانة" },

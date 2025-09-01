@@ -1,0 +1,18 @@
+import { Metadata } from 'next';
+import Automation from '@/_pages/features/Automation';
+
+export const metadata: Metadata = {
+  title: 'الأتمتة والتخصيص - كرزون',
+  description: 'أتمتة المهام المتكررة وتخصيص سير العمل حسب احتياجاتك',
+  keywords: 'أتمتة, تخصيص, سير العمل, كرزون, إدارة المهام',
+  openGraph: {
+    title: 'الأتمتة والتخصيص - كرزون',
+    description: 'أتمتة المهام المتكررة وتخصيص سير العمل حسب احتياجاتك',
+    type: 'website',
+  },
+};
+
+export default function AutomationPage() {
+  return <Automation />;
+}
+

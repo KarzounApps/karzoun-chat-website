@@ -102,9 +102,9 @@ const EmployeeReportsFeatures = () => {
               
               <div className="space-y-3">
                 {feature.benefits.map((benefit, benefitIndex) => (
-                  <div key={benefitIndex} className="flex items-center gap-3 flex-row-reverse">
+                  <div key={benefitIndex} className="flex items-center gap-3">
+                    <span className="text-gray-700 text-right flex-1">{benefit}</span>
                     <CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 text-right">{benefit}</span>
                   </div>
                 ))}
               </div>

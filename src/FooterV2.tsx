@@ -142,7 +142,7 @@ function FooterV2() {
               <div dir="rtl" className="text-right">
                 <h3 className="text-base font-bold md:mb-8 mb-4 text-white">معلومات التواصل</h3>
                 <div className=" md:space-y-3 space-y-2">
-                  <p className="text-white/80 text-sm leading-relaxed">كورون ميديا ماركتينغ إند ديجيتال سيرفيسز</p>
+                  <p className="text-white/80 text-sm leading-relaxed">كرزون ميديا ماركتينغ إند ديجيتال سيرفيسز</p>
                   <p className="text-white/80 text-sm">ش.ذ.م.م</p>
                   <div className="flex items-center gap-3 justify-start text-white/80 text-sm ">
                     <Mail className="w-6 h-6 font-bold" />
@@ -175,8 +175,8 @@ function FooterV2() {
                     </a>
                   </li>
                   <li>
-                    <a href="/karzoun-ninja" className="text-white/80 hover:text-white transition-colors text-sm">
-                      كرزون نينجا
+                    <a href="#" className="text-white/80 hover:text-white transition-colors text-sm">
+                      كرزون ماركتينغ
                     </a>
                   </li>
                 </ul>
@@ -192,12 +192,12 @@ function FooterV2() {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors text-sm">
+                    <a href="https://karzoun.chat/terms-of-service/" className="text-white/80 hover:text-white transition-colors text-sm">
                       شروط الاستخدام
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="text-white/80 hover:text-white transition-colors text-sm">
+                    <a href="https://karzoun.chat/privacy-policy/" className="text-white/80 hover:text-white transition-colors text-sm">
                       سياسة الخصوصية
                     </a>
                   </li>
