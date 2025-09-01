@@ -365,7 +365,7 @@ const featureItems = {
       icon: Facebook,
       title: "فيسبوك",
       description: "ربط صفحات فيسبوك ومسنجر مع نظام المراسلة الموحد",
-      link: "#",
+      link: "/features/facebook-integration",
     },
     {
       icon: Briefcase,
