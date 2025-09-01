@@ -3,28 +3,11 @@ import { MessageSquare } from 'lucide-react';
 
 const QuickReplyTemplatesHero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-6 lg:pt-8 xl:pt-10 bg-gradient-to-br from-[#06142E] via-[#0B2A52] to-[#06142E] overflow-hidden" dir="rtl">
-      {/* Digital Matrix Background */}
+    <section className="relative min-h-screen flex items-center justify-center pt-4 md:pt-6 lg:pt-8 xl:pt-10 bg-gradient-to-b from-gray-900 to-gray-800 overflow-hidden" dir="rtl">
+      {/* Background Pattern - Matching Live Chat */}
       <div className="absolute inset-0">
-        {/* Base dot pattern */}
-        <div 
-          className="absolute inset-0 opacity-40"
-          style={{
-            backgroundImage: `radial-gradient(circle, rgba(59, 130, 246, 1) 1px, transparent 1px)`,
-            backgroundSize: '24px 24px'
-          }}
-        />
-        {/* Glowing overlay */}
-        <div 
-          className="absolute inset-0 opacity-20"
-          style={{
-            backgroundImage: `radial-gradient(circle, rgba(59, 130, 246, 1) 0.5px, transparent 0.5px)`,
-            backgroundSize: '24px 24px'
-          }}
-        />
-        {/* Fade edges */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#06142E]/80 via-transparent to-[#06142E]/80" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#06142E]/60 via-transparent to-[#06142E]/80" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4285f4,#34a853)] opacity-10"></div>
+        <div className="absolute h-full w-full bg-[radial-gradient(#4285f4_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -68,11 +51,11 @@ const QuickReplyTemplatesHero = () => {
           {/* Chat Interface Demo */}
           <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 max-w-4xl mx-auto">
             <div className="flex items-center justify-between mb-6 flex-row-reverse">
-              <h3 className="text-xl font-bold text-white">محادثة مباشرة للموقع</h3>
               <div className="flex items-center gap-2 flex-row-reverse">
                 <div className="w-3 h-3 bg-green-400 rounded-full"></div>
                 <span className="text-green-400 text-sm">متصل الآن</span>
               </div>
+              <h3 className="text-xl font-bold text-white">محادثة مباشرة للموقع</h3>
             </div>
             
             <div className="bg-white rounded-xl p-6 min-h-[300px] flex flex-col">
