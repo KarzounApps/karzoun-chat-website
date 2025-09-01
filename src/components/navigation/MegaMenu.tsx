@@ -353,7 +353,7 @@ const featureItems = {
       icon: Instagram,
       title: "انستغرام",
       description: "دمج رسائل انستغرام مع صندوق الوارد الموحد",
-      link: "#",
+      link: "/features/instagram-integration",
     },
     {
       icon: Send,
