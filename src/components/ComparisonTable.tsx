@@ -9,20 +9,20 @@ const features = {
     description: "دردشة مباشرة مع الزوار"
   },
   "صندوق وارد متعدد القنوات": {
-    basic: true,
-    pro: true,
-    enterprise: true,
+    basic: "1 صندوق وارد",
+    pro: "5 صناديق وارد",
+    enterprise: "مخصص",
     description: "دمج جميع قنوات التواصل"
   },
   "عدد المستخدمين": {
-    basic: "3 مستخدمين",
+    basic: "1 مستخدم",
     pro: "10 مستخدمين",
-    enterprise: "غير محدود",
+    enterprise: "مخصص",
     description: "عدد المستخدمين المسموح به"
   },
   "المحادثات الشهرية": {
-    basic: "1,000",
-    pro: "10,000",
+    basic: "غير محدود",
+    pro: "غير محدود",
     enterprise: "غير محدود",
     description: "عدد المحادثات المسموح بها شهرياً"
   },
@@ -33,7 +33,7 @@ const features = {
     description: "عدد روبوتات المحادثة المسموح بها"
   },
   "الذكاء الاصطناعي": {
-    basic: false,
+    basic: true,
     pro: true,
     enterprise: true,
     description: "دعم الذكاء الاصطناعي للردود"
@@ -61,6 +61,36 @@ const features = {
     pro: "متقدم",
     enterprise: "كامل",
     description: "إمكانيات تخصيص واجهة المستخدم"
+  },
+  "العلامات التجارية": {
+    basic: "1 علامة تجارية",
+    pro: "1 علامة تجارية",
+    enterprise: "مخصص",
+    description: "عدد العلامات التجارية المسموح بها"
+  },
+  "الخصائص": {
+    basic: true,
+    pro: true,
+    enterprise: true,
+    description: "إدارة خصائص العملاء والمنتجات"
+  },
+  "إدارة الملفات": {
+    basic: true,
+    pro: true,
+    enterprise: true,
+    description: "رفع وإدارة الملفات والمرفقات"
+  },
+  "النوافذ المنبثقة": {
+    basic: "نموذج واحد",
+    pro: "3 نماذج",
+    enterprise: "مخصص",
+    description: "عدد النوافذ المنبثقة المسموح بها"
+  },
+  "قاعدة المعرفة": {
+    basic: true,
+    pro: true,
+    enterprise: true,
+    description: "إنشاء وإدارة قاعدة المعرفة"
   }
 };
 
@@ -73,15 +103,15 @@ export function ComparisonTable() {
             <th className="py-4 px-6 text-right border-b border-gray-200">الميزة</th>
             <th className="py-4 px-6 text-center border-b border-gray-200">
               <span className="block text-lg font-bold">الأساسية</span>
-              <span className="text-sm text-gray-500">$99/شهرياً</span>
+              <span className="text-sm text-gray-500">$16/شهرياً</span>
             </th>
             <th className="py-4 px-6 text-center border-b border-gray-200 bg-blue-50">
               <span className="block text-lg font-bold text-google-blue">الاحترافية</span>
-              <span className="text-sm text-gray-500">$299/شهرياً</span>
+              <span className="text-sm text-gray-500">$39/شهرياً</span>
             </th>
             <th className="py-4 px-6 text-center border-b border-gray-200">
               <span className="block text-lg font-bold">المؤسسات</span>
-              <span className="text-sm text-gray-500">$999/شهرياً</span>
+              <span className="text-sm text-gray-500">طلب عرض سعر</span>
             </th>
           </tr>
         </thead>

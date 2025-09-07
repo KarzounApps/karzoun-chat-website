@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Check, Users, Building2, Building, Shield, Clock, Zap, MessageSquare, Bot, Users2, Crown } from "lucide-react";
+import { Check, Users, Building2, Building, Shield, Clock, Zap, MessageSquare, Bot, Users2, Crown, Contact, X } from "lucide-react";
 import { TestimonialsCarousel } from "../components/TestimonialsCarousel";
 import { ComparisonTable } from "../components/ComparisonTable";
 
@@ -9,38 +9,42 @@ const plans = [
   {
     name: "الأساسية",
     icon: Users,
-    price: "99",
-    yearlyPrice: "948",
+    price: "16",
+    yearlyPrice: "154",
     description: "مثالية للشركات الناشئة والأعمال الصغيرة",
     features: [
-      { title: "محادثة مباشرة للموقع", included: true },
-      { title: "صندوق وارد متعدد القنوات", included: true },
-      { title: "تعاون الفريق", value: "3 أعضاء", included: true },
-      { title: "روبوتات المحادثة الأساسية", included: true },
+      { title: "تعاون الفريق", value: "عضو واحد", included: true },
+      { title: "جهات الاتصال", value: "1,000 جهة اتصال", included: true },
+      { title: "الأتمتة", value: "2,500 تدفق منفذ", included: true },
+      { title: "العلامة التجارية", value: "علامة تجارية واحدة", included: true },
+      { title: "إدارة المهام والتذاكر", value: "5 مهام", included: true },
+      { title: "التكاملات", value: "تكامل واحد", included: true },
       { title: "تحليلات أساسية", included: true },
-      { title: "دعم عبر البريد الإلكتروني", included: true },
+      { title: "دعم الذكاء الاصطناعي للردود", included: true },
       { title: "روبوتات ذكاء اصطناعي", included: false },
       { title: "تكاملات متقدمة", included: false },
       { title: "API مخصص", included: false },
     ],
     stats: [
-      { icon: MessageSquare, value: "1,000", label: "محادثة شهرياً" },
-      { icon: Users2, value: "3", label: "أعضاء الفريق" },
-      { icon: Bot, value: "2", label: "روبوتات محادثة" },
+      { icon: MessageSquare, value: "غير محدود", label: "محادثات غير محدوده" },
+      { icon: Users2, value: "1", label: "عضو فريق" },
+      { icon: Contact, value: "1,000", label: "جهة اتصال" },
     ],
     color: "blue",
   },
   {
     name: "الاحترافية",
     icon: Building2,
-    price: "299",
-    yearlyPrice: "2,868",
+    price: "39",
+    yearlyPrice: "374",
     description: "للشركات المتوسطة التي تتطلع للنمو",
     features: [
-      { title: "محادثة مباشرة للموقع", included: true },
-      { title: "صندوق وارد متعدد القنوات", included: true },
       { title: "تعاون الفريق", value: "10 أعضاء", included: true },
-      { title: "روبوتات المحادثة الأساسية", included: true },
+      { title: "جهات الاتصال", value: "25,000 جهة اتصال", included: true },
+      { title: "الأتمتة", value: "50,000 تدفق منفذ", included: true },
+      { title: "العلامة التجارية", value: "علامة تجارية واحدة", included: true },
+      { title: "التكاملات", value: "5 تكاملات", included: true },
+      { title: "إدارة المهام والتذاكر", value: "1,000 مهمة وتذكرة", included: true },
       { title: "تحليلات متقدمة", included: true },
       { title: "دعم على مدار الساعة", included: true },
       { title: "روبوتات ذكاء اصطناعي", included: true },
@@ -48,9 +52,9 @@ const plans = [
       { title: "API مخصص", included: false },
     ],
     stats: [
-      { icon: MessageSquare, value: "10,000", label: "محادثة شهرياً" },
+      { icon: MessageSquare, value: "غير محدود", label: "محادثات غير محدوده" },
       { icon: Users2, value: "10", label: "أعضاء الفريق" },
-      { icon: Bot, value: "5", label: "روبوتات محادثة" },
+      { icon: Contact, value: "25,000", label: "جهة اتصال" },
     ],
     popular: true,
     color: "indigo",
@@ -58,13 +62,16 @@ const plans = [
   {
     name: "المؤسسات",
     icon: Building,
-    price: "999",
-    yearlyPrice: "9,588",
+    price: "طلب عرض سعر",
+    yearlyPrice: "طلب عرض سعر",
     description: "حلول مخصصة للمؤسسات الكبيرة",
     features: [
-      { title: "محادثة مباشرة للموقع", included: true },
-      { title: "صندوق وارد متعدد القنوات", included: true },
       { title: "تعاون الفريق", value: "غير محدود", included: true },
+      { title: "جهات الاتصال", value: "غير محدود", included: true },
+      { title: "الأتمتة", value: "غير محدود", included: true },
+      { title: "العلامة التجارية", value: "غير محدود", included: true },
+      { title: "التكاملات", value: "غير محدود", included: true },
+      { title: "إدارة المهام والتذاكر", value: "غير محدود", included: true },
       { title: "روبوتات المحادثة الأساسية", included: true },
       { title: "تحليلات متقدمة", included: true },
       { title: "دعم VIP", included: true },
@@ -73,7 +80,7 @@ const plans = [
       { title: "API مخصص", included: true },
     ],
     stats: [
-      { icon: MessageSquare, value: "غير محدود", label: "محادثة شهرياً" },
+      { icon: MessageSquare, value: "غير محدود", label: "محادثات غير محدوده" },
       { icon: Users2, value: "∞", label: "أعضاء الفريق" },
       { icon: Bot, value: "10+", label: "روبوتات محادثة" },
     ],
@@ -203,11 +210,17 @@ export function Pricing() {
 
                 <div className="mb-8">
                   <div className="flex items-baseline">
-                    <span className="text-4xl font-bold">$</span>
-                    <span className="text-4xl font-bold">
-                      {billingInterval === "monthly" ? plan.price : plan.yearlyPrice}
-                    </span>
-                    <span className="text-gray-500 mr-2">/ {billingInterval === "monthly" ? "شهرياً" : "سنوياً"}</span>
+                    {plan.enterprise ? (
+                      <span className="text-2xl font-bold text-center w-full">{plan.price}</span>
+                    ) : (
+                      <>
+                        <span className="text-4xl font-bold">$</span>
+                        <span className="text-4xl font-bold">
+                          {billingInterval === "monthly" ? plan.price : plan.yearlyPrice}
+                        </span>
+                        <span className="text-gray-500 mr-2">/ {billingInterval === "monthly" ? "شهرياً" : "سنوياً"}</span>
+                      </>
+                    )}
                   </div>
                 </div>
 
@@ -226,7 +239,11 @@ export function Pricing() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-center gap-3">
-                      <Check className={`h-5 w-5 ${feature.included ? "text-green-500" : "text-gray-300"}`} />
+                      {feature.included ? (
+                        <Check className="h-5 w-5 text-green-500" />
+                      ) : (
+                        <X className="h-5 w-5 text-red-400" />
+                      )}
                       <span className={feature.included ? "text-gray-900" : "text-gray-400"}>
                         {feature.title}
                         {feature.value && <span className="text-sm text-gray-500 mr-1">({feature.value})</span>}
@@ -243,8 +260,14 @@ export function Pricing() {
                       ? "bg-purple-600 text-white hover:bg-purple-700 shadow-lg hover:shadow-xl"
                       : "bg-gray-100 text-gray-900 hover:bg-gray-200"
                   }`}
+                  onClick={() => {
+                    if (plan.enterprise) {
+                      // Scroll to contact section or open contact form
+                      window.location.href = '#contact';
+                    }
+                  }}
                 >
-                  {plan.enterprise ? "تواصل معنا" : "ابدأ الآن"}
+                  {plan.enterprise ? "طلب عرض سعر" : "ابدأ الآن"}
                 </button>
               </motion.div>
             ))}
@@ -293,6 +316,105 @@ export function Pricing() {
               اكتشف كيف ساعد كرزون الشركات في تحسين تجربة عملائها وتنمية أعمالها
             </p>
             <TestimonialsCarousel />
+          </div>
+
+          {/* Contact Form Section for Enterprise */}
+          <div id="contact" className="mt-24 bg-gradient-to-r from-google-blue to-blue-600 rounded-3xl p-12 text-white">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-center">طلب عرض سعر للمؤسسات</h2>
+              <p className="text-xl mb-8 opacity-90 text-center">
+                احصل على عرض سعر مخصص يناسب احتياجات مؤسستك
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4">ما يميز باقة المؤسسات:</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-400" />
+                      <span>محادثات غير محدودة</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-400" />
+                      <span>أعضاء فريق غير محدود</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-400" />
+                      <span>دعم VIP مخصص</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-400" />
+                      <span>تكاملات مخصصة</span>
+                    </li>
+                    <li className="flex items-center gap-3">
+                      <Check className="h-5 w-5 text-green-400" />
+                      <span>تدريب مخصص للفريق</span>
+                    </li>
+                  </ul>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                  <form className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2">اسم الشركة</label>
+                      <input 
+                        type="text" 
+                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        placeholder="اسم شركتك"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">اسم المسؤول</label>
+                      <input 
+                        type="text" 
+                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        placeholder="اسمك الكامل"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">البريد الإلكتروني</label>
+                      <input 
+                        type="email" 
+                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        placeholder="email@company.com"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">رقم الهاتف</label>
+                      <input 
+                        type="tel" 
+                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        placeholder="+966 50 123 4567"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">حجم الشركة</label>
+                      <select className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
+                        <option value="" className="text-gray-900">اختر حجم الشركة</option>
+                        <option value="50-100" className="text-gray-900">50-100 موظف</option>
+                        <option value="100-500" className="text-gray-900">100-500 موظف</option>
+                        <option value="500-1000" className="text-gray-900">500-1000 موظف</option>
+                        <option value="1000+" className="text-gray-900">أكثر من 1000 موظف</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2">متطلبات خاصة</label>
+                      <textarea 
+                        rows={3}
+                        className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                        placeholder="اخبرنا عن احتياجاتك الخاصة..."
+                      />
+                    </div>
+                    <button 
+                      type="submit"
+                      className="w-full bg-white text-purple-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                    >
+                      إرسال طلب العرض
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Final CTA */}
