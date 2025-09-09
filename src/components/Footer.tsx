@@ -50,7 +50,7 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-600 hover:text-google-blue">
+                <a href="/contact" className="text-gray-600 hover:text-google-blue">
                   تواصل معنا
                 </a>
               </li>
